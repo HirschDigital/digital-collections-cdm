@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+.Card-cardcontainer {
+    box-shadow: 0 2px 5px rgba(0,0,0,.25); 
+	position: relative;
+	text-align: center;
+	color: white;
+}
+.Card-fullcard {
+	height: auto !important;
+	width: 100% !important;
+	display:inline;
+}
+.Card-cardImageHolder {
+	max-width: 100% !important;
+	height: auto;
+	float: none;
+}
+.Card-cardImage {
+	max-width: 100% !important;
+	height: auto !important;	
+}
+.Card-cardTextHolder {
+	float: center !important;
+	width: 100% !important;
+	position: absolute;
+	botton: 8px;
+	left: 16px;
+}
+
+.titleDiv {
+	position: absolute;
+	min-width: 100%;
+	height: auto;
+	text-align: center;
+	padding-top: 1.5%;
+	padding-left: 1.5%;
+	padding-right: 1.5%;
+	min-height: 12%;
+}

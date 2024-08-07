@@ -1,0 +1,78 @@
+---
+header: true
+footer: true
+title: Custom page with CSS+JS button
+---
+
+<style>
+	.cdmdemo-page {
+		padding: 15px;
+	}
+
+	.cdmdemo-page > h3 > a {
+		font-size: 0.875rem;
+		text-decoration: underline;
+	}
+
+	.cdmdemo-code {
+		font-family: monospace, monospace;
+	}
+</style>
+
+<div class="shared-box cdmdemo-page">
+	<h2>Hello, World!</h2>
+	<br/>
+	<a href="#" onclick="var el=document.getElementById('show-hide'); if (el.style.display === 'none') {el.style.display='block';}else{el.style.display='none';}" class="CollectionLanding-landingBrowseButton cdm-btn btn btn-lg btn-primary">Toggle display</a>
+	<h3 id="show-hide" style="display: none">This HTML page uses inline JavaScript (an <i>onclick</i> event) to toggle the CSS <i>display</i> property to make this <span class="cdmdemo-code">&lt;h3&gt;</span> block of text appear and reappear. This page also uses a <span class="cdmdemo-code">&lt;style&gt;</span> section in the HTML to apply CSS formatting to elements in the page. This could also have been done with a separate CSS file, but it can be useful for everything to be contained in a single file. The HTML for this page can be seen <a href="https://cdmdemo.contentdm.oclc.org/customizations/global/pages/helloworld-cssjs.html">here</a> (view the source code).
+		<br/>
+		<br/>
+		The source code for this HTML page (including YAML header) is:
+		<br/>
+		<br/>
+		<pre>
+---
+header: true
+footer: true
+title: Simple page with CSS+JS button
+---
+
+&lt;style&gt;
+  .cdmdemo-page {
+    padding: 15px;
+  }
+
+  .cdmdemo-page > h3 > a {
+    font-size: 0.875rem;
+    text-decoration: underline;
+  }
+
+  .cdmdemo-code {
+    font-family: monospace, monospace;
+  }
+&lt;/style&gt;
+
+&lt;div class=&quot;shared-box&quot;&gt;
+  &lt;h2&gt;Hello, World!&lt;/h2&gt;
+  &lt;br/&gt;
+  &lt;a href=&quot;#&quot; onclick=&quot;var el=document.getElementById('show-hide');
+  if (el.style.display === 'none') {el.style.display='block';}else{el.style.display='none';}&quot;
+  class=&quot;CollectionLanding-landingBrowseButton cdm-btn btn btn-lg btn-primary&quot;&gt;Toggle display&lt;/a&gt;
+  &lt;h3 id=&quot;show-hide&quot; style=&quot;display: none&quot;&gt;This HTML page uses inline JavaScript
+  (an &lt;i&gt;onclick&lt;/i&gt; event) to toggle the CSS &lt;i&gt;display&lt;/i&gt; property to make this
+  &amp;lt;h3&amp;gt; block of text appear and reappear. This page also uses a &amp;lt;style&amp;gt; section in the HTML to
+  apply CSS formatting to elements in the page. This could also have been done with a separate CSS file,
+	but it can be useful for everything to be contained in a single file. The HTML for this page can be seen
+  &lt;a href=&quot;https://cdmdemo.contentdm.oclc.org/customizations/global/pages/helloworld-cssjs.html&quot;&gt;here&lt;/a&gt;
+  (view the source code) and the external CSS is for the &lt;i&gt;shared-box&lt;/i&gt; class in
+  &lt;a href=&quot;https://cdmdemo.contentdm.oclc.org/customizations/global/cdmdemo-aggregate.css&quot;&gt;this file&lt;/a&gt;.
+  &lt;br/&gt;
+  &lt;br/&gt;
+  The source code for this HTMl page (including YAML header) is:
+  &lt;br/&gt;
+  &lt;br/&gt;
+  &lt;pre/&gt; &lt;!-- source removed to avoid recursion --&gt;
+  &lt;/h3&gt;
+&lt;/div&gt;
+		</pre>
+	</h3>
+</div>
