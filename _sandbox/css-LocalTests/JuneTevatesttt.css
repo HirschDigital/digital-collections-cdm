@@ -1,0 +1,456 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*wrapper for about page*/
+.wrapperAbout {
+  display: grid;
+  grid-template-areas:
+  "header header header"
+  "search search search"
+  "related frontMatterWrapper frontMatterWrapper"
+  "footer footer footer";
+  grid-template-rows: auto 400px auto auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  color: white;
+  max-width: 1280px;
+  margin: auto;
+}
+
+#topicHeader {
+  max-width: 1fr;
+  max-height: 70px;
+  padding: 15px;
+  margin-bottom: 0px;
+}
+
+.search-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
+}
+
+#search-content {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+
+
+/*individual box for topics*/
+
+.related {
+  grid-area: related;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  max-height: 1020px;
+
+}
+
+/*=== RELATED TOPICS SIDEBAR ON COLLECTION PAGE ===*/
+
+/*set up related header*/
+
+#topicHeader {
+  max-width: 1fr;
+  max-height: 70px;
+  padding: 15px;
+  margin-bottom: 0;
+}
+
+/*set up related container*/
+
+.topicSection {
+  max-height: 400px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+/*shaded area on related items*/
+
+.topicSection .content {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height:30%;
+  max-height: 30%;
+  background: rgba(0, 0, 0, .5);
+}
+
+/*text in shaded area*/
+
+.topicSection .content p, .topicSection h4 {
+  color: white;
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  right: 5%;
+  font-size: 1.7em;
+}
+
+/*Front Matter Section on collection pages */
+.frontMatter {
+  background: #f4f5f8;
+  height: auto;
+  color: #13293d;
+  overflow-wrap: break-word;
+ word-wrap: break-word;
+ -ms-word-break: break-all;
+ /* Instead use this non-standard one: */
+ word-break: break-word;
+}
+
+.frontMatterWrapper {
+  grid-area: frontMatterWrapper;
+  display: inline-block;
+  top: 0;
+  width: 2fr;
+  bottom: 20px;
+}
+
+#edQueries {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left: 25px;
+  margin-right: 20px;
+}
+
+#edQueries li {
+  padding: 4px;
+}
+
+#goldStarButton {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  padding-top: 5px;
+}
+
+#goldStarButton .button {
+  padding: 7px;
+  border: none;
+}
+
+#goldStarButton .button:hover {
+background-color: #366789;
+}
+
+#goldStarButton .button a:hover {
+background-color: #366789;
+text-decoration: none;
+}
+
+#goldStarButton .button a {
+color: white;
+font-size: 1.2em;
+}
+
+#lbatCounties {
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+  grid-auto-flow: row;
+  grid-gap: 8px;
+}
+
+#lbatCounties a {
+  padding: 4px;
+  font-size: 1em;
+}
+
+.frontMatter .card-body ul {
+  list-style: circle;
+  padding-left: 15px;
+}
+
+.frontMatter .card-body ul li {
+    padding-bottom: 10px;
+}
+
+
+/*format & position browse link in shaded area*/
+
+#search-content a, #search-content p a {
+  color: #e6aa3c;
+  display: inline;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  float: right;
+}
+
+
+#search-content .browseAll {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .025rem;
+}
+
+/*format & position browse icon*/
+
+#search-content i {
+  font-size: 1rem;
+}
+
+.search-caption p a {
+  font-size: .9rem;
+  text-transform: none;
+}
+
+
+/* Stack the layout on small devices/viewports. */
+
+@media (min-width: 300px) and (max-width: 567px) {
+
+  .wrapperAbout {
+    grid-template-areas: "header" "search" "frontMatterWrapper" "related" "footer";
+    grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+    grid-template-columns: 1fr;
+    padding: 10px;
+    grid-gap: 10px;
+  }
+
+
+      .search {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        padding: 0;
+      }
+
+      .search-container {
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+        margin-top: 20px;
+      }
+
+
+  #topicHeader h1 {
+    font-size: 1.75em;
+  }
+
+  .topicSection h4 {
+margin: 4%;
+left: 0;
+bottom: 0;
+font-size: 1.65em;
+  }
+
+  #search-content h3 {
+    font-size: 5vmin;
+  }
+
+  #search-content p {
+    font-size: .85em;
+    padding: 0;
+  }
+
+  #search-content p a {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-bottom: 0;
+  }
+
+  .search-caption a {
+    font-size: 1.05em;
+    top: 0;
+  }
+
+  .browseAll {
+    margin-top:.5%;
+  }
+
+  .topicSection .content {
+    max-height: 40%;
+  }
+
+  #goldStarButton {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 15px;
+    padding-top: 5px;
+  }
+
+  #goldStarButton .button {
+    padding: 10px;
+    border: none;
+  }
+
+}
+
+/*Devices with widths under 375px*/
+@media (max-width: 374px) {
+  .search {
+    padding: 0;
+  }
+
+  .search-container {
+      margin-top: 20px;
+    }
+
+  #search-content {
+    max-height: 60%;
+    padding: 15px;
+  }
+  #search-content h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  #search-content p {
+    margin: 0;
+    font-size: .9rem;
+  }
+  #search-content p a {
+    right: 20px;
+  }
+  .search-caption a {
+    display: inline;
+    text-align: left;
+    font-size: .9em;
+  }
+  .topicSection h4 {
+    font-size: 1.4em;
+margin: 5%;
+left: 0;
+bottom: 0;
+  }
+  #goldStarButton {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 15px;
+    padding-top: 5px;
+  }
+}
+
+/* Portrait Tablets & Landscape Phones----------- */
+@media (min-width: 568px) and (max-width: 1024px) {
+  .wrapperAbout {
+    grid-template-areas: "header header header header" "search search search search" "related frontMatterWrapper frontMatterWrapper frontMatterWrapper" "footer footer footer footer";
+    grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 10px;
+    grid-gap: 10px;
+  }
+
+
+  .search-container {
+max-height: 40%;
+  }
+
+
+  .related {
+    grid-area: related;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    margin-bottom: 10px;
+  }
+
+
+  .topicSection .content {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 45%;
+    max-height: 55%;
+    background: rgba(0, 0, 0, .5);
+  }
+
+  #topicHeader {
+    max-height: 100px;
+  }
+
+
+  #search-content p {
+    font-size: .9em;
+  }
+
+  .topicSection {
+    line-height: 1.15rem;
+  }
+
+  .topicSection h4 {
+margin: 3.5%;
+left: 0;
+bottom: 0;
+font-size: 1.5em;
+  }
+
+@media print {
+  .wrapperAbout {
+    display: grid;
+    grid-template-areas:
+    "search search search"
+    "frontMatterWrapper frontMatterWrapper frontMatterWrapper"
+    "footer footer footer";
+    grid-template-rows: auto auto auto;
+    grid-gap: 20px;
+    color: white;
+    margin: auto;
+    overflow: auto;
+    position: static;
+  }
+  .wrapperBG {
+    margin: auto;
+  }
+  .collapse:not(.show) {
+   display: unset;
+ }
+ body {
+ width:100% !important;
+ margin:0 !important;
+ padding:0 !important;
+ background: none;
+ }
+
+p, h1, h2, h3, h4, h5, a, li {
+ color: #000;
+   font-size: 12pt;
+}
+  img, .search-container, .related, #collectionheader, .search-caption, .browseAll {
+  display: none!important;
+}
+.search{
+height: 100px;
+}
+.search-content h3 {
+  size: 2.5em;
+}
+
+
+.card-header a{
+  color: black!important;
+  font-size: 1.2em;
+}
+#frontMatter {
+  overflow: visible;
+  display: inline;
+}
+}
+}

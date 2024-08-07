@@ -1,0 +1,115 @@
+@charset "utf-8";
+/* CSS Document */
+h2.Header-overlayTitleText {
+	margin-left: -185px;
+	margin-top: 8px;
+	font-weight: bold;
+}
+
+.SearchTerm-term {
+	width: 200px;
+}
+
+#root img.Header-logoImageBanner {
+	width: 300px;
+}
+
+.Footer-footerWrapper {
+	display: none;
+}
+
+.CollectionLanding-aboutCollection h1 {
+	display: none;
+}
+
+.CollectionLanding-aboutCollection {
+	margin-bottom: 5px;
+}
+
+#hrc-browse-iiif {
+}
+
+#hrc-browse-iiif img {
+	width: 45px;
+	height: 45px;
+	margin-left: 15px;
+	margin-bottom: 10px;
+}
+
+ul.CollectionLanding-landingLinks {
+	margin-left: -63px;
+}
+
+.hrc-video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.hrc-video-container iframe,
+.video-container object,
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.fa-download:before {
+	content: "";
+}
+
+.fa-download:after {
+	content: "  Download ";
+	font-family: Arial, Helvetica, Verdana, sans-serif !important;
+	font-size: 1.5rem !important;
+	font-weight: bold !important;
+}
+
+.fa-print:before {
+	content: "";
+}
+
+.fa-print:after {
+	content: "  Print ";
+	font-family: Arial, Helvetica, Verdana, sans-serif !important;
+	font-size: 1.5rem !important;
+	font-weight: bold !important;
+}
+
+.iiif-button {
+	font-family: Arial, Helvetica, Verdana, sans-serif !important;
+	font-size: 1.49rem !important;
+	font-weight: bold !important;
+}
+
+.CompoundItemPagination-container {
+	position: absolute !important;
+	top: -60px !important;
+	left: 30% !important;
+}
+
+.btn-primary.active,
+.btn-primary:active,
+.open > .dropdown-toggle.btn-primary {
+	color: #fff;
+	background-color: #ac1a30 !important;
+	border-color: #ac1a30 !important;
+}
+
+audio {
+	width: 100% !important;
+}
+
+*:focus {
+	outline: #000000 solid 3px !important;
+	border-radius: 0.1rem !important;
+}
+
+/*Collections Level*/
+

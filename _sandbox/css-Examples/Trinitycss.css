@@ -1,0 +1,129 @@
+/* Stylesheet addition added Summer 2018 */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700,700i");
+
+body, h1, h2, h3 { font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+body, p, ul, ol, dl, div, a { font-size: 1rem; }
+body { background: #ffffff; }
+a, a:visited { color: #337ab7; }
+a:hover, a:focus, a:active { color: #723130; }
+a.headerIcon, a.SimpleSearch-headerAdvancedSearchButtonLink { color: #eeeeee; }
+.cdm-footer a:visited, .cdm-footer a, .Footer-footerLanguageHolder a, .Footer-footerLanguageHolder a:hover, #trademark a, a.headerIcon, a.SimpleSearch-headerAdvancedSearchButtonLink:visited, a.SimpleSearch-headerAdvancedSearchButtonLink { font-size: 0.75rem; }
+.Header-header { height: 64px; }
+.Header-logoNameContainer { padding: 10px; }
+.Header-verticalCenter { top: 10px; }
+.Header-valerieBar { height: 0; }
+.Footer-footerWrapper, .Footer-footerContainer, .navbar-default { background-color: #292b2c; border-radius: 0; }
+.cdm-footer a:visited, .cdm-footer a, .Footer-footerLanguageHolder a,.Footer-footerLanguageHolder a:hover, #trademark a { color: #eee; }
+.Paginator-paginationwrapper { background-color: #efefef; padding-top: 7px; }
+.shared-search-box { border: 0; border-bottom: 1px solid #efefef; border-radius: 0; }
+.ItemView-bottomBorder { border-bottom: 0; }
+.ItemView-sideColumn .ItemView-itemSearchContainer { border-top: 0; padding: 15px; border-radius: 5px; }
+.CollectionLanding-landingBrowseButton { background-color: #337ab7 !important; }
+.CollectionLanding-landingBrowseButton:hover { background-color: #286090 !important; }
+.Card-cardcontainer { padding-bottom: 30px; padding-right: 25px; border-bottom: 1px solid #eee; padding-top: 15px; }
+.CardWrapper-cardscontainer { border-top: 1px solid #eee; }
+.ContentHeader-mainCopyHolder { padding-bottom: 15px; }
+.MetadataFields-header, .titleDiv { font-weight: 700; }
+:focus { outline: none; }
+
+/*Styles for horizontal menu and advanced search below header */
+.Header-valerieBar {
+    height: 52px;
+    width: 100%;
+    z-index: 800;
+    background: #eee;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+.SimpleSearch-searchBox {
+    position: absolute;
+    top: 58px;
+    right: 20px;
+}
+.SimpleSearch-searchInputControl {
+	border: 0;
+	font-size: 12px;
+	border-radius: 3px;
+	padding: 3px 10px;
+}
+
+a.headerIcon, a.SimpleSearch-headerAdvancedSearchButtonLink:visited, a.SimpleSearch-headerAdvancedSearchButtonLink {
+    color: #545454;
+}
+
+.open>.dropdown-toggle.headerIconButton:hover, .headerIconButton:active:hover, .headerIconButton:active:focus, .headerIconButton:hover, .headerIconButton:focus, .headerIconButton:active:hover a, .headerIconButton:active:focus a, .headerIconButton:hover a, .headerIconButton:focus a, .open.dropdown>.headerIconButton a, .open.dropdown>.headerIconButton, .open>.dropdown-toggle.headerIconButton:focus, .open>.dropdown-toggle.headerIconButton:hover {
+    color: #eee;
+    background-color: #545454;
+	}
+	
+.Header-headerMenuLinks h3 {
+    color: rgba(255,255,255,.6);
+    }
+	  
+.Header-headerMenuLinks, .Header-headerMenuLinks a, .Header-headerMenuLinks li a:hover  {
+		  background-color: #292b2c !important;
+	}
+	
+@media (min-width: 960px) {
+  .fa-download::after {
+    content: "  Download ";
+    white-space: pre;
+    font-size: 1.125rem;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+  }
+  .fa-print::after {
+    content: "  Print ";
+    white-space: pre;
+    font-size: 1.125rem;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+  }
+}
+.btn-primary .fa-expand::after {
+  content: "  View ";
+  white-space: pre;
+  font-size: 1.125rem;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+	  
+@media screen and (min-width: 768px) {
+	.CoreLayout-mainWrapperContainer {
+    margin-top: 140px;
+	}
+    .Header-hamburgerHolder {
+            float: right;
+    }
+	.Header-hamburgerHolder .btn-group button {
+		display: none;
+	}
+    .Header-headerMenuLinks {
+            position: static;
+            display: flex;
+            flex-wrap: nowrap;
+            border: none;
+            box-shadow: none;
+			background-color: #292b2c;
+			top:0;
+      }
+	  
+	  
+    .Header-headerMenuLinks h3 {
+            margin: 5px;
+			color: rgba(255,255,255,.6);
+    }
+	.Header-headerMenuLinks li a:hover {
+		background-color: #292b2c !important;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.SimpleSearch-searchInputControl {
+		margin: 0 15px;
+	}
+	.SimpleSearch-searchBox {
+		right: 0;
+	}
+}@charset "utf-8";
+/* CSS Document */
+

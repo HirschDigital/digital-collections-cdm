@@ -1,0 +1,299 @@
+@charset "utf-8";
+/* CSS Document */
+.CoreLayout-mainwrapper,
+.CoreLayout-mainWrapperContainer {
+  background-color: #e8ecf0; /*also #e8eaf0*/
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='24' viewBox='0 0 12 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.18'%3E%3Cpath d='M2 0h2v12H2V0zm1 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM9 8c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-1 4h2v12H8V12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.ItemImage-expandButton {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  right: 0;
+}
+
+.ItemPDF-expandButton {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  right: 0;
+}
+
+.btn-default {
+  background-color: #e6aa3c !important;
+  color: white !important;
+}
+
+.btn-default:hover,
+.btn-default:active,
+.btn-default:focus,
+.cdm-btn:hover,
+.cdm-btn:active,
+.cdm-btn:focus {
+  background-color: #ac730b !important;
+  color: white !important;
+}
+
+.cdm-btn.btn-primary:focus,
+.cdm-btn.btn-primary:hover,
+.cdm-btn.btn-primary:active,
+.cdm-btn.btn-primary:active:focus,
+.cdm-btn.btn-primary:active:hover {
+  background-color: #ac730b !important;
+  color: white !important;
+}
+
+btn .btn-default .cdm-btn {
+  background-color: #e6aa3c !important;
+}
+
+.cdm-btn:hover,
+.cdm-btn:active,
+.cdm-btn:focus {
+  background-color: #ac730b !important;
+}
+
+.ResultsDisplaySelector-searchHeaderBtnInactive
+  .cdm-toggle-btn
+  .btn
+  .btn-default {
+  background-color: #ac730b !important;
+}
+
+.headerIconButton:hover a {
+  background-color: #ac730b !important;
+  color: white !important;
+}
+
+.btn-primary {
+  background-color: #4582ad;
+}
+
+.btn-primary:hover {
+  background-color: #366789;
+}
+
+.panel-default {
+  border-color: #16324f;
+}
+
+.Panel-expandedPanel .panel-default,
+.Panel-expandedPanel .panel-default > .panel-heading {
+  background-color: #366789 !important;
+}
+
+.Header-controls .Header-btn,
+.Header-controls button {
+  background-color: transparent;
+}
+
+.titleDiv {
+  color: #4582ad;
+}
+
+.titleDiv:hover {
+  color: #366789;
+}
+
+a .headerIcon {
+  font-size: 2em;
+}
+
+.Header-header {
+  max-height: 80px;
+}
+
+a.SimpleSearch-headerAdvancedSearchButtonLink,
+a.SimpleSearch-headerAdvancedSearchButtonLink:visited {
+  color: white !important;
+}
+
+.SimpleSearch-searchInput {
+  color: rgb(0, 0, 0);
+}
+
+.ItemImage-expandButton btn .btn-default .cdm-btn {
+  background-color: #e6ab3c;
+  color: white;
+}
+
+.headerIconButton:active:hover,
+.headerIconButton:active:focus,
+.headerIconButton:hover,
+.headerIconButton:focus,
+.headerIconButton:active:hover a,
+.headerIconButton:active:focus a,
+.headerIconButton:hover a,
+.headerIconButton:focus a,
+.open.dropdown > .headerIconButton a,
+.open.dropdown > .headerIconButton,
+.open > .dropdown-toggle.headerIconButton:focus,
+.open > .dropdown-toggle.headerIconButton:hover {
+  background-color: #e6ab3c;
+  color: white;
+}
+
+.CoreLayout-mainWrapperContainer {
+  margin-top: 80px;
+}
+
+.Header-headerContainer {
+  background-color: #16324f;
+  color: white;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.Header-headerContainer a,
+.Header-headerContainer p {
+  color: white;
+}
+
+.Header-controls {
+  top: 20px;
+}
+
+#headerNameDiv {
+  margin-top: 0;
+}
+
+#headerNameDiv h2 {
+  color: white;
+  font-size: 2em;
+  padding: 0;
+  margin-top: 0;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+  z-index: 3;
+  color: #fff;
+  cursor: default;
+  background-color: #4582ad;
+  border-color: #4582ad;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.42857143;
+  color: #4582ad;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.Paginator-paginationwrapper {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.ImageViewer-buttonGroup,
+.Lightbox-lightbox .btn-group {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Footer-footerContainer {
+  background-color: #16324f;
+  color: white;
+  margin-bottom: 0;
+}
+
+.Footer-footerContainer a,
+.FooterNavigationLinks-footerLinksHolder a,
+.cdm-footer a:visited {
+  color: white;
+}
+
+.Footer-footerContainer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.Footer-footerWrapper {
+  background-color: #16324f;
+}
+
+/*
+* === MEDIA QUERIES ===
+*/
+
+@media (min-width: 769px) {
+  .Header-logoImage {
+    position: absolute;
+    left: 0;
+    max-height: 65px;
+    padding-left: 10px;
+    max-width: 155px;
+    margin-top: 10px !important;
+    margin-left: 0 !important;
+  }
+
+  .Header-logoNameContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  .Header-nameHolder {
+    padding-top: 30px;
+    padding-left: 160px;
+  }
+
+  .Header-titleText {
+    display: inline-block;
+    overflow: auto;
+    padding-left: 165px;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .Header-logoImage {
+    padding-left: 0;
+  }
+
+  #headerNameDiv h2 {
+    color: white;
+    font-size: 1.5em;
+    overflow: hidden;
+  }
+
+  .Header-header {
+    max-height: 150px;
+  }
+
+  .CoreLayout-mainWrapperContainer {
+    margin-top: 0;
+  }
+
+  .MetadataFields-header h2 {
+    font-size: 0.75em;
+    padding-bottom: 10px;
+  }
+
+  .MetadataField-content .truncation {
+    max-height: 50px;
+  }
+
+  .MetadataField-content {
+    padding-bottom: 10px;
+  }
+}

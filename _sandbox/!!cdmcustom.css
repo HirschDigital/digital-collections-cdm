@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+  font-family: "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+  color: #545454;
+  font-style: normal;
+}
+body, p, ul, ol, dl, div {
+  font-weight: normal;
+  font-size: 0.875rem;
+}
+h1 {
+  font-family: "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  color: #545454;
+  font-style: normal;
+  text-decoration: none;
+}
+h2, h2 a, h2 a:hover, h2 a:visited {
+  font-family: "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #dc4b38;
+  font-style: normal;
+  text-decoration: none;
+}
+h3 {
+  font-family: "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+  font-size: 1.0rem;
+  font-weight: normal;
+  color: #545454;
+  font-style: normal;
+  text-decoration: none;
+}
+a, a#filter-by-collection-cancel-button {
+  font-family: "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: #006FA7;
+  font-style: normal;
+  text-decoration: none;
+}
+a:hover, a#filter-by-collection-cancel-button {
+  color: #006FA7;
+  text-decoration: underline;
+}
+a:visited, a#filter-by-collection-cancel-button {
+  color: #609;
+}
+.search-clear-query-button {
+  color: #CCC;
+}
+.f-dropdown li a {
+  color: #434343;
+  font-weight: 700;
+}
+.navbar-default {
+  background-color: #ffffff;
+}
+.header-text {
+  color: #545454;
+  font-size: 1.125rem;
+}
+.cdm-btn.btn-primary, .cdm-btn.btn-default:hover {
+  background-color: #dc4b38;
+  color: #fff;
+}
+.cdm-btn {
+  font-family: "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+  font-size: .75rem;
+  font-weight: bold;
+}
+.cdm-btn.btn-primary:focus, .cdm-btn.btn-primary:hover, .cdm-btn.btn-primary:active, .cdm-btn.btn-primary:active:focus, .cdm-btn.btn-primary:active:hover {
+  background-color: #CCC;
+  color: #545454;
+}
+.headerIconButton:active:hover, .headerIconButton:active:focus, .headerIconButton:hover, .headerIconButton:focus, .headerIconButton:active:hover a, .headerIconButton:active:focus a, .headerIconButton:hover a, .headerIconButton:focus a, .open.dropdown > .headerIconButton a, .open.dropdown > .headerIconButton, .open > .dropdown-toggle.headerIconButton:focus, .open > .dropdown-toggle.headerIconButton:hover {
+  color: #ffffff;
+  background-color: #dc4b38;
+}
+.cdm-footer a:visited {
+  color: #006FA7;
+}
+.cdm-footer a:hover {
+  color: #006FA7;
+}
+a.headerIcon, a.SimpleSearch-headerAdvancedSearchButtonLink:visited, a.SimpleSearch-headerAdvancedSearchButtonLink {
+  color: #dc4b38;
+}
+a.headerIcon {
+  color: #006FA7;
+}
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > li > a:hover, .cdm-toggle-btn.active, .cdm-toggle-btn.active:hover, .cdm-toggle-btn.btn-default:hover, .cdm-toggle-btn.btn-default:focus {
+  color: #fff;
+  background-color: #006FA7;
+}
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > li > a:hover, .cdm-toggle-btn.active, .cdm-toggle-btn.active:hover, .cdm-toggle-btn.btn-default:hover {
+  background-color: #dc4b38;
+  color: #fff;
+}

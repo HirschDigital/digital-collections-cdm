@@ -1,0 +1,132 @@
+
+/* hide Adv Search label text - show icon instead */
+.SimpleSearch-searchInputLabel
+{ display: none; }
+
+.SimpleSearch-advancedSearch
+{ display: inline-block; }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	.SimpleSearch-searchInput 
+	{ width: 225px; }
+} /* end media query */
+
+@media screen and (min-width: 768px) {
+      .Header-logoImage {
+            margin-top: 5px !important;
+			/* not really needed for nav, but
+				necessary to override in-line margin, 
+				which varies by collection ??? */
+            height: 100px;
+            width: auto;
+			padding: 10px!important;
+      }
+      .Header-controls {
+            width: 100%;
+            position: static;
+			height: 50px;
+			display: flex;
+			justify-content: space-between;
+			align-content: center;
+      }
+      .Header-hamburgerHolder {
+            float: left;
+      }
+      .Header-hamburgerHolder .btn-group button {
+            display: none;
+      }
+      .Header-headerMenuLinks {
+            position: static;
+            display: flex;
+            flex-wrap: nowrap;
+			background-color: inherit;
+            border: none;
+            box-shadow: none;
+      }
+	  .Header-headerMenuLinks li {
+			background-color: #fff; 
+			margin-right: 5px; 
+			border: solid 1px #d3d3d3;
+			border-radius: 6px;
+			padding: 0px 3px;
+	  }
+	  .Header-headerMenuLinks li:hover {
+			background-color: #d3d3d3;
+			color: #333;
+	  }
+	  .Header-headerMenuLinks li a {
+			/* background-color: inherit!important; */
+			padding: 1px 10px;
+	  }
+	  
+	  .Header-headerMenuLinks li a:hover,
+	  .Header-headerMenuLinks li a:focus {
+			color: #333!important;
+			background-color: #d3d3d3!important;
+	  }
+	  .Header-headerMenuLinks li a:hover h3 {
+		  color: #333!important;
+	  }
+      .Header-headerMenuLinks h3 {
+            margin: 5px;
+			font-size: 1rem;
+      }
+	  .SimpleSearch-searchInputControl {
+			height: 33px; 
+	  }
+}
+
+
+/* hide admin links (at all screen sizes) */
+/* display only first 4 links */
+.Header-headerMenuLinks li
+{ display: none; }
+
+.Header-headerMenuLinks li:nth-child(1),
+.Header-headerMenuLinks li:nth-child(2),
+.Header-headerMenuLinks li:nth-child(3),
+.Header-headerMenuLinks li:nth-child(4)
+{ display: list-item; }
+
+/* hide empty text box on homepage (above collection list) */
+.ContentHeader-position
+{ display: none; }
+
+p.data{
+	margin: 10%;
+	
+}
+.subjectList{
+	border-collapse: separate;
+	background-color: white!important;
+	border: 1px double black!important;
+}
+.subjectFacets{
+	border-collapse: separate;
+	background-color: white!important;
+	border: 1px solid black!important;
+	font-size: 20px!important;
+	padding: 5px;
+}
+.subjectLink{
+	font-size: 20px!important;
+}
+
+/* make preview images clickable (instead of View/expand button) */
+.ItemImage-expandButton {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  right: 0;
+}
+.ItemPDF-expandButton {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  right: 0;
+}
+.forTESTING {
+  display:none;
+}

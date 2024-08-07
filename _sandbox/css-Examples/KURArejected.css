@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+  @media screen and (max-width: 1365px) {
+        .CardWrapper-cardscontainer.row div {
+            margin-right: auto;
+        }
+    }
+
+/* Exclude a Collection from the display */
+.CardWrapper-cardscontainer.row div .Card-cardcontainer:nth-child(n+13) {
+    display: none;
+}
+
+    .CoreLayout-mainwrapper.cdm-main-content .CardWrapper-cardscontainer,
+    .CoreLayout-mainwrapper.cdm-main-content .Search-container,
+    .CoreLayout-mainwrapper.cdm-main-content .AboutView-maincontentAbout,
+    .CoreLayout-mainwrapper.cdm-main-content .AdvancedSearch-container,
+    .CoreLayout-mainwrapper.cdm-main-content .SavedItems-container,
+    .CoreLayout-mainwrapper.cdm-main-content .CollectionLayout-container {
+        max-width: 1460px;
+        padding-left: 10px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+        /* Transition on hover */
+        .CardWrapper-cardscontainer div .Card-cardcontainer a div .Card-cardImageHolder {
+            overflow: hidden;
+        }
+
+        .CardWrapper-cardscontainer div .Card-cardcontainer a div .Card-cardImageHolder img {
+            transition: transform 1.05s, filter 1.05s ease-in-out;
+        }
+
+        .CardWrapper-cardscontainer div .Card-cardcontainer a div .Card-cardImageHolder:hover img {
+            transform: scale(1.05);
+        }
