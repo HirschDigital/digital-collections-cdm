@@ -11,7 +11,9 @@ const coverImagesFilenames = [
     'Construct.png',
     'photoleague.png',
     'leirner.jpg',
+    'friendship.jpg',
 	'BTS-V-D-1.png',
+    'ResourceGuides.png',
 ];
 
 // helper function to assemble full URL of each JS file
