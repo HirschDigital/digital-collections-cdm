@@ -1,0 +1,441 @@
+---
+header: true
+footer: true
+title: Research Guide with Cards
+---
+<html lang="en" class="fa-events-icons-ready">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--put in favicon-->
+  <link rel="icon" type="image/ico" href="favicon.ico">
+  <title>Tennessee Virtual Archive (TeVA)</title>
+  <script src="https://use.fontawesome.com/8ca2852caa.js"></script>
+  <link href="https://use.fontawesome.com/8ca2852caa.css" media="all" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+    integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+  <!--Bootstrap CSS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!--font stylesheet-->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Open+Sans:400,700" rel="stylesheet">
+  <!--jQuery-->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="css/bgIndex.css">
+  <link rel="stylesheet" type="text/css" href="css/teva.css">
+</head>
+
+<body onload="load()">
+  <div class="wrapperBG">
+    <div class="wrapperBorder">
+      <div class="wrapperHome">
+        <header id="pageHeader">
+          <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: #16324f; color: white;">
+            <a class="navbar-brand" href="index.html">
+              <img src="img/TeVALogo.svg" width="155px" alt="TeVA">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link" href="about.html">About</a>
+                <a class="nav-item nav-link" href="help.html">Help</a>
+                <a class="nav-item nav-link" href="https://sos.tn.gov/tsla/">Library &amp; Archives</a>
+                <a class="nav-item nav-link" href="https://tnsla.ent.sirsi.net/">Catalog</a>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <div class="search" role="search">
+          <div class="search-container">
+
+            <!--//--><!--[CDATA[// --><!--&nbsp;//--><!--]]-->
+
+            <script>
+              <!--//-->< ![CDATA[// ><!--
+
+                $(document).ready(function () {
+
+
+                  function newsearch() {
+                    //  window.location.href = "https://teva.contentdm.oclc.org/cdm/search/searchterm/"+$('#srchTerm').val();
+                    window.open('https://teva.contentdm.oclc.org/digital/search/searchterm/' + $('#srchTerm').val(), '_blank');
+                  }
+                  $("#search_collection").click(function () {
+                    newsearch();
+                  });
+
+
+                  $('#srchTerm').keypress(function (event) {
+                    if (event.keyCode == 13) {
+                      $('#search_collection').click();
+                    }
+                  });
+
+
+                })]
+
+              //--><!]]>
+            </script>
+
+            <form id="srchFrm" role="form" data-dashlane-rid="059979cb905328cf">
+              <input id="srchTerm" name="srchTerm" type="text" placeholder="Search all collections..."
+                aria-label="Search all collections" data-dashlane-rid="ae958fe47dba8bd3">
+              <input class="button" id="search_collection" type="button" value="" data-dashlane-rid="42ffba27eaa5a1b1">
+            </form>
+          </div>
+
+
+          <div id="search-content" alt="">
+            <h3>Tennessee Virtual Archive</h3>
+            <div class="search-caption mr-lg-2 mr-sm-3 mt-sm-1 mt-xs-1"><a
+                href="https://teva.contentdm.oclc.org/digital/collection/p15138coll29/id/2975" target="_blank"
+                rel="noopener">Image:
+                AEF reunion menu, 1927</a>
+            </div>
+            <p>The Tennessee Virtual Archive (TeVA) is a digital repository of the Tennessee State Library &amp;
+              Archives providing open access to thousands of photographs, documents, maps, postcards, film, audio and
+              other records relating to the history and
+              culture of Tennessee.</p>
+          </div>
+        </div>
+
+        <div class="featuredExplore">
+          <div id="featured" aria-labelledby="carousel">
+            <div id="featuredControls" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#featuredIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#featuredIndicators" data-slide-to="1" class=""></li>
+                <li data-target="#featuredIndicators" data-slide-to="2" class=""></li>
+                <li data-target="#featuredIndicators" data-slide-to="3"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+
+                <div class="carousel-item active" aria-live="polite">
+                  <picture>
+                    <source srcset="img/featured/Birth_Record_500%20x%20300_No_Blur.jpg" media="(max-width: 566px)">
+                    <source srcset="img/featured/Birth_Record_1024%20x%20398_No_Blur.jpg">
+                    <img srcset="img/featured/Birth_Record_1024%20x%20398_No_Blur.jpg" class="d-block img-fluid"
+                      alt="1922, Union County Certificate 441">
+                  </picture>
+                  <div class="carousel-caption">
+                    <h3><a href="collections/birth/birth.html" target="_blank" rel="noopener">New! Tennessee Birth
+                        Records</a></h3>
+                    <p>Birth records issued by the State of Tennessee.<br><a
+                        href="https://teva.contentdm.oclc.org/digital/collection/p15138coll53/id/42932/rec/1"
+                        target="_blank" rel="noopener">Image: 1922, Union County Certificate 441</a></p>
+                  </div>
+                </div>
+
+                <div class="carousel-item" aria-live="polite">
+                  <picture>
+                    <source srcset="img/featured/death_record_500x300.jpg" media="(max-width: 566px)">
+                    <source srcset="img/featured/Death_Record_1024%20x398_No_Blur.jpg">
+                    <img srcset="img/featured/Death_Record_1024%20x398_No_Blur.jpg" class="d-block img-fluid"
+                      alt="71-000001">
+                  </picture>
+                  <div class="carousel-caption">
+                    <h3><a href="collections/death/death.html" target="_blank" rel="noopener">New!<br>Tennessee Death
+                        Records</a></h3>
+                    <p>Death records issued by the State of Tennessee<br><a
+                        href="https://teva.contentdm.oclc.org/digital/collection/p15138coll54/search" target="_blank"
+                        rel="noopener">Image: Certificate 71-000001</a></p>
+                  </div>
+                </div>
+
+
+                <div class="carousel-item" aria-live="polite">
+                  <picture>
+                    <source srcset="img/featured/51753_500x300.jpg" media="(max-width: 566px)">
+                    <source srcset="img/featured/51753_1024x398.jpg">
+                    <img srcset="img/featured/51753_1024x398.jpg" class="d-block img-fluid"
+                      alt=" Letter to the governor, 1849">
+                  </picture>
+                  <div class="carousel-caption">
+                    <h3><a href="collections/earlygovernors/earlygovernors.html" target="_blank"
+                        rel="noopener">New!<br>Early Governors' Papers</a></h3>
+                    <p>Documents and correspondence from Tennessee's earliest governors.<br><a
+                        href="https://teva.contentdm.oclc.org/digital/collection/p15138coll30/id/2262/rec/1">Image:
+                        Letter to the governor</a></p>
+                  </div>
+                </div>
+
+
+
+
+                <a class="carousel-control-prev" href="#featuredControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#featuredControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="explore">
+            <div class="exploreBox" aria-labelledby="button"><a href="https://teva.contentdm.oclc.org/digital/search"
+                target="_blank" rel="noopener">
+                <h3>Browse all items</h3>
+                <p>Browse through everything in our digital collections.</p>
+              </a></div>
+            <div class="exploreBox" aria-labelledby="button"><a href="explore.html">
+                <h3>Explore</h3>
+                <p>Explore digital collections by location &amp; format.</p>
+              </a></div>
+               </div>
+
+          </div>
+        </div>
+
+        <div id="collectionheader">
+          <h1>All Collections </h1>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">List</button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown menu of collections">
+              <div id="menuColl">
+                <a class="dropdown-item" href="collections/agriculture/agriculture.html" target="_blank"
+                  rel="noopener">19th Century Agricultural Resources</a><a class="dropdown-item"
+                  href="collections/mckenneyhall/mckenneyhall.html" target="_blank" rel="noopener">19th Century Native
+                  American Prints</a><a class="dropdown-item" href="collections/york/york.html" target="_blank"
+                  rel="noopener">Alvin C. York</a><a class="dropdown-item" href="collections/jackson/jackson.html"
+                  target="_blank" rel="noopener">Andrew Jackson Collection</a><a class="dropdown-item"
+                  href="collections/johnson/johnson.html" target="_blank" rel="noopener">Andrew Johnson Collection</a><a
+                  class="dropdown-item" href="collections/jimkey/jimkey.html" target="_blank" rel="noopener">Beautiful
+                  Jim Key Collection</a><a class="dropdown-item" href="collections/bwall/bwall.html" target="_blank"
+                  rel="noopener">Bernhardt Wall Etchings</a><a class="dropdown-item"
+                  href="collections/broadsides/broadsides.html" target="_blank" rel="noopener">Broadsides in American
+                  Culture</a><a class="dropdown-item" href="collections/calvert/calvert.html" target="_blank"
+                  rel="noopener">Calvert Brothers Studio Collection</a><a class="dropdown-item"
+                  href="collections/cherokee/cherokee.html" target="_blank" rel="noopener">Cherokee Claims and Related
+                  Records</a><a class="dropdown-item" href="collections/ammons/ammons.html" target="_blank"
+                  rel="noopener">Christopher D. Ammons</a><a class="dropdown-item"
+                  href="collections/cwmilitary/cwmilitary.html" target="_blank" rel="noopener">Civil War Military
+                  Records</a><a class="dropdown-item" href="collections/cwsoldier/cwsoldier.html" target="_blank"
+                  rel="noopener">Civil War Soldier Photographs</a><a class="dropdown-item"
+                  href="collections/cwvisual/cwvisual.html" target="_blank" rel="noopener">Civil War Visual
+                  Culture</a><a class="dropdown-item" href="collections/ccc/ccc.html" target="_blank"
+                  rel="noopener">Civilian Conservation Corps</a><a class="dropdown-item"
+                  href="collections/cwcivilian/cwcivilian.html" target="_blank" rel="noopener">Civilian Life in the
+                  Civil War</a><a class="dropdown-item" href="collections/combgraves/combgraves.html" target="_blank"
+                  rel="noopener">Comb Graves of Tennessee</a><a class="dropdown-item"
+                  href="collections/brock/brock.html" target="_blank" rel="noopener">David Brock Korean War
+                  Photographs</a><a class="dropdown-item" href="collections/rg82/rg82.html" target="_blank"
+                  rel="noopener">Dept. of Conservation Photographs</a><a class="dropdown-item"
+                  href="collections/diaries/diaries.html" target="_blank" rel="noopener">Diaries &amp; Letters</a><a
+                  class="dropdown-item" href="collections/mustard/mustard.html" target="_blank" rel="noopener">Dr. Harry
+                  Mustard Photo Album</a><a class="dropdown-item" href="collections/schoolhouses/schoolhouses.html"
+                  target="_blank" rel="noopener">Early 20th Century Schoolhouses</a><a class="dropdown-item"
+                  href="collections/earlygovernors/earlygovernors.html" target="_blank" rel="noopener">Early Governors'
+                  Papers</a><a class="dropdown-item" href="collections/edoutreach/edoutreach.html" target="_blank"
+                  rel="noopener">Education Outreach</a><a class="dropdown-item" href="collections/fisk/fisk.html"
+                  target="_blank" rel="noopener">Fisk University Scrapbook</a><a class="dropdown-item"
+                  href="collections/hodge/hodge.html" target="_blank" rel="noopener">Frank Hodge World War I
+                  Papers</a><a class="dropdown-item" href="collections/stone/stone.html" target="_blank"
+                  rel="noopener">Gene A. Stone Korean War Collection</a><a class="dropdown-item"
+                  href="collections/grassmere/grassmere.html" target="_blank" rel="noopener">Grassmere Collection,
+                  1786-1985</a><a class="dropdown-item" href="collections/mitchener/mitchener.html" target="_blank"
+                  rel="noopener">Hardy A. Mitchener, Jr. Journal</a><a class="dropdown-item"
+                  href="collections/highlander/highlander.html" target="_blank" rel="noopener">Highlander Folk
+                  School</a><a class="dropdown-item" href="collections/polk/polk.html" target="_blank"
+                  rel="noopener">James K. Polk Collection</a><a class="dropdown-item"
+                  href="collections/sales/sales.html" target="_blank" rel="noopener">John Sales Vietnam War
+                  Collection</a><a class="dropdown-item" href="collections/libraryphoto/libraryphoto.html"
+                  target="_blank" rel="noopener">Library Photograph Collection</a><a class="dropdown-item"
+                  href="collections/lbat/lbat.html" target="_blank" rel="noopener">Looking Back at Tennessee
+                  Photographs</a><a class="dropdown-item" href="collections/lbatcw/lbatcw.html" target="_blank"
+                  rel="noopener">Looking Back: The Civil War in TN</a><a class="dropdown-item"
+                  href="collections/kinsall/kinsall.html" target="_blank" rel="noopener">Lt. Col. J.Y. Kinsall
+                  Collection</a><a class="dropdown-item" href="collections/lbj/lbj.html" target="_blank"
+                  rel="noopener">Lyndon Johnson's 1967 Tennessee Visit</a><a class="dropdown-item"
+                  href="collections/maps/maps.html" target="_blank" rel="noopener">Maps at the Library &amp;
+                  Archives</a><a class="dropdown-item" href="collections/miersriver/miersriver.html" target="_blank"
+                  rel="noopener">Miers River Photo Collection</a><a class="dropdown-item"
+                  href="collections/olivet/olivet.html" target="_blank" rel="noopener">Mount Olivet Cemetery
+                  Records</a><a class="dropdown-item" href="collections/dupont/dupont.html" target="_blank"
+                  rel="noopener">Old Hickory DuPont Gunpowder Plant</a><a class="dropdown-item"
+                  href="collections/king/king.html" target="_blank" rel="noopener">Oliver &amp; Katherine King
+                  Papers</a><a class="dropdown-item" href="collections/ohot/ohot.html" target="_blank"
+                  rel="noopener">Over Here, Over There</a><a class="dropdown-item"
+                  href="collections/puryear/puryear.html" target="_blank" rel="noopener">Puryear Family Photograph
+                  Albums</a><a class="dropdown-item" href="collections/quilts/quilts.html" target="_blank"
+                  rel="noopener">Quilts Collection</a><a class="dropdown-item"
+                  href="collections/reconstruction/reconstruction.html" target="_blank" rel="noopener">Reconstruction in
+                  Tennessee</a><a class="dropdown-item" href="collections/rg36/rg36.html" target="_blank"
+                  rel="noopener">Record of Ex-Soldiers in World War I</a><a class="dropdown-item"
+                  href="collections/revwar/revwar.html" target="_blank" rel="noopener">Revolutionary War
+                  Collection</a><a class="dropdown-item" href="collections/cartmell/cartmell.html" target="_blank"
+                  rel="noopener">Robert H. Cartmell Diaries</a><a class="dropdown-item"
+                  href="collections/rosemusic/rosemusic.html" target="_blank" rel="noopener">Rose Music Collection</a><a
+                  class="dropdown-item" href="collections/ryman/ryman.html" target="_blank" rel="noopener">Ryman
+                  Auditorium</a><a class="dropdown-item" href="collections/familyphoto/familyphoto.html" target="_blank"
+                  rel="noopener">Small Photograph Collections</a><a class="dropdown-item"
+                  href="collections/southernschool/southernschool.html" target="_blank" rel="noopener">Southern School
+                  News Collection</a><a class="dropdown-item" href="collections/stereographs/stereographs.html"
+                  target="_blank" rel="noopener">Stereograph Collection</a><a class="dropdown-item"
+                  href="collections/strickland/strickland.html" target="_blank" rel="noopener">Strickland Sketches</a><a
+                  class="dropdown-item" href="collections/birth/birth.html" target="_blank" rel="noopener">Tennessee
+                  Birth Records</a><a class="dropdown-item" href="collections/centennial/centennial.html"
+                  target="_blank" rel="noopener">Tennessee Centennial Exposition</a><a class="dropdown-item"
+                  href="collections/death/death.html" target="_blank" rel="noopener">Tennessee Death Records</a><a
+                  class="dropdown-item" href="collections/delayed/delayed.html" target="_blank" rel="noopener">Tennessee
+                  Delayed Birth Records</a><a class="dropdown-item" href="collections/divorce/divorce.html"
+                  target="_blank" rel="noopener">Tennessee Divorce Records</a><a class="dropdown-item"
+                  href="collections/founding/founding.html" target="_blank" rel="noopener">Tennessee Founding &amp;
+                  Landmark Documents</a><a class="dropdown-item" href="collections/legcomp/legcomp.html" target="_blank"
+                  rel="noopener">Tennessee General Assembly Portraits</a><a class="dropdown-item"
+                  href="collections/wwitn/wwitn.html" target="_blank" rel="noopener">Tennessee in World War I</a><a
+                  class="dropdown-item" href="collections/marriage/marriage.html" target="_blank"
+                  rel="noopener">Tennessee Marriage Records</a><a class="dropdown-item"
+                  href="collections/musterrolls/musterrolls.html" target="_blank" rel="noopener">Tennessee Military
+                  Muster Rolls</a><a class="dropdown-item" href="collections/postcards/postcards.html" target="_blank"
+                  rel="noopener">Tennessee Postcard Collection</a><a class="dropdown-item"
+                  href="collections/schooldeaf/schooldeaf.html" target="_blank" rel="noopener">Tennessee School for the
+                  Deaf</a><a class="dropdown-item" href="collections/stateguard/stateguard.html" target="_blank"
+                  rel="noopener">Tennessee State Guard</a><a class="dropdown-item"
+                  href="collections/parksfolklife/parksfolklife.html" target="_blank" rel="noopener">Tennessee State
+                  Parks Folklife Project</a><a class="dropdown-item" href="collections/lostcause/lostcause.html"
+                  target="_blank" rel="noopener">The Lost Cause in Southern Memory</a><a class="dropdown-item"
+                  href="collections/scopes/scopes.html" target="_blank" rel="noopener">The Scopes "Monkey" Trial</a><a
+                  class="dropdown-item" href="collections/tacfolklife/tacfolklife.html" target="_blank"
+                  rel="noopener">TN Arts Commission Folklife Photos</a><a class="dropdown-item"
+                  href="collections/cwwomen/cwwomen.html" target="_blank" rel="noopener">Women in the Civil War</a><a
+                  class="dropdown-item" href="collections/suffrage/suffrage.html" target="_blank" rel="noopener">Women's
+                  Suffrage in Tennessee</a><a class="dropdown-item" href="collections/goldstar/goldstar.html"
+                  target="_blank" rel="noopener">World War I Gold Star Records</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="collectionWrapper" data-role="listview" aria-labelledby="list of collections" role="grid">
+          <noscript>
+            <div style="color:black; font-size:2em">Please enable JavaScript to view this site.</div>
+          </noscript>
+          <div class="hvrbox">
+            <div class="hvrbox-title" tabindex="0">
+              <h5>19th Century Agricultural Resources</h5>
+            </div><img src="img/thumbnails/agriculture.jpg" class="hvrbox-layer_bottom" alt="">
+            <div class="hvrbox-layer_top hvrbox-layer_slideup">
+              <div class="hvrbox-text" tabindex="0"><a href="collections/agriculture/agriculture.html" target="_blank"
+                  rel="noopener">A selection of items depicting the lives of farmers and the development of agriculture
+                  in Tennessee.</a></div><a href="collections/agriculture/agriculture.html" target="_blank"
+                rel="noopener"><i class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+          <div class="hvrbox">
+            <div class="hvrbox-title" tabindex="0">
+              <h5>19th Century Native American Prints</h5>
+            </div><img src="img/thumbnails/mckenneyhall.jpg" class="hvrbox-layer_bottom" alt="">
+            <div class="hvrbox-layer_top hvrbox-layer_slideup">
+              <div class="hvrbox-text" tabindex="0"><a href="collections/mckenneyhall/mckenneyhall.html" target="_blank"
+                  rel="noopener">Selections from a three-volume set of Native American portraits, assembled between 1836
+                  and 1844.</a></div><a href="collections/mckenneyhall/mckenneyhall.html" target="_blank"
+                rel="noopener"><i class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+          <div class="hvrbox">
+            <div class="hvrbox-title" tabindex="0">
+              <h5>Alvin C. York</h5>
+            </div><img src="img/thumbnails/york.jpg" class="hvrbox-layer_bottom" alt="">
+            <div class="hvrbox-layer_top hvrbox-layer_slideup">
+              <div class="hvrbox-text" tabindex="0"><a href="collections/york/york.html" target="_blank"
+                  rel="noopener">A collection of items related to the life of one of the most decorated soldiers of
+                  World War I.</a></div><a href="collections/york/york.html" target="_blank" rel="noopener"><i
+                  class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+          <div class="hvrbox">
+            <div class="hvrbox-title" tabindex="0">
+              <h5>Andrew Jackson Collection</h5>
+            </div><img src="img/thumbnails/jackson.jpg" class="hvrbox-layer_bottom" alt="">
+            <div class="hvrbox-layer_top hvrbox-layer_slideup">
+              <div class="hvrbox-text" tabindex="0"><a href="collections/jackson/jackson.html" target="_blank"
+                  rel="noopener">Images, broadsides, manuscripts, and letters that help to define the life of the 7th
+                  President.</a></div><a href="collections/jackson/jackson.html" target="_blank" rel="noopener"><i
+                  class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+          <div class="hvrbox">
+            <div class="hvrbox-title" tabindex="0">
+              <h5>Andrew Johnson Collection</h5>
+            </div><img src="img/thumbnails/johnson.jpg" class="hvrbox-layer_bottom" alt="">
+            <div class="hvrbox-layer_top hvrbox-layer_slideup">
+              <div class="hvrbox-text" tabindex="0"><a href="collections/johnson/johnson.html" target="_blank"
+                  rel="noopener">Photographs, letters, broadsides, and ephemera relating to the 17th President of the
+                  United States.</a></div><a href="collections/johnson/johnson.html" target="_blank" rel="noopener"><i
+                  class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>
+          <div class="hvrbox">
+            <div class="hvrbox-title" tabindex="0">
+              <h5>Beautiful Jim Key Collection</h5>
+            </div><img src="img/thumbnails/jimkey.jpg" class="hvrbox-layer_bottom" alt="">
+            <div class="hvrbox-layer_top hvrbox-layer_slideup">
+              <div class="hvrbox-text" tabindex="0"><a href="collections/jimkey/jimkey.html" target="_blank"
+                  rel="noopener">Items showcasing the notable career of Dr. William Key and his exceptional horse,
+                  Beautiful Jim Key.</a></div><a href="collections/jimkey/jimkey.html" target="_blank" rel="noopener"><i
+                  class="fa fa-angle-double-right"></i></a>
+            </div>
+          </div>        
+        </div>
+
+        <a id="topButton" href="#" aria-labelledby="button" alt="return to top of page" class=""></a>
+
+        <footer id="pageFooter">
+          <div class=" navbar-brand" id="sosBrand"><img src="img/circle_stars.png" alt="">
+            <p><a href="https://sos.tn.gov/">Tennessee Secretary of State<br>Tre Hargett</a></p>
+          </div>
+          <div id="footerContact">
+            <div id="footerSocial">
+              <a aria-label="TSLA Facebook" href="https://www.facebook.com/TNStateLibraryArchives"><i
+                  class="fab fa-facebook"></i></a>
+              <a aria-label="TSLA Instagram" href="https://www.instagram.com/tnlibarchives/"><i
+                  class="fab fa-instagram"></i></a>
+              <a aria-label="TSLA Blog" href="https://tslablog.blogspot.com/"><i class="fab fa-blogger"></i></a>
+              <a aria-label="Contact Us" href="https://sos.tn.gov/products/tsla/library-and-archives-ask-us-question"><i
+                  class="fas fa-envelope"></i></a>
+            </div>
+            <p>© 2023 Tennessee State Library &amp; Archives<br>A Division of the Department of State
+            </p>
+
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    ,window.onload = function () {
+      if (/iP(hone|ad)/.test(window.navigator.userAgent)) {
+        var elements = document.querySelectorAll('button');
+        var emptyFunction = function () { };
+        for (var i = 0; i < elements.length; i++) {
+          elements[i].addEventListener('touchstart', emptyFunction, false);
+        }
+      }
+    },</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+    integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="js/collectionsMenu.js"></script>
+  <script src="js/teva.js"></script>
+
+  <iframe id="x1JT0qs8" frameborder="0"
+    src="chrome-extension://ekhagklcjbdpajgpjgmbionohlpdbjgc/translateSandbox/translateSandbox.html"
+    style="width: 0px; height: 0px; display: none;"></iframe>
+</body>
+
+</html>
