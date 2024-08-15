@@ -25,7 +25,7 @@
         let thisSearchText;
         var checkboxAll = document.querySelector('.SearchCollectionFilter-allCollectionsCheckbox input');
         if(checkboxAll.checked){
-           thisSearchText = 'Search L&A';
+           thisSearchText = 'Search entire collection';
         }
         else {
             thisSearchText = 'Search within selected collections';
