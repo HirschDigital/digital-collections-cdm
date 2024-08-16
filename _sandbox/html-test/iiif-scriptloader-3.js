@@ -26,7 +26,7 @@ document.addEventListener('cdm-custom-page:ready', function(event) {
         let createCollectionManifest = function() {
             return {
                 '@context' : 'http://iiif.io/api/presentation/2/context.json',
-                '@id' : 'https://cdm17480.contentdm.oclc.org/digital/collection/p17480coll1/custom/timeline.json',
+                '@id' : 'https://cdm17480.contentdm.oclc.org/digital/collection/p17480coll1/.json',
                 '@type' : 'sc:Collection',
                 'label' : 'Timeline Demo',
                 'description' : 'Collection from Timeline Demo',
@@ -38,7 +38,7 @@ document.addEventListener('cdm-custom-page:ready', function(event) {
         // Create a IIIF Collection Manifest member from a CONTENTdm dmQuery API item record
         let createMember = function(record) {
             return {
-                '@id' : 'https://cdm17480.contentdm.oclc.org/digital/iiif-info' + record.collection + '/' + record.pointer + '/manifest.json',
+                '@id' : 'https://cdm17480.contentdm.oclc.org/digital/iiif/info' + record.collection + '/' + record.pointer + '/manifest.json',
                 '@type' : 'sc:Manifest',
                 'label' : record.title
             };

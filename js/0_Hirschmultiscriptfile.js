@@ -32,6 +32,10 @@ const scriptFilesToLoad = [
 	'GA4.js',
 	'headerSearchInputPlaceholder.js',
   'iiif-scriptloader.js',
+  'iiif-scriptloader-1.js',
+  'iiif-scriptloader-2.js',
+  'iiif-scriptloader-3.js',
+  'iiif-scriptloader-4.js',
   'iiif-timeline.js',
 ];
 

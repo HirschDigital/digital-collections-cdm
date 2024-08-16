@@ -37,7 +37,7 @@ document.addEventListener('cdm-custom-page:ready', function(event) {
 
         let createMember = function(record) {
             return {
-                '@id' : 'https://cdm17480.contentdm.oclc.org/digital/iiif-info' + record.collection + '/' + record.pointer + '/manifest.json',
+                '@id' : 'https://cdm17480.contentdm.oclc.org/digital/iiif/info' + record.collection + '/' + record.pointer + '/manifest.json',
                 '@type' : 'sc:Manifest',
                 'label' : record.title
             };
