@@ -1,0 +1,172 @@
+@import 'styles/_variables';
+
+.ItemView-itemViewContainer {
+    margin-bottom: 10px;
+    composes: box from "styles/shared.css";
+    padding: 10px 10px 0 10px;
+    flex-grow: 1;
+}
+
+/**
+ * The side column are hidden on mobile devices.
+ */
+.ItemView-sideColumn {
+    display: none;
+}
+
+.ItemView-bottomBorder {
+    border-bottom: 10px solid #CCC;
+}
+
+.ItemView-bottomSingleItemBorder {
+    border-bottom: 5px solid #CCC;
+}
+
+.ItemView-itemTitle {
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 5px;
+    margin-bottom: 1.2em;
+}
+
+.ItemView-itemNoFile {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.ItemView-itemMetadata {
+    margin-top: 3px;
+    margin-bottom: 25px;
+}
+
+.alertContainer {
+    display: flex;
+    justify-content: center;
+
+    .alert {
+        width: 100%;
+    }
+}
+
+.ItemView-mainColumn .ItemView-itemSearchContainer {
+    background-color: #EFEFEF;
+    margin: 10px -15px;
+    padding: 5px;
+    border: 5px solid #CCC;
+}
+
+.ItemView-mainColumn .ItemView-compoundItemViewerContainer {
+    margin: 10px -15px;
+    border-top: 10px solid #CCC;
+    padding-top: 5px;
+}
+
+.ItemView-mainColumn .ItemView-compoundItemViewerContainer hr {
+    margin: -10px;
+    padding: 10px 10px 5px;
+    height: 1px;
+    border-top: 5px solid #666;
+}
+
+.ItemView-mainColumn .ItemView-compoundItemViewer,
+.ItemView-mainColumn .ItemView-treeViewer {
+    margin: 15px;
+}
+
+.ItemView-panelContainer > div {
+    margin: 15px 0;
+}
+
+.ItemView-panelContainer div {
+    border: 0!important;
+    box-shadow: none;
+}
+
+
+// Current responsive style for fitting images on handheld devices
+img {
+    max-width: 100%
+}
+
+
+/**
+ * On desktop devices, show the side column, and hide the
+ * duplicated components (option and search) in the main column.
+ */
+@media (min-width: $breakpoint-sm) {
+
+    .ItemView-itemViewContainer {
+        margin-bottom: 10px;
+        composes: box from "styles/shared.css";
+        padding: 10px;
+        flex-grow: 1;
+    }
+
+    .ItemView-sideColumn .ItemView-compoundItemViewerContainer hr {
+        display: none;
+    }
+
+    .ItemView-mainColumn .ItemView-compoundItemViewerContainer {
+        margin: 0 15px;
+        border: none;
+    }
+
+    .ItemView-sideColumn {
+        display: block;
+        padding-left: 5px;
+    }
+
+    .ItemView-sideColumn .ItemView-compoundItemViewerContainer {
+        background-color: #EFEFEF;
+    }
+
+    .ItemView-sideColumn .ItemView-itemSearchContainer {
+        background-color: #EFEFEF;
+        margin-top: 10px;
+        padding: 5px;
+        border-top: 5px solid #CCC;
+    }
+
+    .ItemView-mainColumn .ItemView-compoundItemViewer,
+    .ItemView-mainColumn .ItemView-treeViewer,
+    .ItemView-mainColumn .ItemView-options,
+    .ItemView-mainColumn .ItemView-itemViewPager,
+    .ItemView-mainColumn .ItemView-search,
+    .ItemView-mainColumn .ItemView-results,
+    .ItemView-mainColumn .ItemView-itemSearchContainer {
+        display: none;
+    }
+
+    @media print {
+        .ItemView-sideColumn {
+            display: none;
+        }
+    }
+}
+
+@media print {
+    div {
+        float: none !important;
+        position: static !important;
+        display: inline;
+        box-sizing: content-box !important;
+    }
+
+    .ItemView-itemTitle, .ItemView-mainColumn {
+        page-break-before: avoid;
+        break-before: avoid;
+        page-break-inside:avoid;
+        break-inside: avoid;
+    }
+
+    .ItemView-sideColumn {
+        display: none;
+    }
+
+    .ItemView-panelContainer {
+        &:before, &:after{
+            display: table;
+            content: " ";
+            clear: both;
+        }
+    }
+}
