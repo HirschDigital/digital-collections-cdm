@@ -1,6 +1,6 @@
 @import 'styles/_variables';
 
-.ItemView-itemViewContainer {
+.collView-collViewContainer {
     margin-bottom: 10px;
     composes: box from "styles/shared.css";
     padding: 10px 10px 0 10px;
@@ -10,30 +10,30 @@
 /**
  * The side column are hidden on mobile devices.
  */
-.ItemView-sideColumn {
+.collView-sideColumn {
     display: none;
 }
 
-.ItemView-bottomBorder {
+.collView-bottomBorder {
     border-bottom: 10px solid #CCC;
 }
 
-.ItemView-bottomSingleItemBorder {
+.collView-bottomSinglecollBorder {
     border-bottom: 5px solid #CCC;
 }
 
-.ItemView-itemTitle {
+.collView-collTitle {
     border-bottom: 1px solid #CCCCCC;
     padding-bottom: 5px;
     margin-bottom: 1.2em;
 }
 
-.ItemView-itemNoFile {
+.collView-collNoFile {
     font-weight: bold;
     margin-bottom: 15px;
 }
 
-.ItemView-itemMetadata {
+.collView-collMetadata {
     margin-top: 3px;
     margin-bottom: 25px;
 }
@@ -47,42 +47,42 @@
     }
 }
 
-.ItemView-mainColumn .ItemView-itemSearchContainer {
+.collView-mainColumn .collView-collSearchContainer {
     background-color: #EFEFEF;
     margin: 10px -15px;
     padding: 5px;
     border: 5px solid #CCC;
 }
 
-.ItemView-mainColumn .ItemView-compoundItemViewerContainer {
+.collView-mainColumn .collView-compoundcollViewerContainer {
     margin: 10px -15px;
     border-top: 10px solid #CCC;
     padding-top: 5px;
 }
 
-.ItemView-mainColumn .ItemView-compoundItemViewerContainer hr {
+.collView-mainColumn .collView-compoundcollViewerContainer hr {
     margin: -10px;
     padding: 10px 10px 5px;
     height: 1px;
     border-top: 5px solid #666;
 }
 
-.ItemView-mainColumn .ItemView-compoundItemViewer,
-.ItemView-mainColumn .ItemView-treeViewer {
+.collView-mainColumn .collView-compoundcollViewer,
+.collView-mainColumn .collView-treeViewer {
     margin: 15px;
 }
 
-.ItemView-panelContainer > div {
+.collView-panelContainer > div {
     margin: 15px 0;
 }
 
-.ItemView-panelContainer div {
+.collView-panelContainer div {
     border: 0!important;
     box-shadow: none;
 }
 
 
-// Current responsive style for fitting images on handheld devices
+//* Current responsive style for fitting images on handheld devices*//
 img {
     max-width: 100%
 }
@@ -94,50 +94,50 @@ img {
  */
 @media (min-width: $breakpoint-sm) {
 
-    .ItemView-itemViewContainer {
+    .collView-collViewContainer {
         margin-bottom: 10px;
         composes: box from "styles/shared.css";
         padding: 10px;
         flex-grow: 1;
     }
 
-    .ItemView-sideColumn .ItemView-compoundItemViewerContainer hr {
+    .collView-sideColumn .collView-compoundcollViewerContainer hr {
         display: none;
     }
 
-    .ItemView-mainColumn .ItemView-compoundItemViewerContainer {
+    .collView-mainColumn .collView-compoundcollViewerContainer {
         margin: 0 15px;
         border: none;
     }
 
-    .ItemView-sideColumn {
+    .collView-sideColumn {
         display: block;
         padding-left: 5px;
     }
 
-    .ItemView-sideColumn .ItemView-compoundItemViewerContainer {
+    .collView-sideColumn .collView-compoundcollViewerContainer {
         background-color: #EFEFEF;
     }
 
-    .ItemView-sideColumn .ItemView-itemSearchContainer {
+    .collView-sideColumn .collView-collSearchContainer {
         background-color: #EFEFEF;
         margin-top: 10px;
         padding: 5px;
         border-top: 5px solid #CCC;
     }
 
-    .ItemView-mainColumn .ItemView-compoundItemViewer,
-    .ItemView-mainColumn .ItemView-treeViewer,
-    .ItemView-mainColumn .ItemView-options,
-    .ItemView-mainColumn .ItemView-itemViewPager,
-    .ItemView-mainColumn .ItemView-search,
-    .ItemView-mainColumn .ItemView-results,
-    .ItemView-mainColumn .ItemView-itemSearchContainer {
+    .collView-mainColumn .collView-compoundcollViewer,
+    .collView-mainColumn .collView-treeViewer,
+    .collView-mainColumn .collView-options,
+    .collView-mainColumn .collView-collViewPager,
+    .collView-mainColumn .collView-search,
+    .collView-mainColumn .collView-results,
+    .collView-mainColumn .collView-collSearchContainer {
         display: none;
     }
 
     @media print {
-        .ItemView-sideColumn {
+        .collView-sideColumn {
             display: none;
         }
     }
@@ -151,22 +151,189 @@ img {
         box-sizing: content-box !important;
     }
 
-    .ItemView-itemTitle, .ItemView-mainColumn {
+    .collView-collTitle, .collView-mainColumn {
         page-break-before: avoid;
         break-before: avoid;
         page-break-inside:avoid;
         break-inside: avoid;
     }
 
-    .ItemView-sideColumn {
+    .collView-sideColumn {
         display: none;
     }
 
-    .ItemView-panelContainer {
+    .collView-panelContainer {
         &:before, &:after{
             display: table;
             content: " ";
             clear: both;
         }
     }
+}
+.collOptions-collPrintOptions {
+    display: flex;
+    flex-direction: column;
+}
+
+.collOptions-collOptions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .btn-toolbar .btn{
+        padding: .25rem .5rem;
+    }
+}
+
+.collOptions-collShareRow {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media print {
+    .collOptions-collPrintOptions {
+        display: none;
+    }
+}
+.collPreview-container {
+    display: flex;
+
+    & > button{
+        width:30px;
+        font-size: 2em;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+
+        .text {
+            display: none;
+        }
+    }
+
+    .preview {
+        min-height: 65px;
+        flex:1;
+        display: flex;
+        justify-content: center;
+        align-colls: center;
+    }
+}
+
+.preview {
+    min-height: 65px;
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-colls: center;
+}
+@import 'styles/_variables';
+@value text-color from 'styles/colors.css';
+
+.collSearch-collSearchButton a {
+    color: #ffffff;
+}
+
+.collSearch-collHeaderButtonPadding, .collSearch-collStackedHeaderButtonPadding {
+    margin-right: 5px;
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem !important;
+}
+
+.collSearch-collSearchInput {
+    flex: 2 0 0px;
+    margin: 5px 10px 0 5px;
+}
+
+.collSearch-collSearchLabel {
+    width: 100%;
+    text-align: left;
+    padding-left: 5px;
+    margin-bottom: 0;
+    color: #434343;
+    font-size: 0.875rem;
+    font-weight: normal;
+}
+
+.collSearch-collSearchInput > div {
+    font-size: .875rem;
+    font-weight: bold;
+}
+
+.collSearch-collSearchInputControl {
+    font-size: 1rem;
+    color: text-color;
+    width: 100%;
+}
+
+.collSearch-collSearchResults {
+    font-size: .875rem;
+    font-weight: bold;
+    display: block;
+    padding-left: 5px;
+    color: #434343;
+}
+
+.collView-collSearchContainer {
+    background-color: #EFEFEF;
+    margin-top: 10px;
+    padding: 5px;
+    border-top: 5px solid #aaa;
+}
+
+.collSearch-collSearchControl {
+    display: flex;
+    flex-wrap: nowrap;
+    align-colls: flex-end;
+}
+
+@media screen and (min-width: $breakpoint-sm)  {
+    .collSearch-collSearchInput {
+        top: 60px;
+    }
+
+    .collSearch-collSearchInputControl {
+        font-size: 17px !important;
+        top: 10px;
+    }
+}
+
+@media print {
+    .collSearch-collSearchPrint {
+        display: none;
+    }
+}
+.collTitle-primaryTitle{
+    overflow: hidden;
+    position: relative;
+    text-align: justify;
+    padding-right: 1em;
+    &:before {
+        content: "...";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 1em;
+        height: 1em;
+        margin-top: .2em;
+        background: #fff;
+    }
+}
+
+.collTitle-clonedPrimaryTitle{
+  position: absolute;
+  top: 0;
+  width: 10%;
+  overflow: hidden;
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+.collTitle-secondaryTitle{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
