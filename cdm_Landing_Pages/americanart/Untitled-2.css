@@ -82,7 +82,7 @@
 }
 
 
-//* Current responsive style for fitting images on handheld devices*//
+/* Current responsive style for fitting images on handheld devices*/
 img {
     max-width: 100%
 }
@@ -229,78 +229,7 @@ img {
 @import 'styles/_variables';
 @value text-color from 'styles/colors.css';
 
-.collSearch-collSearchButton a {
-    color: #ffffff;
-}
 
-.collSearch-collHeaderButtonPadding, .collSearch-collStackedHeaderButtonPadding {
-    margin-right: 5px;
-    padding: 0.25rem 0.5rem 0.25rem 0.5rem !important;
-}
-
-.collSearch-collSearchInput {
-    flex: 2 0 0px;
-    margin: 5px 10px 0 5px;
-}
-
-.collSearch-collSearchLabel {
-    width: 100%;
-    text-align: left;
-    padding-left: 5px;
-    margin-bottom: 0;
-    color: #434343;
-    font-size: 0.875rem;
-    font-weight: normal;
-}
-
-.collSearch-collSearchInput > div {
-    font-size: .875rem;
-    font-weight: bold;
-}
-
-.collSearch-collSearchInputControl {
-    font-size: 1rem;
-    color: text-color;
-    width: 100%;
-}
-
-.collSearch-collSearchResults {
-    font-size: .875rem;
-    font-weight: bold;
-    display: block;
-    padding-left: 5px;
-    color: #434343;
-}
-
-.collView-collSearchContainer {
-    background-color: #EFEFEF;
-    margin-top: 10px;
-    padding: 5px;
-    border-top: 5px solid #aaa;
-}
-
-.collSearch-collSearchControl {
-    display: flex;
-    flex-wrap: nowrap;
-    align-colls: flex-end;
-}
-
-@media screen and (min-width: $breakpoint-sm)  {
-    .collSearch-collSearchInput {
-        top: 60px;
-    }
-
-    .collSearch-collSearchInputControl {
-        font-size: 17px !important;
-        top: 10px;
-    }
-}
-
-@media print {
-    .collSearch-collSearchPrint {
-        display: none;
-    }
-}
 .collTitle-primaryTitle{
     overflow: hidden;
     position: relative;
@@ -336,4 +265,12 @@ img {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+
+.collView-collViewContainer  {
+    padding-top: 10px;
+    width: 80%;
+    text-align:left;
+    margin: 0 auto 0;;
 }
