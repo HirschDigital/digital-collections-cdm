@@ -1,0 +1,276 @@
+@import 'styles/_variables';
+
+.collView-collViewContainer {
+    margin-bottom: 10px;
+    composes: box from "styles/shared.css";
+    padding: 10px 10px 0 10px;
+    flex-grow: 1;
+}
+
+/**
+ * The side column are hidden on mobile devices.
+ */
+.collView-sideColumn {
+    display: none;
+}
+
+.collView-bottomBorder {
+    border-bottom: 10px solid #CCC;
+}
+
+.collView-bottomSinglecollBorder {
+    border-bottom: 5px solid #CCC;
+}
+
+.collView-collTitle {
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 5px;
+    margin-bottom: 1.2em;
+}
+
+.collView-collNoFile {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.collView-collMetadata {
+    margin-top: 3px;
+    margin-bottom: 25px;
+}
+
+.alertContainer {
+    display: flex;
+    justify-content: center;
+
+    .alert {
+        width: 100%;
+    }
+}
+
+.collView-mainColumn .collView-collSearchContainer {
+    background-color: #EFEFEF;
+    margin: 10px -15px;
+    padding: 5px;
+    border: 5px solid #CCC;
+}
+
+.collView-mainColumn .collView-compoundcollViewerContainer {
+    margin: 10px -15px;
+    border-top: 10px solid #CCC;
+    padding-top: 5px;
+}
+
+.collView-mainColumn .collView-compoundcollViewerContainer hr {
+    margin: -10px;
+    padding: 10px 10px 5px;
+    height: 1px;
+    border-top: 5px solid #666;
+}
+
+.collView-mainColumn .collView-compoundcollViewer,
+.collView-mainColumn .collView-treeViewer {
+    margin: 15px;
+}
+
+.collView-panelContainer > div {
+    margin: 15px 0;
+}
+
+.collView-panelContainer div {
+    border: 0!important;
+    box-shadow: none;
+}
+
+
+/* Current responsive style for fitting images on handheld devices*/
+img {
+    max-width: 100%
+}
+
+
+/**
+ * On desktop devices, show the side column, and hide the
+ * duplicated components (option and search) in the main column.
+ */
+@media (min-width: $breakpoint-sm) {
+
+    .collView-collViewContainer {
+        margin-bottom: 10px;
+        composes: box from "styles/shared.css";
+        padding: 10px;
+        flex-grow: 1;
+    }
+
+    .collView-sideColumn .collView-compoundcollViewerContainer hr {
+        display: none;
+    }
+
+    .collView-mainColumn .collView-compoundcollViewerContainer {
+        margin: 0 15px;
+        border: none;
+    }
+
+    .collView-sideColumn {
+        display: block;
+        padding-left: 5px;
+    }
+
+    .collView-sideColumn .collView-compoundcollViewerContainer {
+        background-color: #EFEFEF;
+    }
+
+    .collView-sideColumn .collView-collSearchContainer {
+        background-color: #EFEFEF;
+        margin-top: 10px;
+        padding: 5px;
+        border-top: 5px solid #CCC;
+    }
+
+    .collView-mainColumn .collView-compoundcollViewer,
+    .collView-mainColumn .collView-treeViewer,
+    .collView-mainColumn .collView-options,
+    .collView-mainColumn .collView-collViewPager,
+    .collView-mainColumn .collView-search,
+    .collView-mainColumn .collView-results,
+    .collView-mainColumn .collView-collSearchContainer {
+        display: none;
+    }
+
+    @media print {
+        .collView-sideColumn {
+            display: none;
+        }
+    }
+}
+
+@media print {
+    div {
+        float: none !important;
+        position: static !important;
+        display: inline;
+        box-sizing: content-box !important;
+    }
+
+    .collView-collTitle, .collView-mainColumn {
+        page-break-before: avoid;
+        break-before: avoid;
+        page-break-inside:avoid;
+        break-inside: avoid;
+    }
+
+    .collView-sideColumn {
+        display: none;
+    }
+
+    .collView-panelContainer {
+        &:before, &:after{
+            display: table;
+            content: " ";
+            clear: both;
+        }
+    }
+}
+.collOptions-collPrintOptions {
+    display: flex;
+    flex-direction: column;
+}
+
+.collOptions-collOptions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .btn-toolbar .btn{
+        padding: .25rem .5rem;
+    }
+}
+
+.collOptions-collShareRow {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media print {
+    .collOptions-collPrintOptions {
+        display: none;
+    }
+}
+.collPreview-container {
+    display: flex;
+
+    & > button{
+        width:30px;
+        font-size: 2em;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+
+        .text {
+            display: none;
+        }
+    }
+
+    .preview {
+        min-height: 65px;
+        flex:1;
+        display: flex;
+        justify-content: center;
+        align-colls: center;
+    }
+}
+
+.preview {
+    min-height: 65px;
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-colls: center;
+}
+@import 'styles/_variables';
+@value text-color from 'styles/colors.css';
+
+
+.collTitle-primaryTitle{
+    overflow: hidden;
+    position: relative;
+    text-align: justify;
+    padding-right: 1em;
+    &:before {
+        content: "...";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 1em;
+        height: 1em;
+        margin-top: .2em;
+        background: #fff;
+    }
+}
+
+.collTitle-clonedPrimaryTitle{
+  position: absolute;
+  top: 0;
+  width: 10%;
+  overflow: hidden;
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+.collTitle-secondaryTitle{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.collView-collViewContainer  {
+    padding-top: 10px;
+    width: 80%;
+    text-align:left;
+    margin: 0 auto 0;;
+}
