@@ -2,9 +2,13 @@
 /* CSS Document */
 @import 'styles/_variables';
 
+.CollView-collcontentContainer .row {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
 .CollView-collViewContainer {
     margin-bottom: 10px;
-    composes: box from "styles/shared.css";
     padding: 10px 10px 0 10px;
     flex-grow: 1;
 }
@@ -30,25 +34,6 @@
     margin-bottom: 1.2em;
 }
 
-.collView-collNoFile {
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.collView-collMetadata {
-    margin-top: 3px;
-    margin-bottom: 25px;
-}
-
-.alertContainer {
-    display: flex;
-    justify-content: center;
-
-    .alert {
-        width: 100%;
-    }
-}
-
 .collView-mainColumn .collView-collSearchContainer {
     background-color: #EFEFEF;
     margin: 10px -15px;
@@ -56,39 +41,14 @@
     border: 5px solid #CCC;
 }
 
-.collView-mainColumn .collView-compoundcollViewerContainer {
-    margin: 10px -15px;
-    border-top: 10px solid #CCC;
-    padding-top: 5px;
-}
-
-.collView-mainColumn .collView-compoundcollViewerContainer hr {
-    margin: -10px;
-    padding: 10px 10px 5px;
-    height: 1px;
-    border-top: 5px solid #666;
-}
-
-.collView-mainColumn .collView-compoundcollViewer,
-.collView-mainColumn .collView-treeViewer {
-    margin: 15px;
-}
-
-.collView-panelContainer > div {
+.collView-panelContainer>div {
     margin: 15px 0;
 }
 
 .collView-panelContainer div {
-    border: 0!important;
+    border: 0 !important;
     box-shadow: none;
 }
-
-
-// Current responsive style for fitting images on handheld devices
-img {
-    max-width: 100%
-}
-
 
 /**
  * On desktop devices, show the side column, and hide the
@@ -98,27 +58,13 @@ img {
 
     .collView-collViewContainer {
         margin-bottom: 10px;
-        composes: box from "styles/shared.css";
         padding: 10px;
         flex-grow: 1;
-    }
-
-    .collView-sideColumn .collView-compoundcollViewerContainer hr {
-        display: none;
-    }
-
-    .collView-mainColumn .collView-compoundcollViewerContainer {
-        margin: 0 15px;
-        border: none;
     }
 
     .collView-sideColumn {
         display: block;
         padding-left: 5px;
-    }
-
-    .collView-sideColumn .collView-compoundcollViewerContainer {
-        background-color: #EFEFEF;
     }
 
     .collView-sideColumn .collView-collSearchContainer {
@@ -127,60 +73,16 @@ img {
         padding: 5px;
         border-top: 5px solid #CCC;
     }
-
-    .collView-mainColumn .collView-compoundcollViewer,
-    .collView-mainColumn .collView-treeViewer,
-    .collView-mainColumn .collView-options,
-    .collView-mainColumn .collView-collViewPager,
-    .collView-mainColumn .collView-search,
-    .collView-mainColumn .collView-results,
-    .collView-mainColumn .collView-collSearchContainer {
-        display: none;
-    }
-
-    @media print {
-        .collView-sideColumn {
-            display: none;
-        }
-    }
-}
-
-@media print {
-    div {
-        float: none !important;
-        position: static !important;
-        display: inline;
-        box-sizing: content-box !important;
-    }
-
-    .collView-collTitle, .collView-mainColumn {
-        page-break-before: avoid;
-        break-before: avoid;
-        page-break-inside:avoid;
-        break-inside: avoid;
-    }
-
-    .collView-sideColumn {
-        display: none;
-    }
-
-    .collView-panelContainer {
-        &:before, &:after{
-            display: table;
-            content: " ";
-            clear: both;
-        }
-    }
 }
 
 @import 'styles/_variables';
-@value text-color from 'styles/colors.css';
 
 .collSearch-collSearchButton a {
     color: #ffffff;
 }
 
-.collSearch-collHeaderButtonPadding, .collSearch-collStackedHeaderButtonPadding {
+.collSearch-collHeaderButtonPadding,
+.collSearch-collStackedHeaderButtonPadding {
     margin-right: 5px;
     padding: 0.25rem 0.5rem 0.25rem 0.5rem !important;
 }
@@ -200,7 +102,7 @@ img {
     font-weight: normal;
 }
 
-.collSearch-collSearchInput > div {
+.collSearch-collSearchInput>div {
     font-size: .875rem;
     font-weight: bold;
 }
@@ -229,10 +131,10 @@ img {
 .collSearch-collSearchControl {
     display: flex;
     flex-wrap: nowrap;
-    align-colls: flex-end;
+    align-items: flex-end;
 }
 
-@media screen and (min-width: $breakpoint-sm)  {
+@media screen and (min-width: $breakpoint-sm) {
     .collSearch-collSearchInput {
         top: 60px;
     }
@@ -243,9 +145,105 @@ img {
     }
 }
 
-@media print {
-    .collSearch-collSearchPrint {
-        display: none;
+.collOptions-collOptions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .btn-toolbar .btn {
+        padding: .25rem .5rem;
     }
 }
 
+.collOptions-collShareRow {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.collPreview-container {
+    display: flex;
+
+    &>button {
+        width: 30px;
+        font-size: 2em;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+
+        .text {
+            display: none;
+        }
+    }
+
+    .preview {
+        min-height: 65px;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.preview {
+    min-height: 65px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@import 'styles/_variables';
+
+.collTitle-primaryTitle {
+    overflow: hidden;
+    position: relative;
+    text-align: justify;
+    padding-right: 1em;
+
+    &:before {
+        content: "...";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 1em;
+        height: 1em;
+        margin-top: .2em;
+        background: #fff;
+    }
+}
+
+.collTitle-secondaryTitle {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.collView-collViewContainer {
+    padding-top: 10px;
+    width: 80%;
+    text-align: left;
+    margin: 0 auto 0;
+    ;
+}
+
+.collImage-itemImage {
+    display: table-cell;
+    max-width: 730px;
+
+    >div {
+        display: table-cell;
+        position: relative;
+    }
+
+    img {
+        max-width: 730px;
+        width: 100%;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 0 3px rgba(0, 0, 0, 0.1);
+    }
+}
