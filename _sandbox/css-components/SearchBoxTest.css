@@ -1,135 +1,3 @@
-@charset "utf-8";
-/* CSS Document */
-body {
-  margin: 0 25px;
-}
-/*****************************/
-/* -- HEADER Modifications --*/
-/*****************************/
-.CoreLayout-headerContainer {
-  position: relative !important;
-}
-.Header-header {
-  height: 140px;
-  width: calc(100%);
-  border-top: 50px #f5f5f5 solid;
-}
-.Header-logoNameContainer {
-  height: 100px;
-  overflow: visible;
-}
-.Header-header .Header-logoImage {
-  padding: 0;
-  /* margin-left: 0 !important;
-  margin-top: 0 !important;*/
-  height: 90px; /******/
-}
-.Header-logoImageBanner {
-  max-height: 90px !important;
-}
-.Header-bannerPadding {
-  padding-top: 8px;
-  padding-left: 10px !important;
-}
-/***Header Name****/
-.Header-nameHolder {
-  position: absolute;
-  top: 80px;
-  left: 300px;
-  padding: 0px;
-}
-.Header-nameHolder .header-text {
-  font-size: 1.2rem;
-  font-style: italic;
-  font-weight: 400;
-  padding-right: 5px;
-}
-/******Misc**********/
-/*.Header-verticalCenter {
-	top: 90px;}*/
-.Header-headerContainer {
-  border-bottom: 1px solid #999;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
-}
-.Header-valerieBar {
-  display: none;
-}
-.Header-headerMenuLinks span {
-  display: none;
-}
-@media screen and (max-width: 767px) {
-  .Header-mobileTitleHide {
-    display: block;
-  }
-  .Header-nameHolder {
-    top: 60px;
-    left: 15px;
-  }
-  .Header-nameHolder .header-text {
-    font-size: .75rem;
-  }
-  .Header-logoImage, .Header-logoImageBanner {
-    height: 60px !important
-  }
-}
-/* Horizontal Menu */
-@media screen and (min-width: 768px) {
-  .Header-logoImage {
-    margin-top: 10px !important;
-    width: auto;
-  }
-  .Header-controls {
-    width: 100%;
-    position: static;
-    border-radius: 0;
-    min-height: 42px;
-    max-height: 42px;
-    border: none;
-    text-align: center;
-    box-shadow: 0 -1px 2px rgba(0, 0, 0, .1);
-  }
-  .Header-hamburgerHolder .btn-group button {
-    display: none;
-  }
-  .Header-hamburgerHolder, .dropdown.btn-group {
-    float: none;
-    display: block;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-  }
-  .Header-headerMenuLinks {
-    position: static;
-    display: flex;
-    flex-wrap: nowrap;
-    border: none;
-    box-shadow: none;
-    float: none;
-    justify-content: left;
-    background-color: #FFFFFF !important;
-    background: none;
-    width: auto;
-    border-top: 0;
-    border-bottom: 0;
-    overflow: visible;
-  }
-  .Header-headerMenuLinks a {
-    background-color: #FFFFFF !important;
-  }
-  .Header-headerMenuLinks h3 {
-    margin: 5px;
-    color: #dc4b38;
-  }
-}
-/* logo as bg image in display name
-.Header-logoNameContainer {
-  overflow: hidden;
-  background-color: #fff;
-}
-.Header-nameHolder h2 {
-  background: url(MFAH_long_orange_dc.png) no-repeat;
-  background-size: 300px;
-  background-position: 40px 21px;
-}*/
 /******Search Bar*********/
 .Header-header .SimpleSearch-searchBox {
   position: absolute;
@@ -146,6 +14,7 @@ body {
     width: calc(69% - 183px);
   }
 }
+
 .SimpleSearch-searchInput {
   margin-top: 0;
   width: calc(50% - 186px);
@@ -254,10 +123,94 @@ a.SimpleSearch-headerAdvancedSearchButtonLink:hover {
     content: '';
   }
 }
-/*@media screen and (max-width: 767px) {
+
+.SimpleSearch-searchInputControl {
+  font-size: 16px;
+  border-radius: 15px;
+  height: 40px;
+  width: 100%;
+  border-color: lightgray;
+  border-style: double;
+  padding: 15px;
+}
+
+.SimpleSearch-searchInputControl::-webkit-search-cancel-button {
+  position: relative;
+  margin-right: 32px !important;
+}
+
+.SimpleSearch-searchInputControl:focus {
+  outline-width: 0;
+  box-shadow: inset 0 0 1px 3px #545454;
+  border-style: none;
+  height: 40px;
+  padding-left: 17px;
+  width: 100%;
+}
+
+.SimpleSearch-searchInputLabel a:hover,
+.SimpleSearch-searchInputLabel a:focus {
+  text-decoration: none !important;
+}
+
+.SimpleSearch-headerAdvancedSearchButtonLink {
+  font-size: 15px;
+  line-height: 25px;
+  border-bottom: 1px solid rgba(0, 124, 185, .5);
+}
+
+#search-button {
+  border: 0;
+  display: inline-block;
+position: absolute;
+  top: 6px;
+}
+
+#advanced-search-button {
+  display: none !important;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 767px) {
   .SimpleSearch-searchBox {
-    position: absolute;
-    top: 60px !important;
-    padding: 0 0 0 15px;
+      position: absolute;
+      top: 10px;
+      padding: 0 0 0 15px;
   }
-}*/
+
+  #search-button {
+      right: 15px;
+  }
+
+  .Header-hamburgerHolder {
+      top: -40px;
+  }
+
+  .SimpleSearch-searchInputLabel {
+      display: unset;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .SimpleSearch-searchBox {
+      position: absolute;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .SimpleSearch-searchBox {
+      right: 10px;
+      top: 25px;
+  }
+
+  #search-button {
+      right: 15px;
+  }
+}
+
+@media screen and (max-width: 1049px) and (min-width: 768px) {
+  #search-button {
+      right: 66px;
+  }
+}

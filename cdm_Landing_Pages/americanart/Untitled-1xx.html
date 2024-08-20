@@ -47,7 +47,7 @@ title: Collection Test
                 <div class="col collView-MainColumn">
                     <div class="CollectionSection-Title">
                         <h1><a
-                                href="https://cdm17480.contentdm.oclc.org/digital/search/collection/american/searchterm/Manuscripts and Albums/field/relatig/mode/exact/conn/and/order/date/ad/asc">Explore
+                                href="https://cdm17480.contentdm.oclc.org/digital/collection/american/search/searchterm/Manuscripts and Albums">Explore
                                 the Collection &gt;&gt;&gt;</a></h1>
                     </div>
                     <div class="collView-collSearchContainer">
@@ -57,7 +57,7 @@ title: Collection Test
                                     var page = document.getElementById('SearchTerm').value
                                     NodeTitle = "Manuscripts and Albums";
                                     NodeTitle = NodeTitle.replace(/&#039;/g, "'");
-                                    window.location = "https://cdm17480.contentdm.oclc.org/cdm/search/collection/americanart/searchterm/" + NodeTitle + "!" + SearchTerm.value + "/field/relatig!all/mode/exact!all/conn/and!and/order/nosort/ad/asc";
+                                    window.location = "https://cdm17480.contentdm.oclc.org/digital/collection/americanart/search/searchterm/" + NodeTitle + "!" + SearchTerm.value;
                                 }
                                 function searchKeyPress(e) {
                                     e = e || window.event;
@@ -68,10 +68,10 @@ title: Collection Test
                                     return true;
                                 }
                             </script>
-                            <div class="collSearch-collSearchInput" data-dashlane-rid="a3c34d7688a0ff7f">
+                            <div class="collSearch-collSearchInput">
                                 <input id="SearchTerm" class="collSearch-collSearchInputControl"
                                     onkeypress="return searchKeyPress(event);" placeholder="Search the Collection"
-                                    type="text" data-dashlane-rid="0baea3907d215df5">
+                                    type="text">
                             </div>
                             <div class="collSearch-collSearchButton">
                                 <button id="btnSearch"

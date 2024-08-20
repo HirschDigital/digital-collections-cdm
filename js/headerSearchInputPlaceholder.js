@@ -7,7 +7,7 @@
      */
 
      function addPlaceholderGeneral() {
-        const thisSearchText = 'Search L&A';
+        const thisSearchText = 'Search Digital Collections';
         const headerSearchInput = document.querySelector('#search-input');
         headerSearchInput.placeholder = thisSearchText;
         headerSearchInput.title = thisSearchText;
