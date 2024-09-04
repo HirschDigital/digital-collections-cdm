@@ -31,6 +31,7 @@ const scriptFilesToLoad = [
 	'pdf-objects-multipage-1_1.js',
 	'GA4.js',
 	'headerSearchInputPlaceholder.js',
+  'collapse.js',
 ];
 
 (function() {
