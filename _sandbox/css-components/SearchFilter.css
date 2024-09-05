@@ -1,0 +1,162 @@
+.SearchFilter-mapBox {
+    text-align: center;
+
+    :global .panel {
+        margin-bottom: 0;
+        border-radius: 5px;
+    }
+
+    button {
+        margin-top: .65em;
+    }
+}
+
+.SearchFilter-collapsible {
+    margin-bottom: 10px;
+}
+
+
+$expanded-panel-color: white;
+$border-radius: 5px;
+
+.Panel-fontAwesomeIcon {
+    margin-right: 2px;
+}
+
+.Panel-fontAwesomeIconExpanded {
+    color: $expanded-panel-color;
+    margin-right: 2px;
+}
+
+.Panel-panelTitle {
+    display: inline-block;
+}
+
+.panel-title {
+    button:hover {
+        background-color: transparent !important;
+    }
+
+    button {
+        border: none;
+        background-color: transparent;
+        margin: 0 0 0 -7px;
+    }
+}
+
+.Panel-panelTitleExpanded {
+    color: $expanded-panel-color;
+}
+
+.Panel-header {
+    margin-left: -2px;
+}
+
+.Panel-panelBorder {
+
+    .panel {
+        margin-bottom: 0;
+    }
+}
+
+.Panel-expandedPanel {
+
+    border-radius: $border-radius;
+
+    .panel-title {
+        a {
+            text-decoration: none;
+            :hover {
+                cursor: pointer;
+            }
+        }
+
+        h2 {
+            font-style: normal;
+            text-decoration: none;
+            margin: 0;
+
+            > .fa {
+                margin-left: -2px;
+            }
+        }
+    }
+
+    .panel-default {
+        background-color: inherit !important;
+    }
+
+    .panel-default>.panel-heading {
+        background-color: inherit !important;
+    }
+
+    .collapse {
+        display: block;
+        background-color: white;
+    }
+
+    .collapse .in {
+        display: block;
+        background-color: white;
+    }
+
+    .panel-body {
+        a {
+            :hover {
+                cursor: pointer !important;
+            }
+        }
+
+        background-color: white;
+
+        padding: 12px !important;
+        padding-top: 5px !important;
+    }
+}
+
+.Panel-panel {
+
+    .panel-title {
+        a {
+            text-decoration: none;
+            :hover {
+                cursor: pointer;
+            }
+        }
+
+        h2 {
+            font-style: normal;
+            text-decoration: none;
+            margin: 0;
+
+            > .fa {
+                margin-left: -2px;
+            }
+        }
+    }
+
+    .panel-default>.panel-heading {
+        background-color: transparent;
+    }
+
+    .panel-body {
+        a {
+            :hover {
+                cursor: pointer !important;
+            }
+        }
+
+        padding: 12px !important;
+        padding-top: 5px !important;
+    }
+}
+
+.hidden-panel-field {
+    display: none;
+}
+
+@media print {
+    .Panel-panel {
+        display: none;
+    }
+}
