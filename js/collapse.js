@@ -24,3 +24,13 @@ document.addEventListener('cdm-collection-landing-page:update', accordionCollaps
 document.addEventListener('cdm-custom-page:ready', accordionCollapse);
 document.addEventListener('cdm-custom-page:update', accordionCollapse);
 })();
+
+
+
+$(document).ready(function(){
+  $(".btn-primary").click(function(){
+    $(".collapse").collapse('toggle');
+  });
+  document.addEventListener('cdm-collection-page:ready', accordionCollapse);
+})();
+

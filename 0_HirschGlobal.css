@@ -449,7 +449,7 @@ p {
   overflow: hidden;
 }
 
-.accordion:after {
+.accordion::after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
   font-size: 13px;
   color: #777;
@@ -457,6 +457,6 @@ p {
   margin-left: 5px;
 }
 
-.active:after {
+.panel-heading > .active::after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
