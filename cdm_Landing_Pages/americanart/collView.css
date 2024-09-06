@@ -269,15 +269,20 @@
     padding: 20px;
 }
 .search{
-    background-image: url()
+    background-image: url(https://cdm17480.contentdm.oclc.org/customizations/collection/americanart/pages/images/friendship.jpg);
 }
-.CollView-SearchContainer{
+.CollView-searchContainer{
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: flex-end;
-    width: 100%;
+    width: 90%;
     max-height: 50%;
+}
+
+.search-caption {
+    font-size: .9rem;
+    align-self: baseline;
 }
 
 #search-content{
@@ -302,6 +307,35 @@
     min-height: 30%;
     padding: 20px;
 }
+#search-content h3 {
+    font-size:2.3rem;
+    font-weight: 700;
+    color: white;
+
+}
+#search-content p {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    line-height: 1.6em;
+}
+#search-content a {
+    display:inline;
+    float:right;
+}
+
+#search_collection {
+    position:absolute;
+    display:inline-block;
+    font-size: 1.9em;
+    background-color:  rgb(220, 75, 56);
+    border:none;
+    padding: .01% 1.15%;
+    right:20px;
+}
+#srchFrm .cdm-btn {
+    flex:2 2 40em;
+}
 .searchy-search{
     flex: 1 1 90%;
     padding: 5px;
@@ -318,3 +352,5 @@
     font-family: 'Open Sans', sans-serif;
     left: 20px;
 }
+
+

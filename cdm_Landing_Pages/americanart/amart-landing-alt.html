@@ -1,31 +1,13 @@
 ---
 header: true
 footer: true
-title: Collection Test
+title: Collection V 1
 ---
 
 <div class="CollectionLayout-container">
-  <div class="CollView-collViewContainer shared-box">
-    <div class="CollView-collcontentContainer shared-contentContainer">
-      <div class="row bar">
-        <div class="col CollView-mainColumn">
-          <div>
-            <div class="search">
-              <div class="CollView-SearchContainer">
-                <form id="srchFrm">
-                  <input class="searchy-search" id="srchTerm" name="srchTerm" type="text" placeholder="Search this collection..." aria-label="Search this collection">
-                  <input class="button" id="search_collection" type="button" value="">
-                </form>
-              </div>
-              <div id="search-content">
-                <h3>American Art in the Libraries and Archives</h3>
+  <div class="CollectionLanding-maincontainer shared-box">
 
-              </div>
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="CollView-collcontentContainer shared-contentContainer">
       <div class="row foo">
         <div class="collView-collTitle">
           <h1 class="collTitle-primaryTitle" tabindex="0" style="max-height: 48px;">
@@ -38,7 +20,8 @@ title: Collection Test
               <div>
                 <div class="collImage-itemImage">
                   <div><img src="/customizations/collection/americanart/pages/images/friendship.jpg"
-                      alt="photobooks_394_1"></div>
+                      alt="photobooks_394_1">
+                  </div>
                 </div>
               </div>
             </div>
@@ -58,28 +41,7 @@ title: Collection Test
           </div>
           <div class="collView-collSearchContainer">
             <div class="collSearch-collSearchControl">
-              <script type="text/javascript">
-$(document).ready(function () {
-
-
-function newsearch() {
-  //  window.location.href = "https://cdm17480.contentdm.oclc.org/cdm/search/searchterm/"+$('#srchTerm').val();
-  window.open('https://cdm17480.contentdm.oclc.org/digital/collection/americanart/search/searchterm/' + $('#srchTerm').val(), '_blank');
-}
-$("#search_collection").click(function () {
-  newsearch();
-});
-
-
-$('#srchTerm').keypress(function (event) {
-  if (event.keyCode == 13) {
-    $('#search_collection').click();
-  }
-});
-
-
-});
-              </script>
+              <script type="text/javascript"></script>
               <div class="collSearch-collSearchInput">
                 <input id="SearchTerm" class="collSearch-collSearchInputControl"
                   onkeypress="return searchKeyPress(event);" placeholder="Search the Collection" type="text">
@@ -290,5 +252,5 @@ $('#srchTerm').keypress(function (event) {
       </div>
     </div>
   </div>
-  <div class="collView-collTitle"></div>
 </div>
+<div class="collView-collTitle"></div>
