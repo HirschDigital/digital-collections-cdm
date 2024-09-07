@@ -51,7 +51,7 @@
  * On desktop devices, show the side column, and hide the
  * duplicated components (option and search) in the main column.
  */
-@media (min-width: $breakpoint-sm) {
+@media (min-width: breakpoint-sm) {
 
     .collView-collViewContainer {
         margin-bottom: 10px;
@@ -141,7 +141,7 @@
     align-items: flex-end;
 }
 
-@media screen and (min-width: $breakpoint-sm) {
+@media screen and (min-width: breakpoint-sm) {
     .collSearch-collSearchInput {
         top: 60px;
     }
@@ -255,7 +255,7 @@
     }
 }
 
-.search{
+.search {
     display: flex;
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
@@ -268,10 +268,12 @@
     height: 400px;
     padding: 20px;
 }
-.search{
+
+.search {
     background-image: url(https://cdm17480.contentdm.oclc.org/customizations/collection/americanart/pages/images/friendship.jpg);
 }
-.CollView-searchContainer{
+
+.CollView-searchContainer {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -285,7 +287,7 @@
     align-self: baseline;
 }
 
-#search-content{
+#search-content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -307,36 +309,41 @@
     min-height: 30%;
     padding: 20px;
 }
+
 #search-content h3 {
-    font-size:2.3rem;
+    font-size: 2.3rem;
     font-weight: 700;
     color: white;
 
 }
+
 #search-content p {
     margin: 0;
     padding: 0;
     display: inline-block;
     line-height: 1.6em;
 }
+
 #search-content a {
-    display:inline;
-    float:right;
+    display: inline;
+    float: right;
 }
 
 #search_collection {
-    position:absolute;
-    display:inline-block;
+    position: absolute;
+    display: inline-block;
     font-size: 1.9em;
-    background-color:  rgb(220, 75, 56);
-    border:none;
+    background-color: rgb(220, 75, 56);
+    border: none;
     padding: .01% 1.15%;
-    right:20px;
+    right: 20px;
 }
+
 #srchFrm .cdm-btn {
-    flex:2 2 40em;
+    flex: 2 2 40em;
 }
-.searchy-search{
+
+.searchy-search {
     flex: 1 1 90%;
     padding: 5px;
     margin: auto;
@@ -353,4 +360,131 @@
     left: 20px;
 }
 
-
+/********panel collapse test********/
+ 
+  .container {
+    max-width: 970px;
+  }
+  
+  div[class*="col-"] {
+    padding: 0 30px;
+  }
+  
+ .wrap {
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
+  
+  .panel-title a:focus, a:hover, a:active {
+    outline: 0;
+    text-decoration: none;
+  }
+  
+  .panel {
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #fff;
+    background: none;
+    box-shadow: none;
+  }
+  
+  .panel:last-child {
+    border-bottom: none;
+  }
+  
+  .panel-group > .panel:first-child .panel-heading {
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .panel-group .panel {
+    border-radius: 0;
+  }
+  
+  .panel-group .panel + .panel {
+    margin-top: 0;
+  }
+  
+  .panel-heading {
+    background-color: #009688;
+    border-radius: 0;
+    border: none;
+    color: #fff;
+    padding: 0;
+  }
+  
+  .panel-title a {
+    display: block;
+    color: #fff;
+    padding: 15px;
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .panel-body {
+    background: #fff;
+  }
+  
+  .panel:last-child .panel-body {
+    border-radius: 0 0 4px 4px;
+  }
+  
+  .panel:last-child .panel-heading {
+    border-radius: 0 0 4px 4px;
+    transition: border-radius 0.3s linear 0.2s;
+  }
+  
+  .panel:last-child .panel-heading.active {
+    border-radius: 0;
+    transition: border-radius linear 0s;
+  }
+  /* #bs-collapse icon scale option */
+  
+  .panel-heading a:before {
+    content: "\e146";
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    font-size: 24px;
+    transition: all 0.5s;
+    transform: scale(1);
+  }
+  
+  .panel-heading.active a:before {
+    content: " ";
+    transition: all 0.5s;
+    transform: scale(0);
+  }
+  
+  #bs-collapse .panel-heading a:after {
+    content: " ";
+    font-size: 24px;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    transform: scale(0);
+    transition: all 0.5s;
+  }
+  
+  #bs-collapse .panel-heading.active a:after {
+    content: "\e909";
+    transform: scale(1);
+    transition: all 0.5s;
+  }
+  /* #accordion rotate icon option */
+  
+  #accordion .panel-heading a:before {
+    content: '\e316';
+    font-size: 24px;
+    position: absolute;
+    font-family: 'Material Icons';
+    right: 5px;
+    top: 10px;
+    transform: rotate(180deg);
+    transition: all 0.5s;
+  }
+  
+  #accordion .panel-heading.active a:before {
+    transform: rotate(0deg);
+    transition: all 0.5s;
+  }

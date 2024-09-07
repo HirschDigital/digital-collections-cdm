@@ -33,6 +33,7 @@ const scriptFilesToLoad = [
 	'headerSearchInputPlaceholder.js',
   'collapse.js',
   'search-collection-header.js',
+  'panel-collapse.js',
 ];
 
 (function() {
