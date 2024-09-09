@@ -9,111 +9,109 @@ title: Collection V 4
             <h1>Landing Page Template</h1>
             <div class="grayDividerLine">
             </div>
-            <div class="ItemView-panelContainer">
-                <div class="Panel-panelBorder" data-testid="open-true">
+            <div class="ItemView-panelContainer" id="bs-collapse">
+                <div class="Panel-panelBorder">
                     <div>
-                        <div class="Panel-expandedPanel" style="background-color: rgb(220, 75, 56);">
-                            <div label="close Transcript details" class="panel panel-default">
+                        <div class="Panel-panel">
+                            <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <div class="panel-title"><button aria-label="close Transcript details"
-                                            aria-expanded="true" data-dashlane-label="true"
-                                            data-dashlane-rid="f1dc1c10fe2168f3" data-dashlane-classification="other">
-                                            <h2 title="Close Transcript"><span aria-hidden="true"
-                                                    class="fa fa-fas fa-play-circle fa-fw fa-rotate-90 Panel-fontAwesomeIconExpanded"></span><span
-                                                    class="Panel-panelTitleExpanded">Transcript</span></h2>
-                                        </button></div>
-                                </div>
-                                <div class="panel-collapse collapse in" id="compoundItemTranscript">
-                                    <div class="panel-body">
-                                        <div class="ItemText-container">
-                                            <p>
-                                                <span data-id="itemText">Lorem ipsum odor amet, consectetuer adipiscing
-                                                    elit. Lacus faucibus nulla inceptos massa adipiscing sit dictum
-                                                    curabitur. Iaculis torquent iaculis enim eros enim faucibus est mus
-                                                    mus? Quisque quam elit pharetra conubia ligula ipsum lacinia varius
-                                                    ligula. Nunc senectus malesuada habitasse felis mi posuere justo.
-                                                    Diam magna maecenas congue class fermentum felis leo posuere.
-                                                    Sagittis id suspendisse; porttitor feugiat cubilia netus vulputate
-                                                    accumsan? Et cursus ornare ultrices conubia dui pretium. Duis magnis
-                                                    mollis fames sollicitudin aliquet class class?</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <h2 class="hidden-panel-field">panel-header</h2>
-                </div>
-                <div class="Panel-panelBorder" data-testid="open-true">
-                    <div>
-                        <div class="Panel-expandedPanel" style="background-color: rgb(220, 75, 56);">
-                            <div label="close Object Description details" class="panel panel-default">
-                                <div class="panel-heading">
-                                    <div class="panel-title"><button aria-expanded="true"
-                                            aria-label="close Object Description details" data-dashlane-label="true"
-                                            data-dashlane-rid="b61ad552b10034ca" data-dashlane-classification="other">
-                                            <h2 title="Close Object Description"><span aria-hidden="true"
-                                                    class="fa fa-fas fa-play-circle fa-fw fa-rotate-90 Panel-fontAwesomeIconExpanded"></span>
-                                                <span class="Panel-panelTitleExpanded">Object Description</span>
+                                    <div class="panel-title">
+                                        <button id="toggleIconButton" data-target="#transcript" aria-expanded="false">
+                                            <h2>
+                                                <span id="icon" aria-hidden="true"
+                                                    class="fa fa-far fa-play-circle fa-fw Panel-fontAwesomeIcon">
+                                                </span>
+                                                <span class="Panel-panelTitle">Transcript</span>
                                             </h2>
-                                        </button></div>
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="panel-collapse collapse in" id="compoundObjectDescription">
+                                <div class="panel-collapse collapse" id="transcript">
                                     <div class="panel-body">
                                         <div class="ItemText-container">
-                                            <p>
-                                                <span data-id="itemText">Erat egestas semper ornare cursus tristique
-                                                    maximus sociosqu tristique. Neque pellentesque accumsan erat ante
-                                                    tempus magna vehicula. Senectus auctor congue placerat potenti,
-                                                    dignissim adipiscing. Placerat commodo eget felis sociosqu potenti
-                                                    suscipit. Dapibus taciti at dui nibh consequat laoreet. Lobortis
-                                                    montes turpis suscipit, sed netus curabitur volutpat mattis. Odio
-                                                    mus mattis tempus egestas ante etiam curabitur sem vestibulum.
-                                                    Rhoncus inceptos aliquet, nulla dapibus enim quam viverra.</span>
-                                            </p>
+                                            <span data-id="itemText">Lorem ipsum odor amet, consectetuer adipiscing
+                                                elit. Lacus faucibus nulla inceptos massa adipiscing sit dictum
+                                                curabitur. Iaculis torquent iaculis enim eros enim faucibus est mus
+                                                mus? Quisque quam elit pharetra conubia ligula ipsum lacinia varius
+                                                ligula. Nunc senectus malesuada habitasse felis mi posuere justo.
+                                                Diam magna maecenas congue class fermentum felis leo posuere.
+                                                Sagittis id suspendisse; porttitor feugiat cubilia netus vulputate
+                                                accumsan? Et cursus ornare ultrices conubia dui pretium. Duis magnis
+                                                mollis fames sollicitudin aliquet class class?</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <h2 class="hidden-panel-field">panel-header</h2>
                 </div>
-                <div class="Panel-panelBorder" data-testid="open-true">
+                <div class="Panel-panelBorder">
                     <div>
-                        <div class="Panel-expandedPanel" style="background-color: rgb(220, 75, 56);">
-                            <div label="close Item Description details" class="panel panel-default">
+                        <div class="Panel-panel">
+                            <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <div class="panel-title"><button aria-expanded="true"
-                                            aria-label="close Item Description details" data-dashlane-label="true"
-                                            data-dashlane-rid="e7e1ed27f2ac058e" data-dashlane-classification="other">
-                                            <h2 title="Close Item Description"><span aria-hidden="true"
-                                                    class="fa fa-fas fa-play-circle fa-fw fa-rotate-90 Panel-fontAwesomeIconExpanded"></span><span
-                                                    class="Panel-panelTitleExpanded">Item Description</span></h2>
-                                        </button></div>
+                                    <div class="panel-title">
+                                        <button aria-expanded="false" data-target="#object" id="toggleIconButton">
+                                            <h2>
+                                                <span id="icon" aria-hidden="true"
+                                                    class="fa fa-far fa-play-circle fa-fw Panel-fontAwesomeIcon">
+                                                </span>
+                                                <span class="Panel-panelTitle">Object Description</span>
+                                            </h2>
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="panel-collapse collapse in" id="compoundItemDescription">
+                                <div class="panel-collapse collapse" id="object">
                                     <div class="panel-body">
                                         <div class="ItemText-container">
-                                            <p>
-                                                <span data-id="itemText">Posuere id semper scelerisque aliquet
-                                                    condimentum, non in lacus. Primis eleifend pharetra diam porta nisi.
-                                                    Hendrerit non ornare conubia tristique ac cubilia dapibus aptent.
-                                                    Suscipit hac ullamcorper dignissim, congue sollicitudin aliquet ut.
-                                                    Viverra quisque etiam aptent eleifend dictumst feugiat nisi
-                                                    placerat. Ipsum interdum rhoncus tellus arcu luctus dapibus aenean.
-                                                    Luctus amet porta suspendisse eleifend inceptos taciti vulputate. Ad
-                                                    nisi condimentum aenean convallis a. Ornare ac efficitur tempus,
-                                                    rutrum mus turpis.</span>
-                                            </p>
+                                            <span data-id="itemText">Erat egestas semper ornare cursus tristique
+                                                maximus sociosqu tristique. Neque pellentesque accumsan erat ante
+                                                tempus magna vehicula. Senectus auctor congue placerat potenti,
+                                                dignissim adipiscing. Placerat commodo eget felis sociosqu potenti
+                                                suscipit. Dapibus taciti at dui nibh consequat laoreet. Lobortis
+                                                montes turpis suscipit, sed netus curabitur volutpat mattis. Odio
+                                                mus mattis tempus egestas ante etiam curabitur sem vestibulum.
+                                                Rhoncus inceptos aliquet, nulla dapibus enim quam viverra.</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <h2 class="hidden-panel-field">panel-header</h2>
+                </div>
+                <div class="Panel-panelBorder">
+                    <div>
+                        <div class="Panel-panel">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="panel-title">
+                                        <button aria-expanded="false" data-target="#item" id="toggleIconButton">
+                                            <h2>
+                                                <span id="icon" aria-hidden="true"
+                                                    class="fa fa-far fa-play-circle fa-fw Panel-fontAwesomeIcon">
+                                                </span><span class="Panel-panelTitle">Item Description</span>
+                                            </h2>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="panel-collapse collapse" id="item">
+                                    <div class="panel-body">
+                                        <div class="ItemText-container">
+                                            <span data-id="itemText">Posuere id semper scelerisque aliquet
+                                                condimentum, non in lacus. Primis eleifend pharetra diam porta nisi.
+                                                Hendrerit non ornare conubia tristique ac cubilia dapibus aptent.
+                                                Suscipit hac ullamcorper dignissim, congue sollicitudin aliquet ut.
+                                                Viverra quisque etiam aptent eleifend dictumst feugiat nisi
+                                                placerat. Ipsum interdum rhoncus tellus arcu luctus dapibus aenean.
+                                                Luctus amet porta suspendisse eleifend inceptos taciti vulputate. Ad
+                                                nisi condimentum aenean convallis a. Ornare ac efficitur tempus,
+                                                rutrum mus turpis.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

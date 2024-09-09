@@ -393,8 +393,31 @@
     margin-left: 5px;
   }
   
-  .panel-heading > .active::after {
+  .Panel-panelBorder > .panel-heading > .active::after {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
   }
 
-.
+
+  .collapse {
+    display: none;
+  }
+  .collapse.show {
+    display: block;
+  }
+  .Panel-fontAwesomeIcon {
+    transition: transform 0.3s ease;
+  }
+  .collapsed .Panel-fontAwesomeIcon {
+    transform: rotate(0deg);
+  }
+  .expanded .Panel-fontAwesomeIcon {
+    transform: rotate(90deg);
+  }
+
+  .Panel-heading .expanded {
+    background-color: rgb(220, 75, 56);
+  }
+
+  .expanded .Panel-panelTitle {
+    color: #ffffff;
+  }

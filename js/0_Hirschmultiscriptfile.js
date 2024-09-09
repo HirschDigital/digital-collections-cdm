@@ -32,7 +32,7 @@ const scriptFilesToLoad = [
 	'GA4.js',
 	'headerSearchInputPlaceholder.js',
   'collapse.js',
-  'search-collection-header.js',
+  'panel-expand.js',
 ];
 
 (function() {
