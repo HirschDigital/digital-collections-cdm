@@ -27,10 +27,15 @@ document.addEventListener('cdm-custom-page:update', accordionCollapse);
 
 
 
-$(document).ready(function(){
-  $(".btn-primary").click(function(){
-    $(".collapse").collapse('toggle');
-  });
-  document.addEventListener('cdm-collection-page:ready', accordionCollapse);
-})();
 
+function(t) {
+  "A" === t.currentTarget.tagName && t.preventDefault();
+  var n = st(this),
+    e = Fn.getSelectorFromElement(this),
+    i = [].slice.call(document.querySelectorAll(e));
+  st(i).each(function() {
+    var t = st(this),
+      e = t.data(lt) ? "toggle" : n.data();
+    Tt._jQueryInterface.call(t, e)
+  })
+}
