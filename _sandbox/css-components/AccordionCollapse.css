@@ -52,3 +52,23 @@
 .card-header .collapsed .fa {
   transform: rotate(90deg);
 }
+
+.collapse {
+  display: block;
+  background-color: white;
+  transition: .3s transform ease;
+}
+
+.collapse .in {
+  display: block;
+  background-color: white;
+  transition: .3s transform ease;
+}
+
+.collapse {
+  display: none;
+}
+
+.collapse::after {
+  display: block;
+}
