@@ -1,6 +1,4 @@
-export { pdf_object_multipage };
-
-function pdf_object_multipage () {
+(function() {
   'use strict';
 
   function getFullPDFLink(collection, item) {
@@ -140,7 +138,7 @@ function pdf_object_multipage () {
     }
   });
 
-};
+})();
 
 /* version history
 

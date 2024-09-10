@@ -1,12 +1,4 @@
-export { insert_iiif_links };
-/**
- * Inserts IIIF manifest and image links on item pages.
- *
- * @version 1.0
- * @url https://help.oclc.org/Metadata_Services/CONTENTdm/Advanced_website_customization/Customization_cookbook/insert_iiif_manifest_link_as_metadata
- */
-
-function insert_iiif_links () {
+(function () {
     'use strict';
 
     const currentUrl = window.location.origin ?
@@ -251,7 +243,7 @@ function insert_iiif_links () {
         }
     });
 
-};
+})();
 
 /* version history
 

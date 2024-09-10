@@ -1,8 +1,5 @@
-export { panelExpand };
-    
 
-    function panelExpand () {
-        'use strict';
+  document.addEventListener('cdm-custom-page:ready', function() {
     // Get all buttons with the toggle functionality
     const buttons = document.querySelectorAll('[data-target]');
 
@@ -45,5 +42,5 @@ export { panelExpand };
             panelPanel.classList.remove('collapsed-panel');
         }
     });
-};
+});
   

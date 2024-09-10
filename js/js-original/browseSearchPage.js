@@ -1,6 +1,4 @@
-export { browseSearchPage };
-
-function browseSearchPage() {
+(function () {
     'use strict';
 
      /**
@@ -136,4 +134,4 @@ function browseSearchPage() {
     document.addEventListener('cdm-collection-search-page:update', searchFilterListener);
     document.addEventListener('cdm-search-page:update', searchFilterListener);
 
-};
+})();

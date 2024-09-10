@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.CompoundItemView-thumbnail {
+    filter:blur(5px) !important;
+}
+
+.field-restri 
+
+
+.MobileModal-container {
+    z-index: 100001;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #CCCCCC;
+
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+.MobileModal-buttonContainer {
+    padding-bottom: 5px;
+}
+
+.MobileModal-content {
+    clear: right;
+}
+
+
+.ItemModalViewer-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    // center child
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
