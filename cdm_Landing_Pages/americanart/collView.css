@@ -397,6 +397,7 @@
     content: "\2796"; /* Unicode character for "minus" sign (-) */
   }
 
+/****Collapse V 4******/
 
   .collapse {
     display: none;
@@ -414,10 +415,10 @@
     transform: rotate(90deg);
   }
 
-  .Panel-heading .expanded {
+  .panel .expanded {
     background-color: rgb(220, 75, 56);
   }
 
-  .expanded .Panel-panelTitle {
+  .expanded >.Panel-panelTitle {
     color: #ffffff;
   }

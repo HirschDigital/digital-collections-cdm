@@ -343,7 +343,7 @@ p {
   .Card-cardImageHolder {
     width: 100%;
     margin: unset;
-    height: 200px;
+    height: 270px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
   }
@@ -363,7 +363,6 @@ p {
   .titleDiv {
     font-size: 24px !important;
     padding: 0 0 15px;
-    white-space: nowrap;
     margin-bottom: 5px !important;
     line-height: 32px !important;
     max-height: 76px !important;

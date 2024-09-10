@@ -1,5 +1,5 @@
 document.addEventListener('cdm-custom-page:ready', function() {
-    const buttons = document.querySelectorAll('.panel-title button');
+    const buttons = document.querySelectorAll('.panel-default button');
     
     buttons.forEach(button => {
       button.addEventListener('click', function() {
@@ -24,23 +24,6 @@ document.addEventListener('cdm-custom-page:ready', function() {
     });
   });
 
-  document.addEventListener('cdm-custom-page:ready', function() {
-    const icon = document.getElementById('icon');
-    
-    // Function to toggle the icon class
-    function toggleIconClass() {
-      if (icon.classList.contains('fa-far')) {
-        icon.classList.remove('fa-far');
-        icon.classList.add('fa-fas');
-      } else {
-        icon.classList.remove('fa-fas');
-        icon.classList.add('fa-far');
-      }
-    }
-
-    // Example usage: Toggle the icon class on button click
-    document.getElementById('toggleIconButton').addEventListener('click', toggleIconClass);
-  });
 
 
 
