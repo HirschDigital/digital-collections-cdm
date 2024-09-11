@@ -1,11 +1,9 @@
-export { offensive_content_popup };
-
-
 /**
  * Adds offensive content popup to all pages. Stores acknowledgement for 7 days which is refreshed on
  * page visit.
  */
-function offensive_content_popup() {
+(function offensive_content_popup () {
+  'use strict';
   // Check that our browser supports custom elements,
   // ... cf. https://caniuse.com/?search=customElements
   if (!("customElements" in window)) {
@@ -196,5 +194,17 @@ function offensive_content_popup() {
   // Update hide time to 7 days, default 0
   noticeDialog.setAttribute("hide-for-days", 7);
   document.body.append(noticeDialog);
-}
+
+  document.addEventListener('cdm-home-page:ready', offensive_content_popup);
+  document.addEventListener('cdm-about-page:ready', offensive_content_popup);
+  document.addEventListener('cdm-search-page:ready', offensive_content_popup);
+  document.addEventListener('cdm-collection-search-page:ready', offensive_content_popup);
+  document.addEventListener('cdm-collection-page:ready', offensive_content_popup);
+  document.addEventListener('cdm-advanced-search-page:ready', offensive_content_popup);
+  document.addEventListener('cdm-collection-landing-page:ready', offensive_content_popup);
+  document.addEventListener('cdm-item-page:ready', offensive_content_popup);
+  document.addEventListener('cdm-saved-items-page:ready', offensive_content_popup);
+  document.addEventListener('cdm-custom-page:ready', offensive_content_popup);
+
+})();
 

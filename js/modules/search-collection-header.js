@@ -1,4 +1,6 @@
-(document).ready(function () {
+export { special_search };
+
+function special_search () {
 'use strict';
 
   function newsearch() {
@@ -22,4 +24,4 @@ document.addEventListener('cdm-collection-landing-page:update', newsearch);
 document.addEventListener('cdm-custom-page:ready', newsearch);
 document.addEventListener('cdm-custom-page:update', newsearch);
   
-  })();
+  };

@@ -1,4 +1,4 @@
-(document).ready(function () {
+(function special_search () {
 'use strict';
 
   function newsearch() {
@@ -15,11 +15,11 @@
       ('#search_collection').click();
     }
   });
-document.addEventListener('cdm-collection-page:ready', newsearch);
-document.addEventListener('cdm-collection-landing-page:ready', newsearch);
-document.addEventListener('cdm-collection-page:update', newsearch);
-document.addEventListener('cdm-collection-landing-page:update', newsearch);
-document.addEventListener('cdm-custom-page:ready', newsearch);
-document.addEventListener('cdm-custom-page:update', newsearch);
+document.addEventListener('cdm-collection-page:ready', special_search);
+document.addEventListener('cdm-collection-landing-page:ready', special_search);
+document.addEventListener('cdm-collection-page:update', special_search);
+document.addEventListener('cdm-collection-landing-page:update', special_search);
+document.addEventListener('cdm-custom-page:ready', special_search);
+document.addEventListener('cdm-custom-page:update', special_search);
   
   })();

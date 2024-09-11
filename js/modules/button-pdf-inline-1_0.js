@@ -1,4 +1,5 @@
-(function() {
+export { pdf_button };
+function pdf_button () {
     'use strict';
 
     function buildPDFDownloadLink(collection, item) {
@@ -90,7 +91,7 @@
       })
   });
 
-})();
+};
 
 /* version history
 

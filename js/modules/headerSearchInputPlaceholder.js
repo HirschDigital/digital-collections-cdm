@@ -1,4 +1,5 @@
-(function() {
+export { search_placeholder };
+function search_placeholder() {
     'use strict';
 
     /**
@@ -48,4 +49,4 @@
     document.addEventListener('cdm-collection-search-page:ready', addPlaceholderSingle);
     document.addEventListener('cdm-search-page:update', addPlaceholderMultiple);
 
-})();
+};

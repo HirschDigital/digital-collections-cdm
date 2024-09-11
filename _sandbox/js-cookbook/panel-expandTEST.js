@@ -53,7 +53,7 @@ import _inheritsLoose from "@babel/runtime-corejs2/helpers/esm/inheritsLoose";
 import PropTypes from 'prop-types';
 import React from 'react';
 import { prefix, splitBsProps, bsClass } from './utils/bootstrapUtils';
-import Collapse from './Collapse';
+import Collapse from '../../js/js-original/Collapse';
 var propTypes = {
   /**
    * Callback fired before the component expands

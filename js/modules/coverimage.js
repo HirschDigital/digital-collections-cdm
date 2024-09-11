@@ -1,4 +1,7 @@
+export { cover_images };
 // JavaScript Document// path to where the cover images are uploaded
+
+function cover_images (){
 const PATH_COVERS_FILE_DIRECTORY = '/customizations/global/pages/images/thumbnail/';
 // replace thumbnails with better thumbnails
 const coverImagesFilenames = [
@@ -21,7 +24,7 @@ function coversFilePath(file) {
     return PATH_COVERS_FILE_DIRECTORY + file;
 }
 
-(function () {
+function () {
     'use strict';
 
     /** 
@@ -40,4 +43,4 @@ function coversFilePath(file) {
 
     document.addEventListener('cdm-home-page:ready', updateCollectionCovers);
 
-})();
+}};

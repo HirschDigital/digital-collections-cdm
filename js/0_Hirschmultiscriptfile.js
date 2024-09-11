@@ -25,15 +25,18 @@ const fileDirectory = '/customizations/global/pages/js/';
 
 // array containing file names of each JS file
 const scriptFilesToLoad = [
-	'field-insert-iiif.js',
-	'uv-cp.js',
-	'button-pdf-inline-1_0.js',
-	'pdf-objects-multipage-1_1.js',
-	'GA4.js',
-	'headerSearchInputPlaceholder.js',
+	'browseSearchPage.js',
+  'button-pdf-inline-1_0.js',
   'collapse.js',
-  'panel-expand.js',
+  'coverimage.js',
+  'field-insert-iiif.js',
+  'headerSearchInputPlaceholder.js',
+  'link-reformatter.js',
   'offensive-content.js',
+  'panel-expand.js',
+  'pdf-objects-multipage-1_1.js',
+  'search-collection-header.js',
+	'uv-cp.js',
 ];
 
 (function() {

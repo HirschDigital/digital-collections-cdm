@@ -1,4 +1,5 @@
-(function () {
+export { link_reformat };
+function link_reformat () {
   'use strict';
 
   //when particular formatting is found in a metadata field, this script will convert
@@ -133,7 +134,7 @@
         }
     });
 
-})();
+};
 
 /* version history
 

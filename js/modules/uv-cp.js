@@ -1,4 +1,5 @@
-(function() {
+export { uv_cp };
+function uv_cp () {
 'use strict';
 
   function loadResource(type,src) {
@@ -205,7 +206,7 @@
     });
   }
 
-})();
+};
 
 /* version history
 
