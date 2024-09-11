@@ -35,8 +35,9 @@ const scriptFilesToLoad = [
   'offensive-content.js',
   'panel-expand.js',
   'pdf-objects-multipage-1_1.js',
-  'search-collection-header.js',
 	'uv-cp.js',
+  'sway.js',
+  'slider.js',
 ];
 
 (function() {

@@ -43,5 +43,5 @@ document.addEventListener('cdm-custom-page:ready', function () {
             panelPanel.classList.remove('collapsed-panel');
         }
     });
-})();
+});
   

@@ -1,0 +1,282 @@
+---
+header: false
+footer: false
+title: Collection V 6
+---
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: none;
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+  color: #222;
+  font-family: "Kalam", sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: url("https://images.unsplash.com/photo-1629968417841-d87296c4205b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTMzMjQ1Nzh8&ixlib=rb-4.0.3&q=100&w=3000");
+  background-size: cover;
+}
+main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+p {
+  line-height: 1;
+}
+a {
+  color: royalblue;
+  text-decoration: none;
+}
+#gallery {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+  max-width: 100vw;
+  padding: 20px;
+  -webkit-perspective: 0;
+  perspective: 0;
+}
+#gallery figure:nth-child(7n) {
+  --duration: 1s;
+  --pin-color: #0ff;
+}
+#gallery figure:nth-child(7n + 1) {
+  --duration: 1.8s;
+  --pin-color: #dbdb2b;
+}
+#gallery figure:nth-child(7n + 2) {
+  --duration: 1.3s;
+  --pin-color: #00f077;
+}
+#gallery figure:nth-child(7n + 3) {
+  --duration: 1.5s;
+  --pin-color: #ea4597;
+}
+#gallery figure:nth-child(7n + 4) {
+  --duration: 1.1s;
+  --pin-color: #6f9ac6;
+}
+#gallery figure:nth-child(7n + 5) {
+  --duration: 1.6s;
+  --pin-color: #9452d7;
+}
+#gallery figure:nth-child(7n + 6) {
+  --duration: 1.2s;
+  --pin-color: #ff7f00;
+}
+#gallery figure:nth-child(3n) {
+  --angle: 3deg;
+}
+#gallery figure:nth-child(3n + 1) {
+  --angle: -3.3deg;
+}
+#gallery figure:nth-child(3n + 2) {
+  --angle: 2.4deg;
+}
+#gallery figure:nth-child(odd) {
+  --direction: alternate;
+}
+#gallery figure:nth-child(even) {
+  --direction: alternate-reverse;
+}
+#gallery figure {
+  --angle: 3deg;
+  --count: 5;
+  --duration: 1s;
+  --delay: calc(-0.5 * var(--duration));
+  --direction: alternate;
+  --pin-color: red;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 /1;
+  text-align: center;
+  background-color: white;
+  background-image: url("https://images.unsplash.com/photo-1603484477859-abe6a73f9366?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTM0NTk4ODN8&ixlib=rb-4.0.3&q=100&w=800");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  filter: brightness(125%);
+
+  transform-origin: center 0.22rem;
+  will-change: transform;
+  break-inside: avoid;
+  overflow: hidden;
+  outline: 1px solid transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+#gallery figure.active {
+  animation-duration: var(--duration), 1.5s;
+  animation-delay: var(--delay),
+    calc(var(--delay) + var(--duration) * var(--count));
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: var(--count), 1;
+  animation-direction: var(--direction), normal;
+  animation-fill-mode: both;
+  animation-name: swing, swingEnd;
+}
+#gallery figure:after {
+  position: absolute;
+  top: 0.22rem;
+  left: 50%;
+  width: 0.7rem;
+  height: 0.7rem;
+  content: "";
+  background: var(--pin-color);
+  border-radius: 50%;
+  box-shadow: -0.1rem -0.1rem 0.3rem 0.02rem rgba(0, 0, 0, 0.7) inset;
+  filter: drop-shadow(0.25rem 0.13rem 0.15rem rgba(0, 0, 0, 0.7));
+  transform: translateZ(0);
+}
+figure figcaption {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: #888;
+  line-height: 1;
+  /*
+  background: rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(3px);
+  
+  text-stroke: 0.5px rgba(20, 20, 20, 0.5);
+	-webkit-text-stroke: 0.5px rgba(20, 20, 20, 0.5);
+  */
+  filter: invert(1);
+  mix-blend-mode: difference;
+  transform: translateZ(0);
+}
+figure h2 {
+  color: royalblue;
+  font-size: 24px;
+}
+figure p {
+  font-size: 17px;
+}
+figure small {
+  font-size: 15px;
+}
+figure svg {
+  width: 10px;
+}
+@keyframes swing {
+  0% {
+    transform: rotate3d(0, 0, 1, calc(-1 * var(--angle)));
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, var(--angle));
+  }
+}
+@keyframes swingEnd {
+  to {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+#info {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+#info a {
+  font-size: 1.1rem;
+}
+@media (min-width: 800px) {
+  #gallery {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+</style>
+
+<!-- 
+Swaying photo gallery - scroll event
+Created on AUGUST 29, 2023
+Copyright (c) 2023 by Wakana Y.K. (https://codepen.io/wakana-k/pen/WNLrWMm)
+-->
+<!-- 
+Related works : 
+Portforio design @wakana-k - https://codepen.io/wakana-k/pen/BaxKKvE
+Swaying photo gallery - hover event @wakana-k - https://codepen.io/wakana-k/pen/oNJxbPw
+-->
+
+<body ontouchstart="">
+    <main>
+      <div id="gallery">
+        <figure data-img="https://images.unsplash.com/photo-1633279156874-5f648d4efc68?ixlib=rb-4.0.3&q=100&fit=crop&crop=faces,entropy&w=780&h=780">
+          <figcaption>1. Lorem Ipsum</figcaption>
+        </figure>
+        <figure>
+          <div>
+            <h2>Note</h2>
+            <p>Hover Animation!</p>
+          </div>
+        </figure>
+        <figure data-img="https://images.unsplash.com/photo-1631164159408-540fe1e32537?&cs=tinysrgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTM0NjE5MjJ8&ixlib=rb-4.0.3&q=100&fit=crop&crop=center&w=780&h=780">
+          <figcaption>2. Lorem Ipsum</figcaption>
+        </figure>
+        <figure data-img="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?&cs=tinysrgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTMzMzA4OTl8&ixlib=rb-4.0.3&q=100&fit=crop&crop=faces,top&w=780&h=780">
+          <figcaption>3. Lorem Ipsum</figcaption>
+        </figure>
+        <figure>
+          <div>
+            <h2>Feature</h2>
+            <p>Crumpled Paper Effect!</p>
+          </div>
+        </figure>
+        <figure data-img="https://images.unsplash.com/photo-1563004597-7bcef0f8a842?&cs=tinysrgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTM1OTI0MjF8&ixlib=rb-4.0.3&q=100&fit=crop&crop=faces,center&w=780&h=780">
+          <figcaption>4. Lorem Ipsum</figcaption>
+        </figure>
+        <figure data-img="https://images.unsplash.com/photo-1595527963403-e20e3fe1e6cb?&cs=tinysrgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTMzODc2NTR8&ixlib=rb-4.0.3&q=100&fit=crop&crop=faces,entropy&w=780&h=780">
+          <figcaption>5. Lorem Ipsum</figcaption>
+        </figure>
+        <figure data-img="https://images.unsplash.com/photo-1533910534207-90f31029a78e?&cs=tinysrgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTM1OTI1MzV8&ixlib=rb-4.0.3&q=100&fit=crop&crop=faces,entropy&w=780&h=780">
+          <figcaption>6. Lorem Ipsum</figcaption>
+        </figure>
+        <figure data-img="https://images.unsplash.com/photo-1507384428463-9ad93c924971?ixlib=rb-4.0.3&q=100&fit=crop&crop=faces,entropy&w=780&h=780">
+          <figcaption>7. Lorem Ipsum</figcaption>
+        </figure>
+        <figure data-img="https://images.unsplash.com/photo-1528756514091-dee5ecaa3278?ixlib=rb-4.0.3&q=100&fit=crop&crop=faces,entropy&w=780&h=780">
+          <figcaption>8. Lorem Ipsum</figcaption>
+        </figure>
+        <figure data-img="https://images.unsplash.com/photo-1568832359672-e36cf5d74f54?ixlib=rb-4.0.3&q=100&fit=crop&crop=right,top&w=780&h=780">
+          <figcaption>9. Lorem Ipsum</figcaption>
+        </figure>
+        <figure>
+          <div>
+            <h2>Related work</h2>
+            <p><small>Scroll animation version <svg viewBox="0 0 448 512" width="100" title="arrow-right">
+                  <path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z" />
+                </svg> <a target="_blank" href="https://codepen.io/wakana-k/pen/WNLrWMm">Link</a></small></p>
+          </div>
+        </figure>
+      </div>
+    </main>
+  
+    <footer id='info'><a target="_blank" href="https://codepen.io/wakana-k/">@wakana-k</a></footer>
+  </body>
