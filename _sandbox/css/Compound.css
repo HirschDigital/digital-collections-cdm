@@ -25,3 +25,23 @@
     border-top: unset;
 }
 
+.ItemView-compoundItemViewer.CompoundItemViewer-nonprintable {
+    display: flex;
+}
+
+.ItemView-itemViewContainer .row.foo .col-sm-4.ItemView-sideColumn .ItemView-compoundItemViewerContainer {
+    float: right !important
+}
+
+.ItemView-compoundItemViewer.CompoundItemViewer-nonprintable {
+flex-wrap: wrap !important;
+display: flex;
+overflow: auto hidden;
+margin: 0px;
+justify-content: center;
+max-width: 75%;
+align-items: center;
+flex-direction: row;
+flex-flow: wrap;
+align-content: flex-end;
+}
