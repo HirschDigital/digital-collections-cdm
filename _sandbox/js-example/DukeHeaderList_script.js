@@ -1,8 +1,0 @@
-(function (window, document) {
-    var _dmh = _dmh || {};
-    _dmh.window = window;
-    _dmh.document = document;
-    _dmh.stylesheet = 'masthead-responsive.css?ver=1716983871'
-    _dmh.mastheadMarkup = '*******';
-    !function (e) { function t(e, n, t) { if ("ontouchstart" in r.documentElement && (e = e.replace(/dul-masthead-no-touch/, "")), t.innerHTML = e, n.getElementById("dul-masthead-filler")) { var a = n.getElementById("dul-masthead-filler"); a.parentNode.replaceChild(t, a) } else { var d = n.getElementsByTagName("body")[0]; d.insertBefore(t, d.firstChild) } n.querySelector("#dul-masthead-nav-trigger-btn").addEventListener("click", function (e) { if (e.target && "dul-masthead-nav-trigger-btn" == e.target.id) { var t = e.target, a = "true" === t.getAttribute("aria-expanded") || !1; t.setAttribute("aria-expanded", !a); var d = n.getElementById("dul-masthead-mobile-menu"); d.hidden = !d.hidden } }) } var a = e.window, r = e.document, d = e.stylesheet, n = (e.noTouch, e.mastheadMarkup), l = r.head || r.getElementsByTagName("head")[0], i = r.createElement("link"); i.type = "text/css", i.media = "all", i.rel = "stylesheet", i.href = ("https:" == document.location.protocol ? "https://" : "//") + "library.duke.edu/masthead/css/" + d, l.appendChild(i); var s = r.createElement("div"); s.className = "dul-masthead-bar", a.addEventListener ? a.addEventListener("load", function () { t(n, r, s) }, !1) : a.attachEvent("onload", function () { t(n, r, s) }, !1) }(_dmh);
-})(window, document)
