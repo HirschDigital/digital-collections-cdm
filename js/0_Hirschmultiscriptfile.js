@@ -37,7 +37,6 @@ const scriptFilesToLoad = [
   'pdf-objects-multipage-1_1.js',
 	'uv-cp.js',
   'sway.js',
-  'slider.js',
 ];
 
 (function() {

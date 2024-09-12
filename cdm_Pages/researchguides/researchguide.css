@@ -1,0 +1,184 @@
+@charset "utf-8";
+/* CSS Document */
+/*************************/
+/****Built in classes*****/
+/***.CollectionLayout-container {}
+.CollectionLanding-aboutCollection {}
+.CollectionLanding-landingLinkContainer {}
+.CollectionLanding-mainLandingImage {}
+.CollectionLanding-mainLandingImage  img {    }
+.CollectionLanding-landingLinks {}
+.CollectionLanding-landingBrowseButton {}
+.CollectionLanding-landingLinks li { }
+.CollectionLanding-pageTitle {}
+.CollectionLanding-maincontainer {}
+.CollectionLanding-maincontentLanding  {
+    composes: contentContainer from "styles/shared.css";
+}
+@media not all and (min-resolution:.001dpcm){
+    @supports (-webkit-appearance:none) {
+        .CollectionLayout-container {
+            -webkit-flex-wrap: wrap;
+			flex-wrap: wrap;}}}
+*****/
+.CollectionLanding-tabContainer {
+  width: 90%;
+  border-left: 0;
+  border-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#tabs-container .nav-tabs {
+  border-bottom: 0;
+}
+#tabs-container .nav-tabs > li > a, #tabs-container .nav-tabs > li > button {
+  border-radius: 4px 4px 4px 4px;
+  background-color: #cccccc;
+  color: #dc4b38;
+  font-weight: bold;
+}
+#tabs-container .nav-tabs > li > a:hover, #tabs-container .nav-tabs > li > button:hover {
+  border-radius: 4px 4px 4px 4px;
+  background-color: #70b1df;
+  color: #ffffff;
+}
+#tabs-container .nav-tabs > .active > a, #tabs-container .nav-tabs > .active > button {
+  color: #ffffff;
+  cursor: default;
+  background-color: #70b1df;
+  border-radius: 4px 4px 4px 4px;
+  border-bottom-color: transparent;
+  font-weight: bold;
+  display: block;
+  clear: both;
+  line-height: 1.42857143;
+  white-space: nowrap;
+}
+#tabs-container .nav-tabs > .active > a:hover, #tabs-container .nav-tabs > .active > button:hover {
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #70b1df;
+  border-radius: 4px 4px 4px 4px;
+  border-bottom-color: transparent;
+  font-weight: bold;
+}
+.CollectionLanding-cardsContainer row {
+  margin-right: -15px;
+  margin-left: -15px;
+  box-sizing: border-box;
+}
+
+.CollectionCards-cardContainer{
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 992px) {
+  .CollectionCards-cardContainer col-md-6 {
+    width: 50%;
+    float: left;
+  }
+	.CollectionCards-cardContainer col-md-12 {
+	width: 100%;
+	float: left;
+	}
+}
+.CollectionCards-cardWrapper {
+  margin: 0;
+}
+.CollectionCards-cardBox {
+  border: 1px solid #cccccc;
+  background-color: #fff;
+  border-color: #cccccc;
+  box-shadow: 0 8px 6px -6px #cccccc;
+  display: inline-block;
+  margin: 0 0 20px 0;
+  overflow: visible;
+  padding: 0;
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+  border-radius: 4px 4px 4px 4px;
+}
+.boxTitle {
+  background-color: #70b1df !important;
+  background-image: none;
+  border-bottom: 1px solid #cccccc !important;
+  border-radius: 3px 3px 0px 0px;
+}
+.boxTitle span {
+  font-size: 1.00rem;
+  font-weight: bold;
+  color: #ffffff !important;
+  font-style: normal;
+  padding: 6px 8px;
+}
+.CollectionCards-cardContent {
+  padding: 10px;
+}
+.CollectionCards-linkList {
+  list-style-type: circle;
+  padding-left: 20px;
+}
+.CollectionCards-linkList li {
+  padding-top: 5px;
+}
+.linkTitle > span > a {
+  color: #dc4b38;
+}
+
+/***Tiles***/
+
+.CollectionCards-tileContent {
+display: inline-block;
+  overflow: visible;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+	opacity: 1;
+}
+
+.tilePane {
+  float: none;
+  width: auto;
+  overflow: auto;
+  clear: none;
+  padding:20px;
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+}
+.tileGrid {
+position: relative;
+  display: block;
+  overflow: hidden;
+
+}
+.tile {
+	width: 31%; 
+	display: inline-block;
+	padding: 10px;
+  margin: 6px;
+	border-radius: 10px;
+}
+.tile img {
+	margin: 0 auto; 
+	min-width: 0; 
+	width: auto;
+	object-fit: fill;
+	
+}
+ .tile:hover {
+    box-shadow: 0 0 1px 6px #999;
+}
+
+@media (max-width: 860x) {
+  .tile {
+    width: 48%;
+  }
+}

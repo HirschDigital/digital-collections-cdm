@@ -1,6 +1,7 @@
 /**
  * Adds offensive content popup to all pages. Stores acknowledgement for 7 days which is refreshed on
  * page visit.
+ * Modified from Georgia State University
  */
 (function offensive_content_popup () {
   'use strict';
