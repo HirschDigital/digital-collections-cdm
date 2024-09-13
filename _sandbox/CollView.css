@@ -1,0 +1,188 @@
+@charset "utf-8";
+/* CSS Document */
+@import 'styles/_variables';
+
+
+.CollView-collcontentContainer .row {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.CollView-collViewContainer {
+    margin-bottom: 10px;
+    padding: 10px 10px 0 10px;
+    flex-grow: 1;
+}
+
+/**
+ * The side column are hidden on mobile devices.
+ */
+ .collView-sideColumn {
+    display: none;
+}
+
+.collView-bottomBorder {
+    border-bottom: 5px solid #CCC;
+}
+
+.collView-collTitle {
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 5px;
+    margin-bottom: 1.2em;
+    width: 100%;
+}
+
+/**
+ * On desktop devices, show the side column, and hide the
+ * duplicated components (option and search) in the main column.
+ */
+ @media (min-width: breakpoint-sm) {
+
+    .collView-collViewContainer {
+        margin-bottom: 10px;
+        padding: 10px;
+        flex-grow: 1;
+    }
+
+    .collView-sideColumn {
+        display: block;
+        padding-left: 5px;
+    }
+
+    .collView-sideColumn .collView-collSearchContainer {
+        background-color: #EFEFEF;
+        margin-top: 10px;
+        padding: 5px;
+        border-top: 5px solid #CCC;
+    }
+}
+
+
+/*********search**********/
+@import 'styles/_variables';
+
+
+.collSearch-collSearchButton a {
+    color: #ffffff;
+}
+
+.collSearch-collHeaderButtonPadding,
+.collSearch-collStackedHeaderButtonPadding {
+    margin-right: 5px;
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem !important;
+}
+
+.collSearch-collSearchInput {
+    flex: 2 0 0px;
+    margin: 5px 10px 0 5px;
+}
+
+.collSearch-collSearchLabel {
+    width: 100%;
+    text-align: left;
+    padding-left: 5px;
+    margin-bottom: 0;
+    color: #434343;
+    font-size: 0.875rem;
+    font-weight: normal;
+}
+
+.collSearch-collSearchInput>div {
+    font-size: .875rem;
+    font-weight: bold;
+}
+
+.collSearch-collSearchInputControl {
+    font-size: 1rem;
+    color: text-color;
+    width: 100%;
+    display: block;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.collSearch-collSearchResults {
+    font-size: .875rem;
+    font-weight: bold;
+    display: block;
+    padding-left: 5px;
+    color: #434343;
+}
+
+.collView-collSearchContainer {
+    background-color: #EFEFEF;
+    margin-top: 10px;
+    padding: 5px;
+    border-top: 5px solid #aaa;
+}
+
+.collSearch-collSearchControl {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+}
+
+@media screen and (min-width: breakpoint-sm) {
+    .collSearch-collSearchInput {
+        top: 60px;
+    }
+
+    .collSearch-collSearchInputControl {
+        font-size: 17px !important;
+        top: 10px;
+    }
+}
+
+
+.collOptions-collOptions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .btn-toolbar .btn {
+        padding: .25rem .5rem;
+    }
+}
+
+.collOptions-collShareRow {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@import 'styles/_variables';
+
+.collTitle-primaryTitle {
+    overflow: hidden;
+    position: relative;
+    text-align: justify;
+    padding-right: 1em;
+
+    &:before {
+        content: "...";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 1em;
+        height: 1em;
+        margin-top: .2em;
+        background: #fff;
+    }
+}
+
+.collTitle-secondaryTitle {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

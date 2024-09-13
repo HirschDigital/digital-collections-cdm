@@ -2,259 +2,10 @@
 /* CSS Document */
 @import 'styles/_variables';
 
-.CollView-collcontentContainer .row {
-    margin-right: 0px !important;
-    margin-left: 0px !important;
-}
 
-.CollView-collViewContainer {
-    margin-bottom: 10px;
-    padding: 10px 10px 0 10px;
-    flex-grow: 1;
-}
-
-/**
- * The side column are hidden on mobile devices.
- */
-.collView-sideColumn {
-    display: none;
-}
-
-.collView-bottomBorder {
-    border-bottom: 5px solid #CCC;
-}
-
-.collView-collTitle {
-    border-bottom: 1px solid #CCCCCC;
-    padding-bottom: 5px;
-    margin-bottom: 1.2em;
-    width: 100%;
-}
-
-.collView-mainColumn .collView-collSearchContainer {
-    background-color: #EFEFEF;
-    margin: 10px -15px;
-    padding: 5px;
-    border: 5px solid #CCC;
-}
-
-.collView-panelContainer>div {
-    margin: 15px 0;
-}
-
-.collView-panelContainer div {
-    border: 0 !important;
-    box-shadow: none;
-}
-
-/**
- * On desktop devices, show the side column, and hide the
- * duplicated components (option and search) in the main column.
- */
-@media (min-width: breakpoint-sm) {
-
-    .collView-collViewContainer {
-        margin-bottom: 10px;
-        padding: 10px;
-        flex-grow: 1;
-    }
-
-    .collView-sideColumn {
-        display: block;
-        padding-left: 5px;
-    }
-
-    .collView-sideColumn .collView-collSearchContainer {
-        background-color: #EFEFEF;
-        margin-top: 10px;
-        padding: 5px;
-        border-top: 5px solid #CCC;
-    }
-}
-
-@import 'styles/_variables';
-
-
-.collSearch-collSearchButton a {
-    color: #ffffff;
-}
-
-.collSearch-collHeaderButtonPadding,
-.collSearch-collStackedHeaderButtonPadding {
-    margin-right: 5px;
-    padding: 0.25rem 0.5rem 0.25rem 0.5rem !important;
-}
-
-.collSearch-collSearchInput {
-    flex: 2 0 0px;
-    margin: 5px 10px 0 5px;
-}
-
-.collSearch-collSearchLabel {
-    width: 100%;
-    text-align: left;
-    padding-left: 5px;
-    margin-bottom: 0;
-    color: #434343;
-    font-size: 0.875rem;
-    font-weight: normal;
-}
-
-.collSearch-collSearchInput>div {
-    font-size: .875rem;
-    font-weight: bold;
-}
-
-.collSearch-collSearchInputControl {
-    font-size: 1rem;
-    color: text-color;
-    width: 100%;
-    display: block;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-weight: 400;
-    line-height: 1.5;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-}
-
-.collSearch-collSearchResults {
-    font-size: .875rem;
-    font-weight: bold;
-    display: block;
-    padding-left: 5px;
-    color: #434343;
-}
-
-.collView-collSearchContainer {
-    background-color: #EFEFEF;
-    margin-top: 10px;
-    padding: 5px;
-    border-top: 5px solid #aaa;
-}
-
-.collSearch-collSearchControl {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: flex-end;
-}
-
-@media screen and (min-width: breakpoint-sm) {
-    .collSearch-collSearchInput {
-        top: 60px;
-    }
-
-    .collSearch-collSearchInputControl {
-        font-size: 17px !important;
-        top: 10px;
-    }
-}
-
-.collOptions-collOptions {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-
-    .btn-toolbar .btn {
-        padding: .25rem .5rem;
-    }
-}
-
-.collOptions-collShareRow {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.collPreview-container {
-    display: flex;
-
-    &>button {
-        width: 30px;
-        font-size: 2em;
-        padding: 0;
-        border: none;
-        border-radius: 0;
-
-        .text {
-            display: none;
-        }
-    }
-
-    .preview {
-        min-height: 65px;
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-.preview {
-    min-height: 65px;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@import 'styles/_variables';
-
-.collTitle-primaryTitle {
-    overflow: hidden;
-    position: relative;
-    text-align: justify;
-    padding-right: 1em;
-
-    &:before {
-        content: "...";
-        position: absolute;
-        right: 0;
-        bottom: 0;
-    }
-
-    &:after {
-        content: "";
-        position: absolute;
-        right: 0;
-        width: 1em;
-        height: 1em;
-        margin-top: .2em;
-        background: #fff;
-    }
-}
-
-.collTitle-secondaryTitle {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.collView-collViewContainer {
-    padding-top: 10px;
-    width: 80%;
-    text-align: left;
-    margin: 0 auto 0;
-    ;
-}
-
-.collImage-itemImage {
-    display: table-cell;
-    max-width: 730px;
-
-    >div {
-        display: table-cell;
-        position: relative;
-    }
-
-    img {
-        max-width: 730px;
-        width: 100%;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 0 3px rgba(0, 0, 0, 0.1);
-    }
-}
-
+/********************************/
+/***Search Header*******/
+/*******************************/
 .search {
     display: flex;
     -ms-flex-flow: row nowrap;
@@ -269,8 +20,22 @@
     padding: 20px;
 }
 
-.search {
-    background-image: url(https://cdm17480.contentdm.oclc.org/customizations/collection/americanart/pages/images/friendship.jpg);
+#cartagena {
+    background-image: url(https://cdm17480.contentdm.oclc.org/customizations/collection/photobooks/pages/images/CartagenaHeader.jpg);
+background-position: 50%;
+background-size: cover;
+}
+
+
+/*background image for search section*/
+
+.search img {
+    /* Set rules to fill background */
+    min-width: 100%;
+    /* Set up positioning */
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 .CollView-searchContainer {
@@ -282,11 +47,52 @@
     max-height: 50%;
 }
 
-.search-caption {
-    font-size: .9rem;
-    align-self: baseline;
+/*format text input box*/
+
+input[type="text"] {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 90%;
+    flex: 1 1 90%;
+    padding: 5px;
+    margin: auto;
+    height: auto;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 2px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    position: absolute;
+    display: inline-block;
+    width: 90%;
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    left: 20px;
 }
 
+/*format & position search submit button*/
+#search_collection {
+    position: absolute;
+    display: inline-block;
+    font-size: 1.9em;
+    background-color: rgb(220, 75, 56);
+    border: none;
+    padding: .01% 1.15%;
+    right: 20px;
+}
+
+
+#srchFrm .button:hover {
+    background: #dc4b38;
+}
+
+
+
+input:hover[type="submit"] {
+    background: #dc4b38;
+}
+
+/* caption and below */
 #search-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -301,6 +107,7 @@
     -webkit-box-align: baseline;
     -ms-flex-align: baseline;
     align-items: baseline;
+    /*flex-end?*/
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
     margin: 0;
@@ -310,13 +117,15 @@
     padding: 20px;
 }
 
-#search-content h3 {
-    font-size: 2.3rem;
-    font-weight: 700;
-    color: white;
 
+.search-caption {
+    font-size: .9rem;
+    align-self: baseline;
 }
 
+
+
+/*format & position text in shaded area*/
 #search-content p {
     margin: 0;
     padding: 0;
@@ -324,24 +133,25 @@
     line-height: 1.6em;
 }
 
+#search-content h3 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: white;
+
+}
+
+/*format & position browse icon*/
+#search-content i {
+    font-size: 1rem;
+}
+
+/*format & position browse link in shaded area*/
 #search-content a {
     display: inline;
     float: right;
 }
 
-#search_collection {
-    position: absolute;
-    display: inline-block;
-    font-size: 1.9em;
-    background-color: rgb(220, 75, 56);
-    border: none;
-    padding: .01% 1.15%;
-    right: 20px;
-}
 
-#srchFrm .cdm-btn {
-    flex: 2 2 40em;
-}
 
 .searchy-search {
     flex: 1 1 90%;
@@ -360,119 +170,78 @@
     left: 20px;
 }
 
-/*****ACCORDION V 3 **********/
-.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-}
 
-.accordion .active,
-.accordion:hover {
-    background-color: #ccc;
-}
+@media (min-width: 300px) and (max-width: 567px) {
 
-.panelAccordion {
-    padding: 18px 18px;
-    display: none;
-    background-color: white;
-    overflow: hidden;
-}
-
-.accordion::after {
-    content: "\02795";
-    /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    color: #777;
-    float: right;
-    margin-left: 5px;
-}
-
-.Panel-panelBorder>.panel-heading>.active::after {
-    content: "\2796";
-    /* Unicode character for "minus" sign (-) */
-}
-
-/****Collapse V 4******/
-
-.collapse {
-    display: none;
-}
-.Panel-fontAwesomeIcon {
-    transition: transform 0.3s ease;
-}
-
-.collapsed-panel .Panel-fontAwesomeIcon {
-    transform: rotate(0deg);
-}
-
-.expanded-panel .Panel-fontAwesomeIcon {
-    transform: rotate(90deg);
-    color: #fff;
-    margin-right: 2px;
-}
-
-.expanded-panel .Panel-panelTitle {
-    color: #ffffff !important;
-}
-
-.collapsed-panel {
-    background-color: #fff;
-}
-
-.expanded-panel {
-
-    background-color: #dc4b38 !important;
-    border-radius: 5px;
-
-    .panel-title {
-        a {
-            text-decoration: none;
-
-            :hover {
-                cursor: pointer;
-            }
-        }
-        h2 {
-            font-style: normal;
-            text-decoration: none;
-            margin: 0;
-
-            >.fa {
-                margin-left: -2px;
-            }
-        }
+    .search {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 0;
     }
-    .panel-default {
-        background-color: inherit !important;
+
+    .search-container {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        margin-top: 20px;
     }
-    .panel-default>.panel-heading {
-        background-color: inherit !important;
+
+    #search-content h3 {
+        font-size: 5vmin;
     }
-    .panel-body {
-        a {
-            :hover {
-                cursor: pointer !important;
-            }
-        }
-        background-color: white;
-        padding-top: 5px;
-        padding-right: 12px;
-        padding-bottom: 12px;
-        padding-left: 12px;
+
+    #search-content p {
+        font-size: .85em;
+        padding: 0;
+    }
+
+    #search-content p a {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        padding-bottom: 0;
+    }
+
+    .search-caption a {
+        font-size: 1.05em;
+        top: 0;
+    }
+
+    .browseAll {
+        margin-top: .5%;
     }
 }
-.ItemText-container {
-    white-space: normal !important;
+
+@media (min-width: 568px) and (max-width: 1024px) {
+
+    .search-container {
+        max-height: 40%;
+    }
+
+    #search-content p {
+        font-size: .9em;
+    }
+
+    img,
+    .search-container,
+    .related,
+    #collectionheader,
+    .search-caption,
+    .browseAll {
+        display: none !important;
+    }
+
+    .search {
+        height: 100px;
+    }
+
+    .search-content h3 {
+        size: 2.5em;
+    }
 }
 
-/************/
-/*SWAY*/
-/********/

@@ -1,32 +1,70 @@
 
-// Script adapted from NYheritage
+// Script adapted from TEVA
 
-(function special_search () {
-'use strict';
+function newsearch() {
+  var searchTerm = document.getElementById('srchTerm').value;
+  window.open('https://teva.contentdm.oclc.org/digital/search/searchterm/' + encodeURIComponent(searchTerm), '_blank');
+}
 
-  function newsearch() {
-    window.location.href = "https://cdm17480.contentdm.oclc.org/cdm/search/searchterm/"+('#srchTerm').val();
-    window.open('https://cdm17480.contentdm.oclc.org/digital/collection/americanart/search/searchterm/' + ('#srchTerm').val(), '_blank');
-  }
-  ("#search_collection").click(function () {
+function setupEventListeners() {
+  document.getElementById('search_collection').addEventListener('click', function () {
     newsearch();
   });
-  
-  
-  ('#srchTerm').keypress(function (event) {
-    if (event.keyCode == 13) {
-      ('#search_collection').click();
+
+  document.getElementById('srchTerm').addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+      document.getElementById('search_collection').click();
     }
   });
-document.addEventListener('cdm-collection-page:ready', special_search);
-document.addEventListener('cdm-collection-landing-page:ready', special_search);
-document.addEventListener('cdm-collection-page:update', special_search);
-document.addEventListener('cdm-collection-landing-page:update', special_search);
-document.addEventListener('cdm-custom-page:ready', special_search);
-document.addEventListener('cdm-custom-page:update', special_search);
-  
-  })();
+}
 
+document.addEventListener('DOMContentLoaded', setupEventListeners);
+
+/* or */
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  function newsearch() {
+      var searchTerm = document.getElementById('srchTerm').value;
+      window.open('https://teva.contentdm.oclc.org/digital/search/searchterm/' + encodeURIComponent(searchTerm), '_blank');
+  }
+
+  document.getElementById('search_collection').addEventListener('click', function() {
+      newsearch();
+  });
+
+  document.getElementById('srchTerm').addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+          document.getElementById('search_collection').click();
+      }
+  });
+
+});
+
+/* or */
+
+
+function newsearch() {
+  var searchTerm = document.getElementById('srchTerm').value;
+  window.open('https://teva.contentdm.oclc.org/digital/search/searchterm/' + encodeURIComponent(searchTerm), '_blank');
+}
+
+function handleEvents(event) {
+  if (event.type === 'click' || (event.type === 'keypress' && event.key === 'Enter')) {
+      newsearch();
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const searchCollectionButton = document.getElementById('search_collection');
+  const searchTermInput = document.getElementById('srchTerm');
+
+  searchCollectionButton.addEventListener('click', handleEvents);
+  searchTermInput.addEventListener('keypress', handleEvents);
+});
+
+
+/*nyheritage*/
 
   function goToPage() {
     var page = document.getElementById('SearchTerm').value
@@ -44,21 +82,3 @@ document.addEventListener('cdm-custom-page:update', special_search);
     return true;
   }
   
-  function goToPage() {
-    var page = document.getElementById('SearchTerm').value
-    window.location = "https://nyheritage.contentdm.oclc.org/cdm/search/searchterm/" + SearchTerm.value + "/field/all/mode/all/conn/and/cosuppress/";
-  }
-  function goToAdv() {
-    window.location = "https://nyheritage.contentdm.oclc.org/digital/search/advanced/";
-  }
-  function searchKeyPress(e) {
-  e = e || window;
-  if (e.keyCode == 13)
-  {
-    document.getElementById('btnSearch').click();
-    return false;
-  }
-  return true;
-  }
-  onkeypress="return searchKeyPress(event);
-  onclick="goToPage()
