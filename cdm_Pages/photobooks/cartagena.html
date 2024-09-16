@@ -6,37 +6,45 @@ title: Alejandro Cartagena Collection
 <div class="CollectionLayout-container">
     <div class="CollectionLanding-maincontainer shared-box">
         <div class="CollectionLanding-maincontentLanding shared-contentContainer">
-            <h1>Landing Page Template</h1>
-            <div class="grayDividerLine">
-            </div>
-            <div class="search shared-box" role="search" id="cartagena">
+
+            <!--header search box-->
+
+            <div class="CollSearch shared-box" role="search" id="cartagena">
                 <div class="CollView-searchContainer">
                     <form id="srchFrm" role="form">
                         <input id="srchTerm" name="srchTerm" type="text" placeholder="Search this collection"
                             aria-label="Search this collections">
-                            <button class="transparentIcon headerIconButton SimpleSearch-headerButtonPadding btn btn-default" aria-label="Search" id="search_collection" type="button">
-                                <a class="headerIcon">
-                                  <span aria-hidden="true" class="fa fa-search fa-2x">
-                                  </span>
-                                </a>
-                              </button>
+                        <button
+                            class="transparentIcon headerIconButton SimpleSearch-headerButtonPadding btn btn-default"
+                            aria-label="Search" id="search_collection" type="button">
+                            <a class="headerIcon">
+                                <span aria-hidden="true" class="fa fa-search fa-2x">
+                                </span>
+                            </a>
+                        </button>
                     </form>
                 </div>
                 <div id="search-content">
-                    <h3>Alejandro Cartagena Pre-Publication Material</h3>
-                    <div class="search-caption mr-lg-2 mr-sm-3 mt-sm-1 mt-xs-1">
-                        <a href="https://cdm17480.contentdm.oclc.org/digital/collection/photobooks/id/1025"
-                            target="blank" rel="noopener">Image: Carpoolers, First Edition [Poster], 2014</a>
+                    <h1>Alejandro Cartagena Pre-Publication Material</h1>
+                    <div class="text-center">
+                        <a data-id="browseButton"
+                            class="CollectionLanding-landingBrowseButton cdm-btn btn btn-lg btn-primary"
+                            data-metrics-event-name="event" data-metrics-merge-pagedefaults="true"
+                            data-metrics-event-category="collection landing" data-metrics-event-action="click"
+                            data-metrics-event-label="browse" href="/digital/collection/photobooks/search/searchterm/cartagena%2C%20alejandro%2C%201977-/field/creato/mode/exact/conn/and">Browse this
+                            collection</a>
                     </div>
-                    <p>Welcome to the this wonderful page</p>
-                    <p>
-                        <a class="text-right browseAll" href="cartagena">"Browse all items "
-                            <i class="fa fa-angle-double-right">
-                            </i>
-                        </a>
-                    </p>
+                    <div>
+                        <p class="search-caption">
+                            <a href="https://cdm17480.contentdm.oclc.org/digital/collection/photobooks/id/1025"
+                                target="blank" rel="noopener">Image: Carpoolers, First Edition [Poster], 2014</a>
+                        </p>
+                    </div>
                 </div>
             </div>
+
+            <!--end header search box-->
+
             <div class="row foo">
                 <div class="col-sm-4 collView-mainColumn">
                     <div class="collPreview-container">
@@ -172,8 +180,7 @@ title: Alejandro Cartagena Collection
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <div class="panel-title">
-                                                <button data-target="#collection"
-                                                    id="toggleIconButton">
+                                                <button data-target="#collection" id="toggleIconButton">
                                                     <h2>
                                                         <span id="icon" aria-hidden="true"
                                                             class="fa fa-far fa-play-circle fa-fw Panel-fontAwesomeIcon">

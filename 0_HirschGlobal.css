@@ -347,7 +347,7 @@ p {
   }
 
   .Card-cardTextHolder {
-    padding: 5px 15px;
+    padding: 5px 20px;
     width: 100%;
   }
 
@@ -441,6 +441,7 @@ p {
 .collImage-itemImage {
   display: table-cell;
   max-width: 730px;
+  margin-top: 15px;
 
   >div {
       display: table-cell;
@@ -516,14 +517,14 @@ p {
   .panel-default>.panel-heading {
       background-color: inherit !important;
   }
-  .panel-body {
-      a {
+  .panel-body a {
           :hover {
               cursor: pointer !important;
           }
       }
+  .panel-body{
       background-color: white;
-      padding-top: 5px;
+      padding-top: 10px !important;
       padding-right: 12px;
       padding-bottom: 12px;
       padding-left: 12px;
