@@ -49,3 +49,25 @@
     document.addEventListener('cdm-search-page:update', addPlaceholderMultiple);
 
 })();
+
+// activate extra search bar on custom pages
+document.addEventListener('cdm-custom-page:ready', function() {
+
+    function newsearch() {
+        var NodeTitle = 'Alejandro Cartagena Photobook Maquettes';
+        var searchTerm = document.getElementById('srchTerm').value;
+        window.open('https://cdm17480.contentdm.oclc.org/digital/collection/photobooks/search/searchterm/' + NodeTitle + "!" + searchTerm + "/field/relatig!all/mode/exact!all/conn/and!and/order/nosort/ad/asc");
+
+    }
+  
+    document.getElementById('search_collection').addEventListener('click', function() {
+        newsearch();
+    });
+  
+    document.getElementById('srchTerm').addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            document.getElementById('search_collection').click();
+        }
+    });
+  
+  });

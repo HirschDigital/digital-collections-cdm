@@ -45,7 +45,6 @@ input[type="text"] {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 2px;
     position: absolute;
-    display: inline-block;
     width: 90%;
     font-size: 1.5em;
     font-weight: 700;
@@ -63,7 +62,6 @@ input[type="text"] {
     padding: .01% 1.15%;
     right: 20px;
 }
-
 
 #search_collection:hover {
     background: #dc4b38;
@@ -84,12 +82,9 @@ input[type="text"] {
     padding: 20px;
 }
 
-
 .search-caption {
     font-size: .7rem;
 }
-
-
 
 /*format & position text in shaded area*/
 #search-content p {
@@ -99,24 +94,21 @@ input[type="text"] {
     line-height: 1.6em;
 }
 
+#search-content p >a {
+    color: gray;
+}
+
 #search-content h1 {
     font-size: 2.3rem;
     font-weight: 700;
     color: white;
-    margin: .1em 0;
+    margin: .1em 0px .7em 0px;
+    display: flex;
 }
 
-/*format & position browse icon*/
-#search-content i {
-    font-size: 1rem;
+#search-content .CollectionLanding-landingBrowseButton {
+display:flex;
 }
-
-/*format & position browse link in shaded area*/
-#search-content a {
-    display: inline-block;
-}
-
-
 
 @media (min-width: 300px) and (max-width: 567px) {
 
