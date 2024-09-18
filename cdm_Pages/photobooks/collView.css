@@ -31,6 +31,7 @@
     width: 90%;
     max-height: 40%;
 }
+
 #srchTerm{
     display:flex;
 }
@@ -110,22 +111,33 @@ input[type="text"] {
 display:flex;
 }
 
+@media (min-width: 568px) and (max-width: 1024px) {
+
+    .CollSearch {
+        height: 120px;
+    }
+#search-content {
+    min-height: 100%;
+}
+
+    #search-content p {
+        font-size: .9em;
+    }
+
+    #search-content h1 {
+        font-size: 1.7rem;
+    }
+}
+
 @media (min-width: 300px) and (max-width: 567px) {
 
     .CollSearch {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
         flex-flow: row wrap;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
         justify-content: space-between;
         padding: 0;
     }
 
-    .search-container {
-        -webkit-box-align: start;
-        -ms-flex-align: start;
+    .CollView-searchContainer {
         align-items: flex-start;
         margin-top: 20px;
     }
@@ -140,8 +152,6 @@ display:flex;
     }
 
     #search-content p a {
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
         justify-content: flex-end;
         padding-bottom: 0;
     }
@@ -149,32 +159,5 @@ display:flex;
     .search-caption a {
         font-size: 1.05em;
         top: 0;
-    }
-}
-
-@media (min-width: 568px) and (max-width: 1024px) {
-
-    .search-container {
-        max-height: 40%;
-    }
-
-    #search-content p {
-        font-size: .9em;
-    }
-
-    .search-container,
-    .related,
-    #collectionheader,
-    .search-caption,
-    .browseAll {
-        display: none !important;
-    }
-
-    .CollSearch {
-        height: 100px;
-    }
-
-    .search-content h3 {
-        size: 2.5em;
     }
 }

@@ -2,18 +2,17 @@
 const PATH_COVERS_FILE_DIRECTORY = '/customizations/global/pages/images/thumbnail/';
 // replace thumbnails with better thumbnails
 const coverImagesFilenames = [
+    'photobooks.jpg',
     'powell.jpg',
-    'digitalpubz.png',
-	'cartagena.jpg', 
-	'photobooks.jpg',
-    'mfaharchives.jpg',
+    'artistsbooks.jpg',
+	'dec-arts.jpg', 
 	'latamperiodcals.png',
-    'Construct.png',
-    'photoleague.png',
+'digitalpubz.png',
+    'mfaharchives.jpg',
     'leirner.jpg',
-    'friendship.jpg',
-	'BTS-V-D-1.png',
+    'digitalpubz.png',
     'ResourceGuides.png',
+    'BTS-V-D-1.png',
 ];
 
 // helper function to assemble full URL of each JS file
