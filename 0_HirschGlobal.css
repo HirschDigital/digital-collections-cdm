@@ -473,7 +473,6 @@ p {
 }
 .Panel-fontAwesomeIcon {
   transition: transform 0.3s ease;
-  display:inline;
 }
 
 .collapsed-panel .Panel-fontAwesomeIcon {
