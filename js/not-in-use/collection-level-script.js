@@ -6,7 +6,7 @@
 
   // list all collection aliases that should trigger this script
   let collectionScope = [
-    'oclcsample',
+    'photobooks',
     'otheralias1',
     'otheralias2'
   ];
