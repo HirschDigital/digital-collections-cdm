@@ -5,9 +5,9 @@ const coverImagesFilenames = [
     'photobooks.jpg',
     'powell.jpg',
     'artistsbooks.jpg',
-	'dec-arts.jpg', 
-	'latamperiodcals.png',
-'digitalpubz.png',
+    'dec-arts.jpg',
+    'latamperiodcals.jpg',
+    'digitalpubz.png',
     'mfaharchives.jpg',
     'leirner.jpg',
     'digitalpubz.png',
@@ -30,13 +30,16 @@ function coversFilePath(file) {
      */
     function updateCollectionCovers() {
         const allCoverImages = coverImagesFilenames.map(coversFilePath);
-        let cardImages = document.querySelectorAll('.Card-cardImage');
+        const cardImages = document.querySelectorAll('.Card-cardImage');
+
+        // Loop through all cover images
         for (let i = 0; i < allCoverImages.length; i++) {
-            cardImages[i].src = null;
-            cardImages[i].src = allCoverImages[i];
+            if (cardImages[i]) {
+                cardImages[i].src = null;
+                cardImages[i].src = allCoverImages[i];
+            }
         }
     }
-
     document.addEventListener('cdm-home-page:ready', updateCollectionCovers);
 
 })();
