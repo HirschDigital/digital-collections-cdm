@@ -322,11 +322,23 @@ p {
   .Card-cardcontainer:hover {
     box-shadow: 0 0 1px 6px #999;
   }
+/*Transition on hover*/
 
+  .CardWrapper-cardscontainer div .Card-cardcontainer a div .Card-cardImageHolder {
+    overflow: hidden;
+}
+
+.CardWrapper-cardscontainer div .Card-cardcontainer a div .Card-cardImageHolder img {
+    transition: transform 1.05s, filter 1.05s ease-in-out;
+}
+
+.CardWrapper-cardscontainer div .Card-cardcontainer a div .Card-cardImageHolder:hover img {
+    transform: scale(1.05);
+}
   .Card-cardImageHolder {
     width: 100%;
     margin: unset;
-    height: 240px;
+    height: 200px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
   }
@@ -368,12 +380,15 @@ p {
   }
 }
 
-/**@media screen and (min-width: 1460px) {
+@media screen and (min-width: 1460px) {
   .CardWrapper-cardscontainer {
-    width: 1460px;
+    max-width: 1460px;
+    padding-left: 10px;
+    margin: 0 auto;
+    width: 100%;
   }
 }
-@media screen and (max-width: 767px) {}
+/**@media screen and (max-width: 767px) {}
 **/
 
 /***************************/

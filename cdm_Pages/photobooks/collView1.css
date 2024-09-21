@@ -2,10 +2,10 @@
 /* CSS Document */
 @import 'styles/_variables';
 
-
 /********************************/
 /***Search Header*******/
 /*******************************/
+
 .CollSearch {
     display: flex;
     flex-flow: row nowrap;
@@ -32,10 +32,6 @@
     max-height: 30%;
 }
 
-#srchTerm{
-    display:flex;
-}
-
 /*format text input box*/
 
 input[type="text"] {
@@ -44,7 +40,7 @@ input[type="text"] {
     height: auto;
     border: none;
     background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 2px;
+    border-radius: 4px;
     position: absolute;
     width: 90%;
     font-size: 1.5em;
@@ -52,16 +48,19 @@ input[type="text"] {
     font-family: 'Open Sans', sans-serif;
     left: 20px;
     color: #545454;
+    display:inline-block;
 }
 
 /*format & position search submit button*/
 #search_collection {
     position: absolute;
-    display: inline-block;
+    display:inline-block;
     background-color: #fff;
     border: none;
-    padding: .01% 1.15%;
+    padding: .25% 1% !important;
     right: 20px;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
 #search_collection:hover {
