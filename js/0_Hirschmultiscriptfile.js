@@ -36,6 +36,7 @@ const scriptFilesToLoad = [
   'pdf-objects-multipage-1_1.js',
 	'uv-cp.js',
   'sway.js',
+  'mfahcarousel.js',
 ];
 
 (function() {
