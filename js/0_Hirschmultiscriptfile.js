@@ -37,6 +37,7 @@ const scriptFilesToLoad = [
 	'uv-cp.js',
   'sway.js',
   'mfahcarousel.js',
+  'Teva-menu.js',
 ];
 
 (function() {
