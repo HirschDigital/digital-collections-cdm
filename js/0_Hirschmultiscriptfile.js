@@ -38,6 +38,7 @@ const scriptFilesToLoad = [
   'sway.js',
   'mfahcarousel.js',
   'Teva-menu.js',
+  'dropdown.js',
 ];
 
 (function() {

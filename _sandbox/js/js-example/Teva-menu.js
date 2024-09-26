@@ -106,6 +106,8 @@ for (var key = 0; key < data.length; key++) {
 
 // Append hvrbox items to correct div
 document.getElementById("collectionWrapper").innerHTML += collectionData;
+
 };
 document.addEventListener('cdm-collection-landing-page:ready', hoverbox);
+
 })();
