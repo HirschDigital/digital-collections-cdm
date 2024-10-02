@@ -1,0 +1,112 @@
+.cardsOnly {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 10px 10px 10px;
+    justify-content: center;
+}
+
+.cdm-animated-card, .cdm-animated-card * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+  
+.cdm-animated-card {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    
+    /*static margins*/
+    margin: 15px;
+    /*auto side margins preference -- comment out static if using these*/
+    /*margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;*/
+
+    /*Optional: add border */
+    /*border: 5px solid #006FA7;
+    border-radius: 25px;*/
+}
+
+.cardTitle {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    top: 0;
+    min-width: 100%;
+    height: auto;
+    min-height: 12%;
+    padding-top: 1.5%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    text-align: center;
+}
+
+.cardHeader{
+    font-weight: 700;
+    font-family: FontAwesome;
+    font-size: 1.1rem;
+    color: #FFF;
+}
+
+.cdm-animated-card i {
+    position: absolute;
+    bottom: 2%;
+    right: 3%;
+    font-size: 3em;
+    color: #E6AA3C;
+}
+
+.cdm-animated-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+  
+.cardDescriptionText a {
+    text-decoration: none;
+    color: #E6AA3C;
+    font-weight: 400;
+    padding: 5px;
+    font-size: 18px;
+    font-family: inherit;
+}
+
+.cdm-animated-card .cardImage {
+    display: block;
+}
+
+.cdm-animated-card .cardDescriptionDiv {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 15px;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+  
+.cdm-animated-card .cardDescriptionText {
+    text-align: center;
+    font-size: 18px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+  
+.cdm-animated-card:hover .cardDescriptionDiv, .cdm-animated-card.active .cardDescriptionDiv, .cardDescriptionDiv:focus-within {
+    opacity: 1;
+}

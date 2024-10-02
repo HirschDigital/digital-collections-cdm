@@ -1,18 +1,9 @@
 function ScriptLoader(url, callback){
     var script = document.createElement("script");
     script.type = "text/javascript";
-    if (script.readyState){ //IE
-        script.onreadystatechange = function() {
-            if (script.readyState == "complete") {
-                script.onreadystatechange = null;
-                callback();
-            }
-        };
-    } else { //Others
         script.onload = function(){
             callback();
         };
-    }
     script.src = url;
     document.getElementsByTagName("head")[0].appendChild(script);
 }
@@ -20,9 +11,6 @@ function ScriptLoader(url, callback){
 document.addEventListener('cdm-custom-page:ready', function(event) {
     if (event.detail.filename.endsWith('timeline')) {
 
- /*
-        * Helper functions
-        */
         let createCollectionManifest = function() {
             return {
                 '@context' : 'http://iiif.io/api/presentation/2/context.json',
@@ -44,7 +32,7 @@ document.addEventListener('cdm-custom-page:ready', function(event) {
         };
 
         ScriptLoader('https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js', function() {
-            axios.get('https://cdm17480.contentdm.oclc.org/digital/bl/dmwebservices/index.php?q=dmQuery/p17480coll1/0/title!demo!rights/demo/100/1/0/0/0/0/json')
+            axios.get('https://cdm17480.contentdm.oclc.org/digital/bl/dmwebservices/index.php?q=dmQuery/p17480coll1/0/title!artist!date/nosort/100/1/0/0/0/0/1/1/json')
             .then(function(response) {
                 let collectionManifest = createCollectionManifest();
                 response.data.records.forEach(function(record) {

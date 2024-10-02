@@ -39,11 +39,21 @@ const scriptFilesToLoad = [
   'mfahcarousel.js',
   'Teva-menu.js',
   'dropdown.js',
+  'citation-teva1.js',
 ];
 
 (function() {
   const allScripts = scriptFilesToLoad.map(filePath);
   allScripts.forEach(loadScript);
+
+  /*document.addEventListener('cdm-custom-page:ready', function(e) {
+    if (e.detail.filename === 'field-insert-iiif') {
+        loadScript('/customizations/global/js/field-insert-iiif.js');
+        }   
+    else if (e.detail.filename === 'citation') {
+        loadScript('/customizations/global/js/citationGenerator.js');
+        }       
+    });*/
 
 })();
 

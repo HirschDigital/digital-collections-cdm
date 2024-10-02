@@ -1,18 +1,9 @@
 function ScriptLoader(url, callback){
     var script = document.createElement("script");
     script.type = "text/javascript";
-    if (script.readyState){ //IE
-        script.onreadystatechange = function() {
-            if (script.readyState == "complete") {
-                script.onreadystatechange = null;
-                callback();
-            }
-        };
-    } else { //Others
         script.onload = function(){
             callback();
         };
-    }
     script.src = url;
     document.getElementsByTagName("head")[0].appendChild(script);
 }
@@ -20,9 +11,6 @@ function ScriptLoader(url, callback){
 document.addEventListener('cdm-custom-page:ready', function(event) {
     if (event.detail.filename.endsWith('timeline')) {
 
-        /*
-        * Helper functions
-        */
         let createCollectionManifest = function() {
             return {
                 '@context' : 'http://iiif.io/api/presentation/2/context.json',
@@ -35,7 +23,6 @@ document.addEventListener('cdm-custom-page:ready', function(event) {
             };
         }
 
-        // Create a IIIF Collection Manifest member from a CONTENTdm dmQuery API item record
         let createMember = function(record) {
             return {
                 '@id' : 'https://cdm17480.contentdm.oclc.org/digital/iiif/info' + record.collection + '/' + record.pointer + '/manifest.json',
@@ -60,7 +47,8 @@ document.addEventListener('cdm-custom-page:ready', function(event) {
             return {
                 'media' : {
                     'url' : updateIIIFImageUrl(itemManifest.sequences[0].canvases[0].images[0].resource['@id'], 'size', '725,'),
-                    'credit' : itemManifest.attribution['@value']
+                    'credit' : itemManifest.attribution['@value'],
+                    'link' : 'https://cdm17480.contentdm.oclc.org/digital/iiif/' + getUrlPart(itemManifest['@id'], 2) + '/id/' + getUrlPart(itemManifest['@id'], 3)
                 },
                 'start_date' : {
                     'year' : new Date(getMetadata(itemManifest.metadata, 'Date')).getFullYear()
@@ -86,6 +74,12 @@ document.addEventListener('cdm-custom-page:ready', function(event) {
             }
             url.pathname = urlParts.join('/');
             return url.href;
+        }
+
+        let getUrlPart = function(inurl, pathIndex) {
+            let url = new URL(iiifUrl);
+            let urlParts = url.pathname.split('/');
+            return urlParts[pathIndex];
         }
 
         /*
