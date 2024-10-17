@@ -32,7 +32,7 @@ document.addEventListener('cdm-custom-page:ready', function(event) {
         };
 
         ScriptLoader('https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js', function() {
-            axios.get('https://cdm17480.contentdm.oclc.org/digital/bl/dmwebservices/index.php?q=dmQuery/p17480coll1/0/title!artist!date/nosort/100/1/0/0/0/0/1/1/json')
+            axios.get('https://cdm17480.contentdm.oclc.org/digital/bl/dmwebservices/index.php?q=dmQuery/p17480coll1/0/title!artist!date/nosort/100/1/0/0/0/0/json')
             .then(function(response) {
                 let collectionManifest = createCollectionManifest();
                 response.data.records.forEach(function(record) {
