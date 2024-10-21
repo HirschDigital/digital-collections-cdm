@@ -1,6 +1,8 @@
 
-document.addEventListener('cdm-custom-page:ready', function () {
+(function () {
+    'use strict';
 
+    function panelexpand(){
     // Get all buttons with the toggle functionality
     const buttons = document.querySelectorAll('[data-target]');
 
@@ -42,6 +44,8 @@ document.addEventListener('cdm-custom-page:ready', function () {
             panelPanel.classList.add('expanded-panel');
             panelPanel.classList.remove('collapsed-panel');
         }
-    });
-});
+    })};
+    document.addEventListener('cdm-custom-page:ready', panelexpand);
+    document.addEventListener('cdm-collection-landing-page:ready', panelexpand);
+})();
   

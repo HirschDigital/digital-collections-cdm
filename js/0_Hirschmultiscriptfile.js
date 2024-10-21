@@ -32,14 +32,12 @@ const scriptFilesToLoad = [
   'field-insert-iiif.js',
   'headerSearchInputPlaceholder.js',
   'link-reformatter.js',
+  'mfahcarousel.js',
   'panel-expand.js',
   'pdf-objects-multipage-1_1.js',
-	'uv-cp.js',
   'sway.js',
-  'mfahcarousel.js',
+	'uv-cp.js',
   'Teva-menu.js',
-  'dropdown.js',
-  'citation-teva1.js',
 ];
 
 (function() {
