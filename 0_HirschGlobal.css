@@ -581,10 +581,33 @@ p {
   }
 }
 
+/* fix to move cpd obj paginator above preview image */
+.CompoundItemPagination-container {
+  position: absolute;
+  top: -60px;
+  left: 30%;
+}
+
 /* Sub section: MAIN ITEM VIEWER */
 
 .row .col-sm-8.ItemView-mainColumn {
   margin-top: 10px;
+}
+
+.ItemImage-expandButton {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  right: 0;
+}
+
+.ItemPDF-expandButton {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  right: 0;
 }
 
 /***************MISC*****************/

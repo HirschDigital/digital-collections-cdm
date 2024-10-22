@@ -29,6 +29,7 @@ const scriptFilesToLoad = [
   'button-pdf-inline-1_0.js',
   'collapse.js',
   'coverimage.js',
+  'debug-events-all-1_5.js',
   'field-insert-iiif.js',
   'headerSearchInputPlaceholder.js',
   'link-reformatter.js',
