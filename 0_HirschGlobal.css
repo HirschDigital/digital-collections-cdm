@@ -286,10 +286,6 @@ p {
 
 /* Sub section: PHOTOGRID */
 
-.CoreLayout-mainwrapper.cdm-main-content>div:not([class]) {
-  margin: 0 auto;
-}
-
 .CardWrapper-cardscontainer {
   padding-bottom: 20px;
   width: 90%;
