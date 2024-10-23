@@ -52,7 +52,7 @@ input[type="text"] {
 }
 
 /*format & position search submit button*/
-#search_collection {
+.searchbutton {
     position: absolute;
     display:inline-block;
     background-color: #fff;
@@ -63,7 +63,7 @@ input[type="text"] {
     border-radius: 4px;
 }
 
-#search_collection:hover {
+.searchbutton:hover {
     background: #dc4b38;
 }
 
@@ -135,8 +135,7 @@ input[type="text"] {
         z-index: 778;
         max-width: 71%;
       }
-    
-      #search_collection {
+     .searchbutton {
         display: inline-block;
         z-index: 1;
         border: none;
