@@ -2,6 +2,7 @@
 /* CSS Document */
 @import 'styles/_variables';
 
+
 /********************************/
 /***Search Header*******/
 /*******************************/
@@ -17,8 +18,8 @@
 }
 
 /*background image for search section*/
-#cartagena {
-    background-image: url(https://cdm17480.contentdm.oclc.org/customizations/collection/photobooks/pages/images/CartagenaHeader.jpg);
+#amart-landing {
+    background-image: url(https://cdm17480.contentdm.oclc.org/customizations/collection/americanart/pages/images/friendship.jpg);
     background-position: 50%;
     background-size: cover;
 }
@@ -80,7 +81,7 @@ input[type="text"] {
 #search-content {
     /*flex-flow: row wrap;*/
     justify-content: space-between;
-    /*align-items: flex-end;*/
+    /*align-items: baseline; flex-end?*/
     position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
     margin: 0;
@@ -115,10 +116,6 @@ input[type="text"] {
 #search-content p>a {
     color: gray;
 }
-
-/*#search-content .text-center{
-    display:block
-}*/
 
 @media (min-width: 300px) and (max-width: 567px) {
 
@@ -174,4 +171,21 @@ input[type="text"] {
     }
 }
 
-@media (min-width: 568px) and (max-width: 1024px) {}
+/**************************/
+/***Collection Grid *******/
+/**************************/
+
+@media screen and (min-width: 767px) {
+    .Card-cardcontainer .col-md-6 {
+      box-shadow: 0 1px 16px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05);
+      height: 100%;
+      margin: 10px;
+      padding: 0;
+      max-width: 550px !important;
+    }
+}
+@media screen and (min-width: 1366px) {
+    .Card-cardcontainer .col-md-6 {
+      max-width: 50% !important;
+    }
+  }
