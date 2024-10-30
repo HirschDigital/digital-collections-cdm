@@ -27,3 +27,40 @@
     </button>
   </div>
 </div>
+
+
+<div class="CollectionSection-block col-sm-6">
+  <div class="CollectionSection-blockTitle">
+    <h3><a
+        href="https://cdm17480.contentdm.oclc.org/digital/search/collection/american/searchterm/Manuscripts and Albums/field/relatig/mode/exact/conn/and/order/date/ad/asc">Explore
+        the Collection >>></a></h3>
+  </div>
+  <div class="CollectionSection-searchbar">
+    <script type="text/javascript">
+      function goToPage() {
+        var page = document.getElementById('SearchTerm').value
+        NodeTitle = "Manuscripts and Albums";
+        NodeTitle = NodeTitle.replace(/&#039;/g, "'");
+        window.location = "https://cdm17480.contentdm.oclc.org/cdm/search/collection/americanart/searchterm/" + NodeTitle + "!" + SearchTerm.value + "/field/relatig!all/mode/exact!all/conn/and!and/order/nosort/ad/asc";
+      }
+      function searchKeyPress(e) {
+        e = e || window.event;
+        if (e.keyCode == 13) {
+          document.getElementById('btnSearch').click();
+          return false;
+        }
+        return true;
+      }
+    </script>
+    <div class="form-row" data-dashlane-rid="a3c34d7688a0ff7f">
+      <div class="col-10">
+        <input id="SearchTerm" class="form-control" onkeypress="return searchKeyPress(event);"
+          placeholder="Search the Collection" type="text" data-dashlane-rid="0baea3907d215df5">
+      </div>
+      <div class="col">
+        <button id="btnSearch" class="btn btn-default" onclick="goToPage();" type="submit"
+          data-dashlane-label="true" data-dashlane-rid="61df54dd5bde0fae">Go</button>
+      </div>
+    </div>
+  </div>
+</div>
