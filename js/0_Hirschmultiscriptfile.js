@@ -30,6 +30,7 @@ const scriptFilesToLoad = [
   'collapse.js',
   'coverimage.js',
   'debug-events-all-1_5.js',
+  'ead-embed-1_2.js',
   'field-insert-iiif.js',
   'headerSearchInputPlaceholder.js',
   'link-reformatter.js',
