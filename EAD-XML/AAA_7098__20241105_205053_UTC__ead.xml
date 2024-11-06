@@ -21,7 +21,7 @@
       <creation>This finding aid was produced using ArchivesSpace on <date>2024-11-05 20:50:54 +0000</date>
         .</creation>
       <langusage>Description is written in: <language langcode="eng" scriptcode="Latn">English,
-        Latin script</language>.</langusage>
+          Latin script</language>.</langusage>
     </profiledesc>
   </eadheader>
   <archdesc level="collection">
@@ -125,7 +125,7 @@
       <subject source="local">TexTreasures -- 2020</subject>
     </controlaccess>
     <dsc>
-      <c id="aspace_e13f803bcc3c4fd2b80c8f8e9e756f26" level="series">
+      <c01 id="aspace_e13f803bcc3c4fd2b80c8f8e9e756f26" level="series">
         <did>
           <unittitle>Scrapbook</unittitle>
           <unitdate calendar="gregorian" datechar="other" era="ce" normal="1975/1982"
@@ -139,7 +139,8 @@
               type="Reel">2890</container>
             <container id="aspace_05bceb1a5aa155afecf9e4c7a49b9a94"
               parent="aspace_fd52e18d72b6de438a6a88f0ea9fdd04" type="Image">4-43</container>
-            <dao xlink:actuate="onRequest" xlink:href="https://id.lib.uh.edu/ark:/84475/do92494b586"
+            <dao xlink:actuate="onRequest"
+              xlink:href="https://id.lib.uh.edu/ark:/84475/do92494b586"
               xlink:role="Access" xlink:show="new"
               xlink:title="Bert L. Long, Jr. Scrapbook, 1975-1977" xlink:type="simple">
               <daodesc>
@@ -228,8 +229,8 @@
             </dao>
           </did>
         </c>
-      </c>
-      <c id="aspace_dd68270c72b9cb97e6aa329b07983a81" level="series">
+      </c01>
+      <c02 id="aspace_dd68270c72b9cb97e6aa329b07983a81" level="series">
         <did>
           <unittitle>Correspondence</unittitle>
           <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1977/1982"
@@ -248,8 +249,8 @@
             </daodesc>
           </dao>
         </did>
-      </c>
-      <c id="aspace_e6c2cbf95c2a9b93248dcd6d991b7227" level="series">
+      </c02>
+      <c03 id="aspace_e6c2cbf95c2a9b93248dcd6d991b7227" level="series">
         <did>
           <unittitle>Clippings</unittitle>
           <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1975/1982"
@@ -267,8 +268,8 @@
             </daodesc>
           </dao>
         </did>
-      </c>
-      <c id="aspace_27a5f103c98b79f38a59688ec84fd4e9" level="series">
+      </c03>
+      <c04 id="aspace_27a5f103c98b79f38a59688ec84fd4e9" level="series">
         <did>
           <unittitle>Writings</unittitle>
           <container id="aspace_fd5c532ae43e32acbd45088d6963e939" label="Mixed Materials"
@@ -283,8 +284,8 @@
             </daodesc>
           </dao>
         </did>
-      </c>
-      <c id="aspace_54d085a095dd83679f273fa853190420" level="file">
+      </c04>
+      <c05 id="aspace_54d085a095dd83679f273fa853190420" level="file">
         <did>
           <unittitle>International Sculpture, Oakland</unittitle>
           <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1982/1982">1982</unitdate>
@@ -301,8 +302,8 @@
             </daodesc>
           </dao>
         </did>
-      </c>
-      <c id="aspace_1a1b1d87a0e42e42fd76aa7bfbd7a052" level="file">
+      </c05>
+      <c06 id="aspace_1a1b1d87a0e42e42fd76aa7bfbd7a052" level="file">
         <did>
           <unittitle>La Concorde Ice Sculpture Sketches</unittitle>
           <container id="aspace_461fd545e08aa4cb9ec47c71ecdf03d6" label="Mixed Materials"
@@ -318,8 +319,8 @@
             </daodesc>
           </dao>
         </did>
-      </c>
-      <c id="aspace_dd00133e0b3411c6345042c556e226fd" level="file">
+      </c06>
+      <c07 id="aspace_dd00133e0b3411c6345042c556e226fd" level="file">
         <did>
           <unittitle>Project 20/20</unittitle>
           <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1981/1981">1981</unitdate>
@@ -335,8 +336,8 @@
             </daodesc>
           </dao>
         </did>
-      </c>
-      <c id="aspace_6da38d278ec7355d0be761d9b148c64d" level="file">
+      </c07>
+      <c08 id="aspace_6da38d278ec7355d0be761d9b148c64d" level="file">
         <did>
           <unittitle>Artists in Action (AIA)</unittitle>
           <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1979/1979">1979</unitdate>
@@ -353,8 +354,8 @@
             </daodesc>
           </dao>
         </did>
-      </c>
-      <c id="aspace_f4abb47095a3773d081637f4068ed5ab" level="file">
+      </c08>
+      <c09 id="aspace_f4abb47095a3773d081637f4068ed5ab" level="file">
         <did>
           <unittitle>Cooking Columns</unittitle>
           <container id="aspace_6d04bac30da6eda6478e31455f982843" label="Mixed Materials"
@@ -369,8 +370,8 @@
             </daodesc>
           </dao>
         </did>
-      </c>
-      <c id="aspace_e1523d00edd173ab38f7ad525a469b67" level="file">
+      </c09>
+      <c10 id="aspace_e1523d00edd173ab38f7ad525a469b67" level="file">
         <did>
           <unittitle>Houston Contemporary Artists and Models Ball</unittitle>
           <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1979/1979">1979</unitdate>
@@ -387,8 +388,8 @@
             </daodesc>
           </dao>
         </did>
-      </c>
-      <c id="aspace_b64fd5bd6bb8d0fd92e65772d91e6e2f" level="file">
+      </c10>
+      <c11 id="aspace_b64fd5bd6bb8d0fd92e65772d91e6e2f" level="file">
         <did>
           <unittitle>Bert Long and Floyd Newsum Exhibition, O'Kane Gallery</unittitle>
           <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1981/1981">1981</unitdate>
@@ -405,8 +406,8 @@
             </daodesc>
           </dao>
         </did>
-      </c>
-      <c id="aspace_1f52baeaeb7117301a38fbdb51524985" level="file">
+      </c11>
+      <c12 id="aspace_1f52baeaeb7117301a38fbdb51524985" level="file">
         <did>
           <unittitle>Rejections, juried show entries</unittitle>
           <container id="aspace_ab5c36d22afb5dc81a11bd3139493f74" label="Mixed Materials"
@@ -421,8 +422,8 @@
             </daodesc>
           </dao>
         </did>
-      </c>
-      <c id="aspace_5ba346a3bc9321285e1223d0f1dc8d61" level="series">
+      </c12>
+      <c13 id="aspace_5ba346a3bc9321285e1223d0f1dc8d61" level="series">
         <did>
           <unittitle>Art Scene</unittitle>
           <unitdate calendar="gregorian" datechar="creation" era="ce" normal="1980/1982"
@@ -464,7 +465,7 @@
             </dao>
           </did>
         </c>
-      </c>
+      </c13>
     </dsc>
   </archdesc>
 </ead>
