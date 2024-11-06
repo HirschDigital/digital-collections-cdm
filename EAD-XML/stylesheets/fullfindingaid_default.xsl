@@ -6,7 +6,8 @@ to work with EAD 2002.-->
 <!--This stylesheet does not format the <dsc> portion of a finding aid.   Users
 need to select another stylesheet for the dsc and reference that file
 in the <xsl:inlcude> statement that appears at the end of this file.-->
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
+xmlns:xlink="http://www.w3.org/1999/xlink">
     <xsl:strip-space elements="*"/>
     <xsl:output method="html" encoding="ISO-8859-1" doctype-public="-//W3C//DTD HTML 4.0 Transitional//EN"/>
 	<!--<xsl:param name="section" select="all"/>-->
@@ -1194,6 +1195,23 @@ that is used generically throughout the stylesheet.-->
         </xsl:choose>
         <xsl:apply-templates select="physdesc"/>
     </xsl:template>
+
+	<!--This template formats the appearance of <thead> elements
+	where ever they occur in <dsc>.-->
+
+	<xsl:template match="thead">
+		<xsl:for-each select="row">
+			<tr>
+				<xsl:for-each select="entry">
+					<td>
+						<b>
+							<xsl:apply-templates/>
+						</b>
+					</td>
+				</xsl:for-each>
+			</tr>
+		</xsl:for-each>
+	</xsl:template>
 
 	<!-- ...............Section 3.............................. -->
 	<!--This section of the stylesheet creates an HTML table for each c01.
