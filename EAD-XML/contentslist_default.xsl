@@ -1,6 +1,7 @@
 <!--Revision date 21 July 2004-->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
-    xmlns:xlink="http://www.w3.org/1999/xlink">
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
     <!-- This stylesheet formats the dsc portion of a finding aid.-->
     <!--It
     formats components that have 2 container elements of any type.-->
@@ -374,7 +375,8 @@ for each level.-->
                 @type='Map-Case' or @type='MAP-CASE' or @type='map-case' or 
                 @type='Box-Folder' or @type='BOX-FOLDER' or @type='box-folder' or 
                 @type='Folio' or @type='FOLIO' or @type='folio' or 
-                @type='Othertype' or @type='OTHERTYPE' or @type='othertype' or @type='IMAGE' or @type='image' or @type='Image']" />
+                @type='Othertype' or @type='OTHERTYPE' or @type='othertype' or 
+                @type='IMAGE' or @type='image' or @type='Image']" />
             <xsl:variable
                 name="preceding"
                 select="preceding::did[1]/container[@type='Box' or @type='BOX' or @type='box' or 
@@ -389,7 +391,8 @@ for each level.-->
                 @type='Map-Case' or @type='MAP-CASE' or @type='map-case' or 
                 @type='Box-Folder' or @type='BOX-FOLDER' or @type='box-folder' or 
                 @type='Folio' or @type='FOLIO' or @type='folio' or 
-                @type='Othertype' or @type='OTHERTYPE' or @type='othertype' @type='IMAGE' or @type='image' or @type='Image']" />
+                @type='Othertype' or @type='OTHERTYPE' or @type='othertype' or 
+                @type='IMAGE' or @type='image' or @type='Image']" />
             <!--This
             variable defines the set of container types that
 		may appear in the second column of a two column container list.
@@ -408,7 +411,8 @@ for each level.-->
                 @type='Map-Case' or @type='MAP-CASE' or @type='map-case' or 
                 @type='Box-Folder' or @type='BOX-FOLDER' or @type='box-folder' or 
                 @type='Folio' or @type='FOLIO' or @type='folio' or 
-                @type='Othertype' or @type='OTHERTYPE' or @type='othertype' @type='IMAGE' or @type='image' or @type='Image']" />
+                @type='Othertype' or @type='OTHERTYPE' or @type='othertype' or 
+                @type='IMAGE' or @type='image' or @type='Image']" />
             <xsl:choose>
                 <!--When
                 the container value or the container type of the first
@@ -561,7 +565,8 @@ for each level.-->
                 @type='Map-Case' or @type='MAP-CASE' or @type='map-case' or 
                 @type='Box-Folder' or @type='BOX-FOLDER' or @type='box-folder' or 
                 @type='Folio' or @type='FOLIO' or @type='folio' or 
-                @type='Othertype' or @type='OTHERTYPE' or @type='othertype' @type='IMAGE' or @type='image' or @type='Image']" />
+                @type='Othertype' or @type='OTHERTYPE' or @type='othertype' or
+                @type='IMAGE' or @type='image' or @type='Image']" />
             <xsl:variable
                 name="preceding"
                 select="preceding::did[1]/container[@type='Box' or @type='BOX' or @type='box' or 
@@ -576,7 +581,8 @@ for each level.-->
                 @type='Map-Case' or @type='MAP-CASE' or @type='map-case' or 
                 @type='Box-Folder' or @type='BOX-FOLDER' or @type='box-folder' or 
                 @type='Folio' or @type='FOLIO' or @type='folio' or 
-                @type='Othertype' or @type='OTHERTYPE' or @type='othertype' @type='IMAGE' or @type='image' or @type='Image']" />
+                @type='Othertype' or @type='OTHERTYPE' or @type='othertype' or 
+                @type='IMAGE' or @type='image' or @type='Image']" />
             <!--This
             variable defines the set of container types that
 		may appear in the second column of a two column container list.
@@ -595,7 +601,8 @@ for each level.-->
                 @type='Map-Case' or @type='MAP-CASE' or @type='map-case' or 
                 @type='Box-Folder' or @type='BOX-FOLDER' or @type='box-folder' or 
                 @type='Folio' or @type='FOLIO' or @type='folio' or 
-                @type='Othertype' or @type='OTHERTYPE' or @type='othertype' @type='IMAGE' or @type='image' or @type='Image']" />
+                @type='Othertype' or @type='OTHERTYPE' or @type='othertype' or 
+                @type='IMAGE' or @type='image' or @type='Image']" />
             <xsl:choose>
                 <!--When
                 the container value or the container type of the first
@@ -713,7 +720,8 @@ for each level.-->
                 @type='Map-Case' or @type='MAP-CASE' or @type='map-case' or 
                 @type='Box-Folder' or @type='BOX-FOLDER' or @type='box-folder' or 
                 @type='Folio' or @type='FOLIO' or @type='folio' or 
-                @type='Othertype' or @type='OTHERTYPE' or @type='othertype' @type='IMAGE' or @type='image' or @type='Image']" />
+                @type='Othertype' or @type='OTHERTYPE' or @type='othertype' or 
+                @type='IMAGE' or @type='image' or @type='Image']" />
             <xsl:variable
                 name="preceding"
                 select="preceding::did[1]/container[@type='Box' or @type='BOX' or @type='box' or 
@@ -728,7 +736,8 @@ for each level.-->
                 @type='Map-Case' or @type='MAP-CASE' or @type='map-case' or 
                 @type='Box-Folder' or @type='BOX-FOLDER' or @type='box-folder' or 
                 @type='Folio' or @type='FOLIO' or @type='folio' or 
-                @type='Othertype' or @type='OTHERTYPE' or @type='othertype' @type='IMAGE' or @type='image' or @type='Image']" />
+                @type='Othertype' or @type='OTHERTYPE' or @type='othertype' or 
+                @type='IMAGE' or @type='image' or @type='Image']" />
             <!--This
             variable defines the set of container types that
 		may appear in the second column of a two column container list.

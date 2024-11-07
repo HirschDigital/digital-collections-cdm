@@ -1,6 +1,4 @@
-<!-- EAD Cookbook Style 8   Version 0.9   19 January 2004 -->
-<!-- Modified for OCLC's ContentDm, 23 October 2008 -->
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0" xmlns:xlink="http://www.w3.org/1999/xlink">
     <xsl:strip-space elements="*"/>
     <xsl:output method="html" encoding="ISO-8859-1" doctype-public="-//W3C//DTD HTML 4.0 Transitional//EN"/>
     <xsl:param name="section" select="cover"/>
@@ -1159,5 +1157,5 @@ inserting the contents if there is or adding one if there isn't. -->
     </xsl:template>
 
 	<!--Insert the address for the dsc stylesheet of your choice here.-->
-	<!--<xsl:include href="dsc4.xsl"/>-->
+	<xsl:include href="contentslist_default.xsl"/>
 </xsl:stylesheet>
