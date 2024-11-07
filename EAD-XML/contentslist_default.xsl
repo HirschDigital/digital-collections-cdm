@@ -3,22 +3,18 @@
     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
     <!-- This stylesheet formats the dsc portion of a finding aid.-->
-    <!--It
-    formats components that have 2 container elements of any type.-->
-    <!--It
-    assumes that c01 and optionally <c02> is a high-level description
+    <!--It formats components that have 2 container elements of any type.-->
+    <!--It assumes that c01 and optionally <c02> is a high-level description
 	such as a series, subseries, subgroup or subcollection and does not have container
 	elements associated with it. However, it does accommodate situations
 	where there a <c01> that is a file is occasionally interspersed. However,
 	if <c01> is always a file, use dsc10.xsl instead. -->
-    <!--Column
-    headings for containers are displayed when either the value or
+    <!--Column headings for containers are displayed when either the value or
 	the type of a component's first container differs from that of
 	the comparable container in the preceding component. -->
     <!-- The content of column headings are taken from the type
     attribute of the container elements.-->
-    <!--The
-    content of any and all container elements is always displayed.-->
+    <!--The content of any and all container elements is always displayed.-->
     <xsl:template match="/ead">
         <html>
             <head>
