@@ -19,9 +19,9 @@
         <html>
             <head>
                 <style type="text/css">
-                    h1, h2, h3, h4 {font-family: arial}
+                    h1, h2, h3, h4 {font-family: helvetica}
                     td {vertical-align: top}
-                    * {font-family: arial}
+                    * {font-family: helvetica}
                 </style>
 
                 <title>
@@ -145,9 +145,9 @@ The named templates are in section 4.-->
         <html>
             <head>
                 <style type="text/css">
-                    h1, h2, h3, h4 {font-family: arial}
+                    h1, h2, h3, h4 {font-family: helvetica}
                     td {vertical-align: top}
-                    * {font-family: arial}
+                    * {font-family: helvetica}
                 </style>
             </head>
             <body>

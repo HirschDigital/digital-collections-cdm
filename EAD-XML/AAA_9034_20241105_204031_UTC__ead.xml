@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="description_default.xsl"?>
 <ead xmlns:xlink="https://www.w3.org/1999/xlink"
   xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.loc.gov/ead/ead.xsd">
+  xsi:schemaLocation="https://www.loc.gov/ead/ead.xsd">
   <eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b"
     repositoryencoding="iso15511">
     <eadid></eadid>

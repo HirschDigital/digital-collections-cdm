@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="contentslist_default.xsl"?>
+<?xml-stylesheet type="text/xsl" href="description_tap.xsl"?>
 <ead xmlns:xlink="https://www.w3.org/1999/xlink"
   xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="https://www.loc.gov/ead/ead.xsd">
