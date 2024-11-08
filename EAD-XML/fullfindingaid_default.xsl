@@ -1,11 +1,3 @@
-<!-- EAD Cookbook Style 8   Version 0.9   19 January 2004 -->
-<!-- Modified for OCLC's ContentDm, 23 October 2008 -->
-<!--  This stylesheet generates a document without a Table of Contents
-or any hyperlinks.   It is an update to eadcbs4.xsl designed
-to work with EAD 2002.-->
-<!--This stylesheet does not format the <dsc> portion of a finding aid.   Users
-need to select another stylesheet for the dsc and reference that file
-in the <xsl:inlcude> statement that appears at the end of this file.-->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
 xmlns:xlink="http://www.w3.org/1999/xlink">
     <xsl:strip-space elements="*"/>
