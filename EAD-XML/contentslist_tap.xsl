@@ -131,9 +131,6 @@ that is used generically throughout the stylesheet.-->
         <xsl:apply-templates
             select="physdesc" />
     </xsl:template>
-    <!-- ...............Section 2.5............................-->
-    <!--This section of the stylesheet calls on xlink:href and xlink:title attributes
-    in the finding aid-->
 
     <!-- ...............Section 3.............................. -->
     <!--This

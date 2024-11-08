@@ -1157,5 +1157,5 @@ inserting the contents if there is or adding one if there isn't. -->
     </xsl:template>
 
 	<!--Insert the address for the dsc stylesheet of your choice here.-->
-	<xsl:include href="contentslist_tap.xsl"/>
+
 </xsl:stylesheet>
