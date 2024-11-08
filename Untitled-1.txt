@@ -1,3 +1,5 @@
 add href attribute to the content level items in the stylesheet?
 Doesn't work that well in mobile.
 Link subject terms.
+
+Truncate facets in object description?
