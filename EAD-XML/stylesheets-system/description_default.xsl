@@ -1,4 +1,6 @@
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+<!-- EAD Cookbook Style 8   Version 0.9   19 January 2004 -->
+<!-- Modified for OCLC's ContentDm, 23 October 2008 -->
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:strip-space elements="*"/>
     <xsl:output method="html" encoding="ISO-8859-1" doctype-public="-//W3C//DTD HTML 4.0 Transitional//EN"/>
     <xsl:param name="section" select="cover"/>
@@ -7,9 +9,9 @@
         <html>
             <head>
                 <style type="text/css">
-		            h1, h2, h3, h4 {font-family: helvetica}
+		            h1, h2, h3, h4 {font-family: arial}
 		            td {vertical-align: top}
-					* {font-family: helvetica}  
+					* {font-family: arial}  
                 </style>
                 <title>
                     <xsl:choose>
@@ -968,7 +970,7 @@ inserting the contents if there is or adding one if there isn't. -->
 	<!--This template formats controlled terms that are entered
 	directly under the controlaccess element.  Elements are alphabetized.-->
     <xsl:template mode="direct" match="archdesc/controlaccess">
-        <xsl:for-each select="subject |corpname | famname | persname | genreform | geogname | occupation">
+        <xsl:for-each select="subject |corpname | famname | persname | genreform | title | geogname | occupation">
             <xsl:sort select="." data-type="text" order="ascending"/>
             <div style="margin-left:50pt">
                 <xsl:apply-templates/>
@@ -993,7 +995,7 @@ inserting the contents if there is or adding one if there isn't. -->
                 <xsl:apply-templates select="head"/>
             </h4>
         </xsl:if>
-		<xsl:for-each select="subject |corpname | famname | persname | genreform | geogname | occupation">
+		<xsl:for-each select="subject |corpname | famname | persname | genreform | title | geogname | occupation">
             <xsl:sort select="." data-type="text" order="ascending"/>
             <div style="margin-left:50pt">
                 <xsl:apply-templates/>
@@ -1157,5 +1159,5 @@ inserting the contents if there is or adding one if there isn't. -->
     </xsl:template>
 
 	<!--Insert the address for the dsc stylesheet of your choice here.-->
-
+	<!--<xsl:include href="dsc4.xsl"/>-->
 </xsl:stylesheet>
