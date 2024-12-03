@@ -1,5 +1,5 @@
 <!--Revision date 21 July 2004-->
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0" xmlns:xlink="https://www.w3.org/1999/xlink" >
     <!-- This stylesheet formats the dsc portion of a finding aid.-->
     <!--It formats components that have 2 container elements of any type.-->
     <!--It assumes that c01 and optionally <c02> is a high-level description
@@ -111,7 +111,7 @@ that is used generically throughout the stylesheet.-->
             <xsl:otherwise>
                 <xsl:element name="a">
                     <xsl:attribute name="href">
-                        <xsl:value-of select="dao/@xlink:href" xmlns:xlink="https://www.w3.org/1999/xlink" />
+                        <xsl:value-of select="dao/@xlink:href"/>
                     </xsl:attribute>
                
                 <xsl:apply-templates select="unittitle" />
