@@ -23,6 +23,17 @@
     background-size: cover;
 }
 
+#earlyphoto {
+    background-image: url();
+    background-position: 50%;
+    background-size: cover;
+}
+#maquette {
+    background-image: url();
+    background-position: 50%;
+    background-size: cover;
+}
+
 .CollSearch img {
     /* Set rules to fill background */
     min-width: 100%;
