@@ -660,16 +660,16 @@ p {
 .about-nav li a:focus {
   color: white !important;
   background-color: #dc4b38;
-  font-weight: 600;
+  font-weight: bold;
   display: inline-block;
-  letter-spacing: .1em;
-  border: outset #fff 2px;
   padding: 10px;
   text-decoration: none;
+  border-radius: 5px;
 }
 
 .about-nav li {
   display: inline-block;
+  margin: 5px;
 }
 
 /*****ACCORDION V 3 **********/
