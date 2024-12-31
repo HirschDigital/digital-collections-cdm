@@ -1,0 +1,15 @@
+/**leirner collection**/
+
+.field-relate .field-value span a img {
+display: block;
+}
+
+
+.field-relate,
+.field-relate td {
+  display: grid;
+}
+
+.field-relate {
+  grid-template-columns: 1fr;
+}
