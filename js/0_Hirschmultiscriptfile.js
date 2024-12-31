@@ -33,13 +33,13 @@ const scriptFilesToLoad = [
   'ead-embed-1_2.js',
   'field-insert-iiif.js',
   'headerSearchInputPlaceholder.js',
-  'link-reformatter-md.js',
-  'mfahcarousel.js',
+  'itemDescriptionMove.js',
+  'itemTable-row-Move.js',
+  'link-reformatter-thumb.js',
   'panel-expand.js',
   'pdf-objects-multipage-1_1.js',
   'sway.js',
 	'uv-cp.js',
-  'Teva-menu.js',
 ];
 
 (function() {
