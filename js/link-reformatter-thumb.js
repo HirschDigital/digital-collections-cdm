@@ -13,14 +13,16 @@ function reformatField(nickname,syntax) {
             field.innerHTML = '';
             origTextArray.forEach(function(segment){
               let eachLink = document.createElement('a');
+              let imgElement = document.createElement('img');
+              let capText = document.createElement('h3');
               displayText = segment.substring(segment.lastIndexOf('[') + 1, segment.lastIndexOf(']')) + '<br/>';
               linkTarget = segment.substring(segment.lastIndexOf('(') + 1, segment.lastIndexOf(')'));
               linkThumb = segment.substring(segment.lastIndexOf('{') + 1, segment.lastIndexOf('}'));
               eachLink.href = linkTarget;
-              let imgElement = document.createElement('img');
               imgElement.src = linkThumb;
               eachLink.appendChild(imgElement);
-              eachLink.innerHTML += displayText;
+              eachLink.appendChild(capText);
+              capText.innerHTML = displayText;
               field.appendChild(eachLink);
             });
           }
