@@ -13,6 +13,7 @@ function reformatField(nickname,syntax) {
             field.innerHTML = '';
             origTextArray.forEach(function(segment){
               let eachLink = document.createElement('a');
+              let imgBox = document.createElement('div');
               let imgElement = document.createElement('img');
               let capText = document.createElement('h3');
               displayText = segment.substring(segment.lastIndexOf('[') + 1, segment.lastIndexOf(']')) + '<br/>';
@@ -20,7 +21,8 @@ function reformatField(nickname,syntax) {
               linkThumb = segment.substring(segment.lastIndexOf('{') + 1, segment.lastIndexOf('}'));
               eachLink.href = linkTarget;
               imgElement.src = linkThumb;
-              eachLink.appendChild(imgElement);
+              eachLink.appendChild(imgBox);
+              imgBox.appendChild(imgElement);
               eachLink.appendChild(capText);
               capText.innerHTML = displayText;
               field.appendChild(eachLink);
@@ -28,7 +30,7 @@ function reformatField(nickname,syntax) {
           }
           break;
         default:
-          console.log('link-reformatter-md.js: No fields found to reformat.');
+          console.log('link-reformatter-thumb.js: No fields found to reformat.');
       }
     })
   }
@@ -45,6 +47,7 @@ document.addEventListener('cdm-item-page:ready', function(e){
     let collection = e.detail.collectionId;
     if (globalScope || collectionScope.includes(collection)) {
       reformatField('relate','markdown');
+      reformatField('relata','markdown');
     }
 });
 
@@ -53,6 +56,7 @@ document.addEventListener('cdm-item-page:update', function(e){
     let collection = e.detail.collectionId;
     if (globalScope || collectionScope.includes(collection)) {
       reformatField('relate','markdown');
+      reformatField('relata','markdown');
     }
 });
 
@@ -65,8 +69,3 @@ document.addEventListener('cdm-item-page:leave', function(e){
 
 })();
 
-/* version history
-
-1.0 - 2020 Sep 18 - initial implementation
-
-*/
