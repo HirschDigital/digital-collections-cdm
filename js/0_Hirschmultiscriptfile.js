@@ -27,6 +27,7 @@ const fileDirectory = '/customizations/global/pages/js/';
 const scriptFilesToLoad = [
 	'browseSearchPage.js',
   'button-pdf-inline-1_0.js',
+  'canonical-redirect-1_4.js',
   'collapse.js',
   'coverimage.js',
   'debug-events-all-1_5.js',
