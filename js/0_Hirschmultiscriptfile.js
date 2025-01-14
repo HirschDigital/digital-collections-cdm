@@ -27,20 +27,19 @@ const fileDirectory = '/customizations/global/pages/js/';
 const scriptFilesToLoad = [
 	'browseSearchPage.js',
   'button-pdf-inline-1_0.js',
-  'canonical-redirect-1_4.js',
   'collapse.js',
   'coverimage.js',
   'debug-events-all-1_5.js',
   'ead-embed-1_2.js',
   'field-insert-iiif.js',
   'headerSearchInputPlaceholder.js',
-  'itemDescriptionMove.js',
   'itemTable-row-Move.js',
   'link-reformatter-thumb.js',
   'panel-expand.js',
   'pdf-objects-multipage-1_1.js',
   'sway.js',
 	'uv-cp.js',
+  'physogs.js',
 ];
 
 (function() {

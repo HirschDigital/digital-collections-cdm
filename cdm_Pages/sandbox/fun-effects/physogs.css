@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#prompt {
+    margin: 20px 0;
+    font-size: 1.5em;
+}
+
+#backgrounds, .image-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.background-option, .image-option {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.background-option:hover, .image-option:hover {
+    border-color: #007BFF;
+}
+
+#game-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 300px;
+    height: 400px;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-cell {
+    border: 1px dashed #ccc;
+    background-size: cover;
+    background-position: center;
+}
+
+#submit {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#submit:hover {
+    background-color: #0056b3;
+}
+
+#answer {
+    margin: 20px;
+    font-size: 1.2em;
+    color: #28a745;
+    display: none;
+}
+
+#correct-image {
+    margin: 20px auto;
+    display: none;
+    max-width: 300px;
+    border: 2px solid #ccc;
+}
