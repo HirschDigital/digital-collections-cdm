@@ -5,7 +5,8 @@ body {
     padding: 0;
 }
 
-#prompt {
+.prompt-container {
+    max-width: 500px ;
     margin: 20px 0;
     font-size: 1.5em;
 }
@@ -25,24 +26,41 @@ body {
 }
 
 .background-option:hover, .image-option:hover {
-    border-color: #007BFF;
+    box-shadow: 0 0 1px 6px #999;
 }
-
-#game-grid {
+#background-grid {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    width: 300px;
-    height: 400px;
-    margin: 20px auto;
-    border: 2px solid #ccc;
+    grid-template-columns: 1fr 2.16fr 1fr;
+    grid-template-rows: 1.8fr 2.4fr 1fr;
+    width: 50vw;
+    height: 80vh;
     background-size: cover;
     background-position: center;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+}
+.middle-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#game-grid {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    background-color: #fff;
+    border: 2px solid #888;
+    height: 100%;
+    width: 100%;
 }
 
 .grid-cell {
     border: 1px dashed #ccc;
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #submit {

@@ -3,8 +3,8 @@
     window.onload = function () {
         physogs(); // Call the function when the page is fully loaded
     };
- function physogs (){
- 
+    function physogs() {
+
         // Step 1: Random Prompt Image
         const promptAnswerMap = {
             "/customizations/collection/myfirst/pages/physogs/prompt1.jpg": { eyes: "/customizations/collection/myfirst/pages/physogs/eyes11.jpg", nose: "/customizations/collection/myfirst/pages/physogs/nose25.jpg", mouth: "/customizations/collection/myfirst/pages/physogs/mouth29.jpg", solution: "/customizations/collection/myfirst/pages/physogs/solution13.jpg" },
@@ -28,64 +28,131 @@
         document.getElementById("prompt-image").src = randomPromptImage;
 
         const correctAnswer = promptAnswerMap[randomPromptImage];
- // Step 2: Background Selection
- const backgrounds = ["/customizations/collection/myfirst/pages/physogs/face_0001.jpg", "/customizations/collection/myfirst/pages/physogs/face_0002.jpg", "/customizations/collection/myfirst/pages/physogs/face_0003.jpg", "/customizations/collection/myfirst/pages/physogs/face_0004.jpg"];
- const backgroundsContainer = document.getElementById("backgrounds");
+        // Step 2: Background Selection
+        const backgrounds = ["/customizations/collection/myfirst/pages/physogs/face_0001.jpg", "/customizations/collection/myfirst/pages/physogs/face_0002.jpg", "/customizations/collection/myfirst/pages/physogs/face_0003.jpg", "/customizations/collection/myfirst/pages/physogs/face_0004.jpg"];
+        const backgroundsContainer = document.getElementById("backgrounds");
 
- backgrounds.forEach((bg) => {
-     const img = document.createElement("img");
-     img.src = bg;
-     img.classList.add("background-option");
-     img.onclick = () => selectBackground(bg);
-     backgroundsContainer.appendChild(img);
- });
+        backgrounds.forEach((bg) => {
+            const img = document.createElement("img");
+            img.src = bg;
+            img.classList.add("background-option");
+            img.onclick = () => selectBackground(bg);
+            backgroundsContainer.appendChild(img);
+        });
 
- function selectBackground(bg) {
-     document.getElementById("game-grid").style.backgroundImage = `url(${bg})`;
- }
+        function selectBackground(bg) {
+            document.getElementById("background-grid").style.backgroundImage = `url(${bg})`;
+        }
 
- // Step 3: Image Groups (eyes, Nose, Mouth)
- const eyes = Array.from({ length: 13 }, (_, i) => `/customizations/collection/myfirst/pages/physogs/eyes${i + 1}.jpg`);
- const noses = Array.from({ length: 13 }, (_, i) => `/customizations/collection/myfirst/pages/physogs/nose${i + 14}.jpg`);
- const mouths = Array.from({ length: 13 }, (_, i) => `/customizations/collection/myfirst/pages/physogs/mouth${i + 27}.jpg`);
+        // Step 3: Image Groups (eyes, Nose, Mouth)
+        document.addEventListener("DOMContentLoaded", function () {
+            // Data for the dropdowns
+        
+        
+        const dropdownData = {
+            eyes: Array.from({ length: 13 }, (_, i) => `/customizations/collection/myfirst/pages/physogs/eyes${i + 1}.jpg`),
+            nose: Array.from({ length: 13 }, (_, i) => `/customizations/collection/myfirst/pages/physogs/nose${i + 14}.jpg`),
+            mouth: Array.from({ length: 13 }, (_, i) => `/customizations/collection/myfirst/pages/physogs/mouth${i + 27}.jpg`),
+        };
+        
+        
+            // Function to initialize a dropdown
+            function initializeDropdown(dropdownId, imagePaths) {
+                const dropdown = document.getElementById(dropdownId);
+                const selectedElement = dropdown.querySelector(".dropdown-selected");
+                const optionsList = dropdown.querySelector(".dropdown-options");
+        
+                // Populate dropdown with images
+                imagePaths.forEach((imgSrc) => {
+                    const li = document.createElement("li");
+                    const img = document.createElement("img");
+                    img.src = imgSrc;
+                    li.appendChild(img);
+                    li.onclick = () => {
+                        selectedElement.innerHTML = `<img src="${imgSrc}" alt="Selected" style="width: 40px; height: 40px; margin-right: 10px; border-radius: 5px;">`;
+                        dropdown.classList.remove("open");
+                    };
+                    optionsList.appendChild(li);
+                });
+        
+                // Toggle dropdown open/close
+                selectedElement.addEventListener("click", () => {
+                    dropdown.classList.toggle("open");
+                });
+        
+                // Close dropdown if clicked outside
+                document.addEventListener("click", (e) => {
+                    if (!dropdown.contains(e.target)) {
+                        dropdown.classList.remove("open");
+                    }
+                });
+            }
+        
+            // Initialize all dropdowns
+            initializeDropdown("eyes-dropdown", dropdownData.eyes);
+            initializeDropdown("nose-dropdown", dropdownData.nose);
+            initializeDropdown("mouth-dropdown", dropdownData.mouth);
+        });
+        
 
- const eyesGroup = document.getElementById("eyes-group");
- const noseGroup = document.getElementById("nose-group");
- const mouthGroup = document.getElementById("mouth-group");
+/**const eyesGroup = document.getElementById("eyes-group");
+const noseGroup = document.getElementById("nose-group");
+const mouthGroup = document.getElementById("mouth-group");
 
- let selectedImage = null;
+let selectedImage = null;
 
- function createImageOptions(group, images) {
-     images.forEach((imgSrc) => {
-         const img = document.createElement("img");
-         img.src = imgSrc;
-         img.classList.add("image-option");
-         img.onclick = () => selectImage(imgSrc);
-         group.appendChild(img);
-     });
- }
+function createImageOptions(group, images) {
+    images.forEach((imgSrc) => {
+        const img = document.createElement("img");
+        img.src = imgSrc;
+        img.classList.add("image-option");
+        img.onclick = () => selectImage(imgSrc);
+        group.appendChild(img);
+    });
+}
 
- createImageOptions(eyesGroup, eyes);
- createImageOptions(noseGroup, noses);
- createImageOptions(mouthGroup, mouths);
+createImageOptions(eyesGroup, eyes);
+createImageOptions(noseGroup, noses);
+createImageOptions(mouthGroup, mouths);
 
- function selectImage(imgSrc) {
-     selectedImage = imgSrc;
- }
+function selectImage(imgSrc) {
+    selectedImage = imgSrc;
+}
+**/
 
- // Step 4 & 5: Place Images in Grid Cells
- const gridCells = document.querySelectorAll(".grid-cell");
- gridCells.forEach((cell) => {
-     cell.onclick = () => {
-         if (selectedImage) {
-             cell.style.backgroundImage = `url(${selectedImage})`;
-         }
-     };
- });
+// Step 4 & 5: Place Images in Grid Cells
 
- // Step 6: Submit and Reveal Answer
+const gridCells = document.querySelectorAll(".grid-cell");
+let selectedImage = null;
 
- document.getElementById("submit").onclick = () => {
+function updateSelectedImage(dropdown) {
+    selectedImage = dropdown.value;
+}
+
+eyesDropdown.onchange = () => updateSelectedImage(eyesDropdown);
+noseDropdown.onchange = () => updateSelectedImage(noseDropdown);
+mouthDropdown.onchange = () => updateSelectedImage(mouthDropdown);
+
+gridCells.forEach((cell) => {
+    cell.onclick = () => {
+        if (selectedImage) {
+            cell.style.backgroundImage = `url(${selectedImage})`;
+        }
+    };
+});
+/**
+ * const gridCells = document.querySelectorAll(".grid-cell");
+gridCells.forEach((cell) => {
+    cell.onclick = () => {
+        if (selectedImage) {
+            cell.style.backgroundImage = `url(${selectedImage})`;
+        }
+    };
+});
+**/
+// Step 6: Submit and Reveal Answer
+
+document.getElementById("submit").onclick = () => {
     const topCell = document.querySelector(".grid-cell[data-cell='top']").style.backgroundImage;
     const middleCell = document.querySelector(".grid-cell[data-cell='middle']").style.backgroundImage;
     const bottomCell = document.querySelector(".grid-cell[data-cell='bottom']").style.backgroundImage;
@@ -113,9 +180,20 @@
     }
     answerElement.style.display = "block";
 };
+// Step 7: Reveal Answer Button
+const revealButton = document.createElement("button");
+revealButton.id = "reveal-answer";
+revealButton.innerText = "Reveal Answer";
+document.body.appendChild(revealButton);
+
+revealButton.onclick = () => {
+    const solutionImageElement = document.getElementById("solution-image");
+    solutionImageElement.src = correctAnswer.solution;
+    solutionImageElement.style.display = "block";
+};
 
 }
- 
- document.addEventListener('cdm-custom-page:ready', physogs);
- document.addEventListener('cdm-custom-page:update', physogs);
-})();
+
+document.addEventListener('cdm-custom-page:ready', physogs);
+document.addEventListener('cdm-custom-page:update', physogs);
+}) ();

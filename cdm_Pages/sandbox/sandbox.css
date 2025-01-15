@@ -130,8 +130,9 @@
 }
 
 .card {
-    position:relative;
+    position: relative;
 }
+
 .card-list {
     display: flex;
     flex-direction: row;
@@ -154,12 +155,14 @@
     background: transparent;
     color: #313131;
 }
+
 .card__inner:hover {
     color: #dc4b38;
 }
+
 .card-list--type__title-over-image .card:hover .card__title {
     background-color: #dc4b38;
-  }
+}
 
 a {
     text-decoration: none;
@@ -243,11 +246,13 @@ a {
 .card-list .card .card__inner p {
     word-break: break-word;
 }
+
 .card-list.card-list--type__masonry {
     display: block;
-  }
-  .card-list .card-media__inner picture::after {
-    background: rgba(0,0,0,.4);
+}
+
+.card-list .card-media__inner picture::after {
+    background: rgba(0, 0, 0, .4);
     bottom: 0;
     content: "";
     height: 100%;
@@ -255,23 +260,124 @@ a {
     position: absolute;
     transition: opacity .8s;
     width: 100%;
-  }
-  .card-list .card__inner:hover picture::after {
-    opacity: 1;
-  }
+}
 
-  /****EFFECTS****/
-  /****puzzle****/
-  body {
+.card-list .card__inner:hover picture::after {
+    opacity: 1;
+}
+
+@media (min-width: 1200px) {
+    .container__inner {
+        width: 1136px;
+    }
+
+    .card-list--type__title-over-image.card-list--4col .card-media,
+    .card-list--type__title-over-image.card-list--4col .card-media img,
+    .card-list--type__title-over-image.card-list--4col .card__title {
+        height: 260px;
+    }
+
+}
+
+@media (min-width: 1200px) and (min-height: 720px) {
+    .card-list--type__title-over-image.card-list--4col .card__title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .card .card-content p {
+        font-size: 17px;
+        line-height: 27px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .container__inner {
+        width: 960px;
+    }
+
+    .card-list--type__title-over-image.card-list--4col .card-media,
+    .card-list--type__title-over-image.card-list--4col .card-media img,
+    .card-list--type__title-over-image.card-list--4col .card__title {
+        height: 216px;
+    }
+}
+
+@media (min-width: 841px) and (max-width: 1024px) {
+    .container__inner {
+        width: 801px;
+    }
+
+    .card-list--type__title-over-image.card-list--4col .card__title {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    .card-list--type__title-over-image.card-list--4col .card-media,
+    .card-list--type__title-over-image.card-list--4col .card-media img,
+    .card-list--type__title-over-image.card-list--4col .card__title {
+        height: 170.25px;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 841px) {
+    .container__inner {
+        width: 720px;
+    }
+
+    .card-list .card {
+        box-sizing: border-box;
+        padding: 0 16px 32px;
+        width: 50%;
+    }
+
+    .card .card__title {
+        font-size: 1.375rem;
+        line-height: 1.75rem;
+        height: 298px;
+    }
+
+}
+
+@media (min-width: 480px) and (max-width: 760px) {
+    .card-list .card {
+        box-sizing: border-box;
+        padding: 0 16px 32px;
+    }
+
+    .card-list--4col .card-media__inner {
+        max-height: 390px;
+    }
+
+    .card-list.card-list--4col .card:nth-child(odd) {
+        clear: left;
+    }
+
+    .card-list .card .card-content,
+    .card-list .card .card-header,
+    .card-list .card .card-media {
+        width: auto;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .card-list--type__title-over-image.card-list--4col .card-media {
+        height: 216px;
+    }
+}
+
+/****EFFECTS****/
+/****puzzle****/
+body {
     font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
     background-color: #fff;
     margin: 0;
     padding: 0;
     border-width: 0;
     cursor: pointer;
-  }
+}
 
-  #menu {
+#menu {
     position: relative;
     list-style-type: none;
     padding-left: 5px;
@@ -279,20 +385,20 @@ a {
     /* 1 */
     display: inline-block;
     text-align: center;
-  }
+}
 
-  #menu li {
+#menu li {
     margin: 2px;
     padding: 4px 10px;
     border-radius: 5px;
     background-color: #ffff80;
-  }
+}
 
-  #menu li:hover {
+#menu li:hover {
     background-color: #ffDD60;
-  }
+}
 
-  #forPuzzle {
+#forPuzzle {
     position: absolute;
     width: 95vw;
     height: 95vh;
@@ -301,40 +407,50 @@ a {
     transform: translate(-50%, -50%);
     background-color: #ffffdd;
     overflow: hidden;
-  }
+}
 
-  .polypiece {
+.polypiece {
     display: block;
     overflow: hidden;
     position: absolute;
-  }
+}
 
-  .moving {
+.moving {
     transition-property: top, left;
     transition-duration: 1s;
     transition-timing-function: linear;
-  }
+}
 
-  .gameCanvas {
+.gameCanvas {
     display: none;
     overflow: hidden;
     position: absolute;
-  }
+}
 
-  /***********Physogs*************/
-  body {
+/***********Physogs*************/
+body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-#prompt {
+.physogs-container {
+max-width: 100%;
     margin: 20px 0;
     font-size: 1.5em;
+    display: block;
+    text-align: center;
 }
 
-#backgrounds, .image-group {
+#prompt-image, #backgrounds{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+}
+
+.image-group {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -349,24 +465,58 @@ a {
 }
 
 .background-option:hover, .image-option:hover {
-    border-color: #007BFF;
+    box-shadow: 0 0 1px 6px #999;
 }
 
-#game-grid {
+.game-container {
+    display: flex;
+    height: 80vh;
+
+}
+@media (min-width: 440px) and (max-width: 630px) {
+    .game-container {
+        max-height: 500px;
+    }
+}
+@media (max-width:439px) {
+    .game-container {
+        max-height: 400px;
+    }
+}
+
+#background-grid {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    width: 300px;
-    height: 400px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 2fr 2.7fr 1fr;
+    background-size: contain;
+    background-position: center;
     margin: 20px auto;
     border: 2px solid #ccc;
-    background-size: cover;
-    background-position: center;
+    aspect-ratio: 19/24;
+    max-width: 100%;
+}
+.middle-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#game-grid {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    background-color: #fff;
+    border: 2px solid #888;
+    height: 100%;
+    width: 100%;
 }
 
 .grid-cell {
     border: 1px dashed #ccc;
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #submit {
@@ -397,3 +547,74 @@ a {
     max-width: 300px;
     border: 2px solid #ccc;
 }
+
+/* Dropdown container */
+.custom-dropdown {
+    position: relative;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+/* Selected item display */
+.dropdown-selected {
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Dropdown options container */
+.dropdown-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    z-index: 10;
+}
+
+/* Option items */
+.dropdown-options li {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropdown-options li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Image inside dropdown */
+.dropdown-options img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* Show dropdown on click */
+.custom-dropdown.open .dropdown-options {
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .custom-dropdown {
+        width: 100%;
+    }
+}
+
+/*****SWAY******/

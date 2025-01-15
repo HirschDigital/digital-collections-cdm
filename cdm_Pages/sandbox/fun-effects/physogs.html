@@ -1,45 +1,93 @@
 ---
 header: true
 footer: true
-title: Puzzle Test
+title: Physogs Game
 ---
 <div class="CollectionLayout-container">
     <div class="CollectionLanding-maincontainer shared-box">
         <div class="CollectionLanding-maincontentLanding shared-contentContainer">
-            <h1>Puzzle Test</h1>
-            <div class="grayDividerLine">
-            </div>
-            <div>
-
-               
-                    <img id="prompt-image" src="" alt="Prompt" style="max-width: 100%; height: auto;">
-            
-
-                <div id="backgrounds"></div>
-            
-                <div id="game-grid">
-                    <div class="grid-cell" data-cell="top"></div>
-                    <div class="grid-cell" data-cell="middle"></div>
-                    <div class="grid-cell" data-cell="bottom"></div>
+            <h1>PHYSOGS</h1>
+            <div class="grayDividerLine"></div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="physogs-container" id="prompt-container">
+                        <h2>Your prompt</h2><br>
+                        <img id="prompt-image" src="" alt="Prompt" style="max-width: 100%; height: auto;">
+                    </div>
+                    <div class="physogs-container" id="faces">
+                        <h2>Select your face</h2><br>
+                        <div id="backgrounds">
+                        </div>
+                    </div>
                 </div>
-            
-                <div class="image-group" id="eyes-group"></div>
+                <div class="col-sm-8">
+                    <div class="game-container">
+                        <div id="background-grid">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div class="middle-cell">
+                                <div id="game-grid">
+                                    <div class="grid-cell" data-cell="top"></div>
+                                    <div class="grid-cell" data-cell="middle"></div>
+                                    <div class="grid-cell" data-cell="bottom"></div>
+                                </div>
+                            </div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="dropdown-container">
+                    <label for="eyes-dropdown">Select Eyes:</label>
+                    <div class="custom-dropdown" id="eyes-dropdown">
+                        <div class="dropdown-selected">-- Select Eyes --</div>
+                        <ul class="dropdown-options">
+                            <!-- Options are dynamically added -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="dropdown-container">
+                    <label for="nose-dropdown">Select Nose:</label>
+                    <div class="custom-dropdown" id="nose-dropdown">
+                        <div class="dropdown-selected">-- Select Nose --</div>
+                        <ul class="dropdown-options">
+                            <!-- Options are dynamically added -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="dropdown-container">
+                    <label for="mouth-dropdown">Select Mouth:</label>
+                    <div class="custom-dropdown" id="mouth-dropdown">
+                        <div class="dropdown-selected">-- Select Mouth --</div>
+                        <ul class="dropdown-options">
+                            <!-- Options are dynamically added -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="image-group" id="eyes-group"></div>
                 <div class="image-group" id="nose-group"></div>
-                <div class="image-group" id="mouth-group"></div>
-            
+                <div class="image-group" id="mouth-group"></div>-->
+            </div>
+            <div class="row">
                 <button id="submit">Submit</button>
-            
                 <div id="answer">Correct Answer: </div>
                 <img id="correct-image" src="" alt="Correct Face">
-                <img id="solution-image" src="" alt="Solution Image" style="display: none; max-width: 300px; margin: 20px auto;">
-
-            
+                <img id="solution-image" src="" alt="Solution Image" style="display: none">
+                <button id="reveal-answer">Reveal Answer</button>
             </div>
-            <div id="CollectionLanding-customcontent">&nbsp;</div>
-
-            <div>&nbsp;</div>
-            <div>&nbsp;</div>
-            <div>&nbsp;</div>
         </div>
+        <div id="CollectionLanding-customcontent">&nbsp;</div>
+
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
     </div>
 </div>
