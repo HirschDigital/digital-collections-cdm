@@ -45,155 +45,98 @@
         }
 
         // Step 3: Image Groups (eyes, Nose, Mouth)
-        document.addEventListener("DOMContentLoaded", function () {
-            // Data for the dropdowns
-        
-        
-        const dropdownData = {
-            eyes: Array.from({ length: 13 }, (_, i) => `/customizations/collection/myfirst/pages/physogs/eyes${i + 1}.jpg`),
-            nose: Array.from({ length: 13 }, (_, i) => `/customizations/collection/myfirst/pages/physogs/nose${i + 14}.jpg`),
-            mouth: Array.from({ length: 13 }, (_, i) => `/customizations/collection/myfirst/pages/physogs/mouth${i + 27}.jpg`),
-        };
-        
-        
-            // Function to initialize a dropdown
-            function initializeDropdown(dropdownId, imagePaths) {
-                const dropdown = document.getElementById(dropdownId);
-                const selectedElement = dropdown.querySelector(".dropdown-selected");
-                const optionsList = dropdown.querySelector(".dropdown-options");
-        
-                // Populate dropdown with images
-                imagePaths.forEach((imgSrc) => {
-                    const li = document.createElement("li");
-                    const img = document.createElement("img");
-                    img.src = imgSrc;
-                    li.appendChild(img);
-                    li.onclick = () => {
-                        selectedElement.innerHTML = `<img src="${imgSrc}" alt="Selected" style="width: 40px; height: 40px; margin-right: 10px; border-radius: 5px;">`;
-                        dropdown.classList.remove("open");
-                    };
-                    optionsList.appendChild(li);
-                });
-        
-                // Toggle dropdown open/close
-                selectedElement.addEventListener("click", () => {
-                    dropdown.classList.toggle("open");
-                });
-        
-                // Close dropdown if clicked outside
-                document.addEventListener("click", (e) => {
-                    if (!dropdown.contains(e.target)) {
-                        dropdown.classList.remove("open");
-                    }
-                });
-            }
-        
-            // Initialize all dropdowns
-            initializeDropdown("eyes-dropdown", dropdownData.eyes);
-            initializeDropdown("nose-dropdown", dropdownData.nose);
-            initializeDropdown("mouth-dropdown", dropdownData.mouth);
+
+        const eyes = Array.from({ length: 13 }, (_, i) => `/customizations/collection/myfirst/pages/physogs/eyes${i + 1}.jpg`);
+        const noses = Array.from({ length: 13 }, (_, i) => `/customizations/collection/myfirst/pages/physogs/nose${i + 14}.jpg`);
+        const mouths = Array.from({ length: 13 }, (_, i) => `/customizations/collection/myfirst/pages/physogs/mouth${i + 27}.jpg`);
+        const eyesGroup = document.getElementById("eyes-group");
+        const noseGroup = document.getElementById("nose-group");
+        const mouthGroup = document.getElementById("mouth-group");
+
+        let selectedImage = null;
+
+        function createImageOptions(group, images) {
+            images.forEach((imgSrc) => {
+                // Create a container for the image
+                const container = document.createElement("div");
+                container.classList.add("image-container");
+
+                const img = document.createElement("img");
+                img.src = imgSrc;
+                img.classList.add("image-option");
+                img.onclick = () => selectImage(imgSrc);
+                // Append the image to the container
+                container.appendChild(img);
+
+                // Append the container to the group
+                group.appendChild(container);
+            });
+        }
+
+
+        createImageOptions(eyesGroup, eyes);
+        createImageOptions(noseGroup, noses);
+        createImageOptions(mouthGroup, mouths);
+
+        function selectImage(imgSrc) {
+            selectedImage = imgSrc;
+        }
+
+        // Step 4 & 5: Place Images in Grid Cells
+        const gridCells = document.querySelectorAll(".grid-cell");
+        gridCells.forEach((cell) => {
+            cell.onclick = () => {
+                if (selectedImage) {
+                    cell.style.backgroundImage = `url(${selectedImage})`;
+                }
+            };
         });
-        
 
-/**const eyesGroup = document.getElementById("eyes-group");
-const noseGroup = document.getElementById("nose-group");
-const mouthGroup = document.getElementById("mouth-group");
 
-let selectedImage = null;
+        // Step 6: Submit and Reveal Answer
 
-function createImageOptions(group, images) {
-    images.forEach((imgSrc) => {
-        const img = document.createElement("img");
-        img.src = imgSrc;
-        img.classList.add("image-option");
-        img.onclick = () => selectImage(imgSrc);
-        group.appendChild(img);
-    });
-}
+        document.getElementById("submit").onclick = () => {
+            const topCell = document.querySelector(".grid-cell[data-cell='top']").style.backgroundImage;
+            const middleCell = document.querySelector(".grid-cell[data-cell='middle']").style.backgroundImage;
+            const bottomCell = document.querySelector(".grid-cell[data-cell='bottom']").style.backgroundImage;
 
-createImageOptions(eyesGroup, eyes);
-createImageOptions(noseGroup, noses);
-createImageOptions(mouthGroup, mouths);
+            const topMatch = topCell.includes(correctAnswer.eyes);
+            const middleMatch = middleCell.includes(correctAnswer.nose);
+            const bottomMatch = bottomCell.includes(correctAnswer.mouth);
 
-function selectImage(imgSrc) {
-    selectedImage = imgSrc;
-}
-**/
+            const answerElement = document.getElementById("answer");
+            const correctImageElement = document.getElementById("correct-image");
+            const solutionImageElement = document.getElementById("solution-image");
 
-// Step 4 & 5: Place Images in Grid Cells
+            if (topMatch && middleMatch && bottomMatch) {
+                answerElement.innerText = "Correct! You assembled the face correctly!";
+                correctImageElement.src = randomPromptImage;
+                correctImageElement.style.display = "block";
 
-const gridCells = document.querySelectorAll(".grid-cell");
-let selectedImage = null;
+                // Reveal the solution image
+                solutionImageElement.src = correctAnswer.solution;
+                solutionImageElement.style.display = "block";
+            } else {
+                answerElement.innerText = "Incorrect! Try again.";
+                correctImageElement.style.display = "none";
+                solutionImageElement.style.display = "none";
+            }
+            answerElement.style.display = "block";
+        };
+        // Step 7: Reveal Answer Button
+        const revealButton = document.createElement("button");
+        revealButton.id = "reveal-answer";
+        revealButton.innerText = "Reveal Answer";
+        document.body.appendChild(revealButton);
 
-function updateSelectedImage(dropdown) {
-    selectedImage = dropdown.value;
-}
+        revealButton.onclick = () => {
+            const solutionImageElement = document.getElementById("solution-image");
+            solutionImageElement.src = correctAnswer.solution;
+            solutionImageElement.style.display = "block";
+        };
 
-eyesDropdown.onchange = () => updateSelectedImage(eyesDropdown);
-noseDropdown.onchange = () => updateSelectedImage(noseDropdown);
-mouthDropdown.onchange = () => updateSelectedImage(mouthDropdown);
-
-gridCells.forEach((cell) => {
-    cell.onclick = () => {
-        if (selectedImage) {
-            cell.style.backgroundImage = `url(${selectedImage})`;
-        }
-    };
-});
-/**
- * const gridCells = document.querySelectorAll(".grid-cell");
-gridCells.forEach((cell) => {
-    cell.onclick = () => {
-        if (selectedImage) {
-            cell.style.backgroundImage = `url(${selectedImage})`;
-        }
-    };
-});
-**/
-// Step 6: Submit and Reveal Answer
-
-document.getElementById("submit").onclick = () => {
-    const topCell = document.querySelector(".grid-cell[data-cell='top']").style.backgroundImage;
-    const middleCell = document.querySelector(".grid-cell[data-cell='middle']").style.backgroundImage;
-    const bottomCell = document.querySelector(".grid-cell[data-cell='bottom']").style.backgroundImage;
-
-    const topMatch = topCell.includes(correctAnswer.eyes);
-    const middleMatch = middleCell.includes(correctAnswer.nose);
-    const bottomMatch = bottomCell.includes(correctAnswer.mouth);
-
-    const answerElement = document.getElementById("answer");
-    const correctImageElement = document.getElementById("correct-image");
-    const solutionImageElement = document.getElementById("solution-image");
-
-    if (topMatch && middleMatch && bottomMatch) {
-        answerElement.innerText = "Correct! You assembled the face correctly!";
-        correctImageElement.src = randomPromptImage;
-        correctImageElement.style.display = "block";
-
-        // Reveal the solution image
-        solutionImageElement.src = correctAnswer.solution;
-        solutionImageElement.style.display = "block";
-    } else {
-        answerElement.innerText = "Incorrect! Try again.";
-        correctImageElement.style.display = "none";
-        solutionImageElement.style.display = "none";
     }
-    answerElement.style.display = "block";
-};
-// Step 7: Reveal Answer Button
-const revealButton = document.createElement("button");
-revealButton.id = "reveal-answer";
-revealButton.innerText = "Reveal Answer";
-document.body.appendChild(revealButton);
 
-revealButton.onclick = () => {
-    const solutionImageElement = document.getElementById("solution-image");
-    solutionImageElement.src = correctAnswer.solution;
-    solutionImageElement.style.display = "block";
-};
-
-}
-
-document.addEventListener('cdm-custom-page:ready', physogs);
-document.addEventListener('cdm-custom-page:update', physogs);
-}) ();
+    document.addEventListener('cdm-custom-page:ready', physogs);
+    document.addEventListener('cdm-custom-page:update', physogs);
+})();

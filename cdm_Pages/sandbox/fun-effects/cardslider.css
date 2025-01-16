@@ -57,7 +57,7 @@ ol > li {
         content: counter(list-item) ".";
         font-size: 5em;
         font-weight: bold;
-        color: #dc4b38
+        color: #dc4b38;
         margin-bottom: 1rem;
         line-height: 1;
     }
@@ -83,22 +83,22 @@ ol > li {
     }
 }
 
-// Play with the intro and outro animations!
+/**Play with the intro and outro animations!**/
 
 @keyframes intro {
     from {
         transform-origin: center left;
         opacity: 0;
         scale: 0;
-        // rotate: z -90deg;
-        // translate: 0 -100%;
+        rotate: z -90deg;
+        translate: 0 -100%;
     }
     to {
         transform-origin: center left;
         opacity: 1;
         scale: 1;
-        // rotate: z 0deg;
-        // translate: 0 0;
+        rotate: z 0deg;
+        translate: 0 0;
     }
 }
 
@@ -107,13 +107,13 @@ ol > li {
         transform-origin: center right;
         opacity: 1;
         scale: 1;
-        // translate: 0 0;
+        translate: 0 0;
     }
     to {
         transform-origin: center right;
         opacity: 0;
         scale: 0;
-        // translate: 0 100%;
+        translate: 0 100%;
     }
 }
 
