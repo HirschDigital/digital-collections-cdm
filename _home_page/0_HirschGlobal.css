@@ -402,7 +402,7 @@ p {
   }
 }
 
-/* hide */
+/* hide 
 #root>div.cdm-home-page>div.CoreLayout-mainWrapperContainer>.CoreLayout-mainwrapper.cdm-main-content>div>div.CardWrapper-cardscontainer>div.CardWrapper-div>div:nth-child(12) {
   display: none;
 }
@@ -410,7 +410,7 @@ p {
 .SearchCollectionFilter-container>div>div>div:nth-child(13) {
   display: none;
 }
-
+*/
 
 /**@media screen and (max-width: 767px) {}
 **/
@@ -674,8 +674,6 @@ p {
 }
 
 /****** NEWS*******/
-@charset "utf-8";
-/* CSS Document */
 /*************************/
 /****Built in classes*****/
 /***.CollectionLayout-container {}
