@@ -440,6 +440,12 @@ p {
   border: 5px solid #CCC;
 }
 
+.collView-subColumn {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 20px;
+  }
+
 .collPreview-container {
   display: flex;
   margin-top: 15px;
