@@ -503,7 +503,12 @@ body {
     max-width: 300px;
     border: 2px solid #ccc;
 }
-
+#solution-image {
+    margin: 20px auto;
+    display: none;
+    max-width: 300px;
+    border: 2px solid #ccc;
+}
 /*** cardslider ***/
 
 #cardslider {

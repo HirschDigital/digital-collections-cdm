@@ -124,12 +124,7 @@
             answerElement.style.display = "block";
         };
         // Step 7: Reveal Answer Button
-        const revealButton = document.createElement("button");
-        revealButton.id = "reveal-answer";
-        revealButton.innerText = "Reveal Answer";
-        document.body.appendChild(revealButton);
-
-        revealButton.onclick = () => {
+        document.getElementById("reveal-answer").onclick = () => {
             const solutionImageElement = document.getElementById("solution-image");
             solutionImageElement.src = correctAnswer.solution;
             solutionImageElement.style.display = "block";
