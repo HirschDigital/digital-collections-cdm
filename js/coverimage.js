@@ -3,14 +3,16 @@ const PATH_COVERS_FILE_DIRECTORY = '/customizations/global/pages/images/thumbnai
 // replace thumbnails with better thumbnails
 const coverImagesFilenames = [
     'photobooks.jpg',
-    'powell.jpg',
+    'americanart.jpg',
     'artistsbooks.jpg',
     'dec-arts.jpg',
     'latamperiodcals.jpg',
+    'manuscripts.jpg',
+    'digitalpubz.png',
+    'digitalpubz.png',
     'digitalpubz.png',
     'mfaharchives.jpg',
     'leirner.jpg',
-    'digitalpubz.png',
     'ResourceGuides.png',
     'BTS-V-D-1.png',
 ];
