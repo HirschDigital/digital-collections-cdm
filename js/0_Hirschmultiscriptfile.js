@@ -37,9 +37,7 @@ const scriptFilesToLoad = [
   'panel-expand.js',
   'pdf-objects-multipage-1_1.js',
   'physogs.js',
-  'puzzle.js',
   'scrollbar.js',
-  'sway.js',
 	'uv-cp.js',
 ];
 
