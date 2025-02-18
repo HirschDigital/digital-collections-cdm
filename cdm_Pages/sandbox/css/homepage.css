@@ -1,0 +1,173 @@
+
+/*****************************/
+/* Section:  HOME PAGE ***** */
+/*****************************/
+.ContentHeader-mainCopyHolder {
+  /*width: 70% !important;*/
+  padding-bottom: 10px;
+}
+
+/* Sub section: PHOTOGRID */
+
+.CardWrapper-cardscontainer {
+  padding-bottom: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.Card-fullcard {
+  border-radius: 15px !important;
+  height: 100%;
+}
+
+.Card-fullcard::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+
+.Card-cardcontainer {
+  border-radius: 15px;
+}
+
+.titleDiv::before {
+  display: none;
+}
+
+.truncation::before {
+  display: none;
+}
+
+@media screen and (min-width: 767px) {
+  .Card-cardcontainer.col-sm-6 {
+    box-shadow: 0 1px 16px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    margin: 10px;
+    padding: 0;
+    width: calc(33% - 20px) !important;
+  }
+
+  .Card-cardcontainer:hover {
+    box-shadow: 0 0 1px 6px #999;
+  }
+
+  /*Transition on hover*/
+
+  .CardWrapper-cardscontainer div .Card-cardcontainer a div .Card-cardImageHolder {
+    overflow: hidden;
+  }
+
+  .CardWrapper-cardscontainer div .Card-cardcontainer a div .Card-cardImageHolder img {
+    transition: transform 1.05s, filter 1.05s ease-in-out;
+  }
+
+  .CardWrapper-cardscontainer div .Card-cardcontainer a div .Card-cardImageHolder:hover img {
+    transform: scale(1.05);
+  }
+
+  .Card-cardImageHolder {
+    width: 100%;
+    margin: unset;
+    height: 200px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .Card-cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50%;
+    max-width: unset;
+    max-height: unset;
+    opacity: 90%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .titleDiv {
+    font-size: 24px !important;
+    padding: 0 0 15px;
+    margin-bottom: 5px !important;
+    line-height: 32px !important;
+    max-height: 76px !important;
+    margin-top: 5px !important;
+  }
+
+  .Card-cardTextHolder {
+    padding: 5px 20px;
+    width: 100%;
+  }
+
+  .Card-cardText {
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .Card-cardcontainer.col-sm-6 {
+    max-width: 30% !important;
+  }
+}
+
+@media screen and (min-width: 1460px) {
+  .CardWrapper-cardscontainer {
+    max-width: 1460px;
+    padding-left: 10px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/* hide 
+#root>div.cdm-home-page>div.CoreLayout-mainWrapperContainer>.CoreLayout-mainwrapper.cdm-main-content>div>div.CardWrapper-cardscontainer>div.CardWrapper-div>div:nth-child(12) {
+  display: none;
+}
+
+.SearchCollectionFilter-container>div>div>div:nth-child(13) {
+  display: none;
+}
+*/
+
+/**@media screen and (max-width: 767px) {}
+**/
+/***** homecard test*****/
+.Card-cardcontainer {
+  box-shadow: 0 2px 5px rgba(0,0,0,.25); 
+position: relative;
+text-align: center;
+color: white;
+}
+.Card-fullcard {
+height: auto !important;
+width: 100% !important;
+display:inline;
+}
+.Card-cardImageHolder {
+max-width: 100% !important;
+height: auto;
+float: none;
+}
+.Card-cardImage {
+max-width: 100% !important;
+height: auto !important;	
+}
+.Card-cardTextHolder {
+float: center !important;
+width: 100% !important;
+position: absolute;
+botton: 8px;
+left: 16px;
+}
+
+.titleDiv {
+position: absolute;
+min-width: 100%;
+height: auto;
+text-align: center;
+padding-top: 1.5%;
+padding-left: 1.5%;
+padding-right: 1.5%;
+min-height: 12%;
+}

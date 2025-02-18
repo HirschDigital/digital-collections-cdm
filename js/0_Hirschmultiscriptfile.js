@@ -25,9 +25,8 @@ const fileDirectory = '/customizations/global/pages/js/';
 
 // array containing file names of each JS file
 const scriptFilesToLoad = [
-	'browseSearchPage.js',
+  'browseSearchPage.js',
   'button-pdf-inline-1_0.js',
-  'coverimage.js',
   'debug-events-all-1_5.js',
   'ead-embed-1_2.js',
   'field-insert-iiif.js',
