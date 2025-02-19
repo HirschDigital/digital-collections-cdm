@@ -1,0 +1,122 @@
+<style>
+/*featured section carousel captions*/
+
+.carousel-caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 15%;
+  bottom: 15%;
+  padding: 4vmin 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  line-height: normal;
+}
+
+.carousel-caption h3 a {
+  font-size: 2.1rem;
+padding-top: 0;
+}
+
+.carousel-caption a:hover {
+  color: #E6AA3C;
+  text-decoration: underline;
+}
+
+.carousel-caption p {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.carousel-caption p a {
+  font-size: .9rem;
+  padding-top: 3vmin;
+}
+
+/*featured section carousel control areas*/
+
+.carousel-control-prev, .carousel-control-next {
+  width: 10%;
+}
+</style>
+
+<div id="featured" aria-labelledby="carousel">
+  <div id="featuredControls" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#featuredIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#featuredIndicators" data-slide-to="1" class=""></li>
+      <li data-target="#featuredIndicators" data-slide-to="2" class=""></li>
+      <li data-target="#featuredIndicators" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+
+      <div class="carousel-item active" aria-live="polite">
+        <picture>
+          <source srcset="img/featured/Birth_Record_500%20x%20300_No_Blur.jpg" media="(max-width: 566px)">
+          <source srcset="img/featured/Birth_Record_1024%20x%20398_No_Blur.jpg">
+          <img srcset="img/featured/Birth_Record_1024%20x%20398_No_Blur.jpg" class="d-block img-fluid"
+            alt="1922, Union County Certificate 441">
+        </picture>
+        <div class="carousel-caption">
+          <h3><a href="collections/birth/birth.html" target="_blank" rel="noopener">New! Tennessee Birth Records</a>
+          </h3>
+          <p>Birth records issued by the State of Tennessee.<br><a
+              href="https://teva.contentdm.oclc.org/digital/collection/p15138coll53/id/42932/rec/1" target="_blank"
+              rel="noopener">Image: 1922, Union County Certificate 441</a></p>
+        </div>
+      </div>
+
+      <div class="carousel-item" aria-live="polite">
+        <picture>
+          <source srcset="img/featured/death_record_500x300.jpg" media="(max-width: 566px)">
+          <source srcset="img/featured/Death_Record_1024%20x398_No_Blur.jpg">
+          <img srcset="img/featured/Death_Record_1024%20x398_No_Blur.jpg" class="d-block img-fluid" alt="71-000001">
+        </picture>
+        <div class="carousel-caption">
+          <h3><a href="collections/death/death.html" target="_blank" rel="noopener">New!<br>Tennessee Death Records</a>
+          </h3>
+          <p>Death records issued by the State of Tennessee<br><a
+              href="https://teva.contentdm.oclc.org/digital/collection/p15138coll54/search" target="_blank"
+              rel="noopener">Image: Certificate 71-000001</a></p>
+        </div>
+      </div>
+
+
+      <div class="carousel-item" aria-live="polite">
+        <picture>
+          <source srcset="img/featured/51753_500x300.jpg" media="(max-width: 566px)">
+          <source srcset="img/featured/51753_1024x398.jpg">
+          <img srcset="img/featured/51753_1024x398.jpg" class="d-block img-fluid" alt=" Letter to the governor, 1849">
+        </picture>
+        <div class="carousel-caption">
+          <h3><a href="collections/earlygovernors/earlygovernors.html" target="_blank" rel="noopener">New!<br>Early
+              Governors' Papers</a></h3>
+          <p>Documents and correspondence from Tennessee's earliest governors.<br><a
+              href="https://teva.contentdm.oclc.org/digital/collection/p15138coll30/id/2262/rec/1">Image: Letter to the
+              governor</a></p>
+        </div>
+      </div>
+
+
+
+
+      <a class="carousel-control-prev" href="#featuredControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#featuredControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>

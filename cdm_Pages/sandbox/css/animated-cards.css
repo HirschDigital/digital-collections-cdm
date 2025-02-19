@@ -5,18 +5,19 @@
     justify-content: center;
 }
 
-.cdm-animated-card, .cdm-animated-card * {
+.cdm-animated-card,
+.cdm-animated-card * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-  
+
 .cdm-animated-card {
     position: relative;
     display: flex;
     overflow: hidden;
     width: 300px;
     height: 300px;
-    
+
     /*static margins*/
     margin: 15px;
     /*auto side margins preference -- comment out static if using these*/
@@ -44,7 +45,7 @@
     text-align: center;
 }
 
-.cardHeader{
+.cardHeader {
     font-weight: 700;
     font-family: FontAwesome;
     font-size: 1.1rem;
@@ -65,7 +66,19 @@
     object-fit: cover;
     object-position: top;
 }
-  
+
+.hvrbox img {
+    width: 100%;
+}
+
+.cdm-animated-card .cardImage {
+    display: block;
+}
+
+.hvrbox .hvrbox-layer_bottom {
+    display: block;
+} 
+
 .cardDescriptionText a {
     text-decoration: none;
     color: #E6AA3C;
@@ -75,8 +88,11 @@
     font-family: inherit;
 }
 
-.cdm-animated-card .cardImage {
-    display: block;
+.hvrbox-text a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 400;
+    padding: 5px;
 }
 
 .cdm-animated-card .cardDescriptionDiv {
@@ -94,7 +110,12 @@
     -webkit-transition: all 0.4s ease-in-out 0s;
     transition: all 0.4s ease-in-out 0s;
 }
-  
+
+.hvrbox .hvrbox-layer_slideup {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+}
+
 .cdm-animated-card .cardDescriptionText {
     text-align: center;
     font-size: 18px;
@@ -106,7 +127,29 @@
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-  
-.cdm-animated-card:hover .cardDescriptionDiv, .cdm-animated-card.active .cardDescriptionDiv, .cardDescriptionDiv:focus-within {
+
+.cdm-animated-card:hover .cardDescriptionDiv,
+.cdm-animated-card.active .cardDescriptionDiv,
+.cardDescriptionDiv:focus-within {
     opacity: 1;
+}
+
+.hvrbox:hover .hvrbox-layer_slideup,
+.hvrbox.active .hvrbox-layer_slideup {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.hvrbox .hvrbox-text_mobile {
+    font-size: 15px;
+    border-top: 1px solid rgb(179, 179, 179);
+    /* for old browsers */
+    border-top: 1px solid rgba(179, 179, 179, 0.7);
+    margin-top: 5px;
+    padding-top: 2px;
+    display: none;
+}
+
+.hvrbox.active .hvrbox-text_mobile {
+    display: block;
 }
