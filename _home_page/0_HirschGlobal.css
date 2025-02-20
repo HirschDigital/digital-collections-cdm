@@ -274,7 +274,6 @@ p {
 /* Section:  HOME PAGE ***** */
 /*****************************/
 .ContentHeader-mainCopyHolder {
-  /*width: 70% !important;*/
   padding-bottom: 10px;
 }
 
@@ -284,6 +283,11 @@ p {
   padding-bottom: 20px;
   width: 90%;
   margin: 0 auto;
+}
+
+.Card-cardcontainer {
+  border-radius: 15px;
+  float: left !important;
 }
 
 .Card-fullcard {
@@ -297,11 +301,6 @@ p {
   display: table;
 }
 
-
-.Card-cardcontainer {
-  border-radius: 15px;
-}
-
 .titleDiv::before {
   display: none;
 }
@@ -310,86 +309,103 @@ p {
   display: none;
 }
 
-@media screen and (min-width: 767px) {
+/*Transition on hover*/
+.CardWrapper-cardscontainer div .Card-cardcontainer a div .Card-cardImageHolder {
+  overflow: hidden;
+}
+
+.CardWrapper-cardscontainer div .Card-cardcontainer a div .Card-cardImageHolder img {
+  transition: transform 1.05s, filter 1.05s ease-in-out;
+}
+
+.CardWrapper-cardscontainer div .Card-cardcontainer a div .Card-cardImageHolder:hover img {
+  transform: scale(1.05);
+}
+
+
+.Card-cardcontainer.col-sm-6 {
+  box-shadow: 0 1px 16px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  margin: 10px;
+  padding: 0;
+
+}
+
+.Card-cardcontainer:hover {
+  box-shadow: 0 0 1px 6px #999;
+}
+
+.Card-cardImageHolder {
+  width: 100%;
+  margin: unset;
+  height: 200px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.Card-cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50%;
+  max-width: unset;
+  max-height: unset;
+  opacity: 90%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.Card-cardTextHolder {
+  padding: 5px 20px;
+  width: 100%;
+  height: 200px;
+}
+
+.titleDiv {
+  display: block;
+  font-size: 20px;
+  padding: 0 0 15px;
+  margin-bottom: 5px !important;
+  line-height: 32px !important;
+  max-height: 76px !important;
+  margin-top: 5px !important;
+  overflow: hidden;
+  margin: 0px auto !important;
+  text-overflow: ellipsis;
+}
+
+.Card-cardText {
+  font-size: 16px;
+  display: block;
+  line-height: 24px;
+  margin: 0px auto !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 891px) {
   .Card-cardcontainer.col-sm-6 {
-    box-shadow: 0 1px 16px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05);
-    height: 100%;
-    margin: 10px;
-    padding: 0;
     width: calc(33% - 20px) !important;
   }
-
-  .Card-cardcontainer:hover {
-    box-shadow: 0 0 1px 6px #999;
-  }
-
-  /*Transition on hover*/
-
-  .CardWrapper-cardscontainer div .Card-cardcontainer a div .Card-cardImageHolder {
-    overflow: hidden;
-  }
-
-  .CardWrapper-cardscontainer div .Card-cardcontainer a div .Card-cardImageHolder img {
-    transition: transform 1.05s, filter 1.05s ease-in-out;
-  }
-
-  .CardWrapper-cardscontainer div .Card-cardcontainer a div .Card-cardImageHolder:hover img {
-    transform: scale(1.05);
-  }
-
-  .Card-cardImageHolder {
-    width: 100%;
-    margin: unset;
-    height: 200px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-  }
-
-  .Card-cardImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50%;
-    max-width: unset;
-    max-height: unset;
-    opacity: 90%;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-  }
-
-  .titleDiv {
-    font-size: 24px !important;
-    padding: 0 0 15px;
-    margin-bottom: 5px !important;
-    line-height: 32px !important;
-    max-height: 76px !important;
-    margin-top: 5px !important;
-  }
-
-  .Card-cardTextHolder {
-    padding: 5px 20px;
-    width: 100%;
-  }
-
-  .Card-cardText {
-    font-size: 16px !important;
-  }
+}
+@media (min-width: 480px) and (max-width: 890px) {
+  .Card-cardcontainer.col-sm-6 {
+    width: calc(50% - 20px) !important;
+}
+}
+@media screen and (max-width: 479px) {
+  .Card-cardcontainer.col-sm-6 {
+    width: 100% !important;
+}
 }
 
 @media screen and (min-width: 1366px) {
-  .Card-cardcontainer.col-sm-6 {
-    max-width: 30% !important;
+  .CardWrapper-cardscontainer {
+    padding-left: 10px;
   }
 }
 
-@media screen and (min-width: 1460px) {
-  .CardWrapper-cardscontainer {
-    max-width: 1460px;
-    padding-left: 10px;
-    margin: 0 auto;
-    width: 100%;
-  }
-}
+
 
 /* hide 
 #root>div.cdm-home-page>div.CoreLayout-mainWrapperContainer>.CoreLayout-mainwrapper.cdm-main-content>div>div.CardWrapper-cardscontainer>div.CardWrapper-div>div:nth-child(12) {
@@ -401,9 +417,6 @@ p {
 }
 */
 
-/**@media screen and (max-width: 767px) {}
-**/
-
 .cardsOnly {
   display: flex;
   flex-wrap: wrap;
@@ -413,7 +426,6 @@ p {
 
 .cdm-animated-card,
 .cdm-animated-card * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -423,18 +435,13 @@ p {
   overflow: hidden;
   width: 300px;
   height: 300px;
-
-  /*static margins*/
+  border-radius: 15px;
   margin: 15px;
-  /*auto side margins preference -- comment out static if using these*/
-  /*margin-left: auto;
+  margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
-  margin-bottom: 15px;*/
-
-  /*Optional: add border */
-  /*border: 5px solid #006FA7;
-  border-radius: 25px;*/
+  margin-bottom: 15px;
+  border-radius: 25px;
 }
 
 .cardTitle {
@@ -473,17 +480,9 @@ p {
   object-position: top;
 }
 
-.hvrbox img {
-  width: 100%;
-}
-
 .cdm-animated-card .cardImage {
   display: block;
 }
-
-.hvrbox .hvrbox-layer_bottom {
-  display: block;
-} 
 
 .cardDescriptionText a {
   text-decoration: none;
@@ -492,13 +491,6 @@ p {
   padding: 5px;
   font-size: 18px;
   font-family: inherit;
-}
-
-.hvrbox-text a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 400;
-  padding: 5px;
 }
 
 .cdm-animated-card .cardDescriptionDiv {
@@ -513,12 +505,7 @@ p {
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
   padding: 15px;
-  -webkit-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
-}
-
-.hvrbox .hvrbox-layer_slideup {
-  -webkit-transform: translateY(100%);
   transform: translateY(100%);
 }
 
@@ -538,11 +525,6 @@ p {
 .cdm-animated-card.active .cardDescriptionDiv,
 .cardDescriptionDiv:focus-within {
   opacity: 1;
-}
-
-.hvrbox:hover .hvrbox-layer_slideup,
-.hvrbox.active .hvrbox-layer_slideup {
-  -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 
@@ -811,10 +793,6 @@ p {
 /**************************/
 /******* TATE TILES *******/
 /**************************/
-.container--primary-content {
-  padding-top: 32px
-}
-
 @media (min-width: 1200px) {
   .container__inner {
     width: 1136px;
@@ -935,13 +913,6 @@ p {
 
 .container__inner {
   padding: 16px 0;
-}
-
-.article-header {
-  margin-bottom: 32px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
 }
 
 .card {
