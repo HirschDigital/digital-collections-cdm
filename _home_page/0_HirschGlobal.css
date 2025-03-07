@@ -266,9 +266,9 @@ p {
   margin-bottom: 1rem;
 }
 
-.shared-contentContainer {
+/*.shared-contentContainer {
   width: 90% !important;
-}
+}*/
 
 /*****************************/
 /* Section:  HOME PAGE ***** */
@@ -281,7 +281,6 @@ p {
 
 .CardWrapper-cardscontainer {
   padding-bottom: 20px;
-  width: 90%;
   margin: 0 auto;
 }
 
@@ -400,14 +399,6 @@ p {
     width: 100% !important;
   }
 }
-
-@media screen and (min-width: 1366px) {
-  .CardWrapper-cardscontainer {
-    padding-left: 10px;
-  }
-}
-
-
 
 /* hide 
 #root>div.cdm-home-page>div.CoreLayout-mainWrapperContainer>.CoreLayout-mainwrapper.cdm-main-content>div>div.CardWrapper-cardscontainer>div.CardWrapper-div>div:nth-child(12) {
