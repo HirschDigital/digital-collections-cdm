@@ -31,7 +31,7 @@ const scriptFilesToLoad = [
   'ead-embed-1_2.js',
   'field-insert-iiif.js',
   'headerSearchInputPlaceholder.js',
-  'itemTable-row-Move.js',
+  'itemTable-row-Move-maintest.js',
   'link-reformatter-thumb.js',
   'panel-expand.js',
   'pdf-objects-multipage-1_1.js',
