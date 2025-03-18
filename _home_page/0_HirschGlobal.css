@@ -282,6 +282,7 @@ p {
 .CardWrapper-cardscontainer {
   padding-bottom: 20px;
   margin: 0 auto;
+  width: 80%;
 }
 
 .Card-cardcontainer {
