@@ -1,4 +1,22 @@
 /**leirner collection**/
+.item-related-container {
+display: inline;
+}
+
+.item-related-container h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+}
+
+.related-artist {
+
+}
+
+.related-title {
+padding-top: 5px;
+}
+
 .ItemImage-itemImage img {
   max-width: 500px;
 }
@@ -43,8 +61,8 @@ margin-left: 0;
   padding: 10px 15px !important;
 }
 
-.field-relate .field-value div,
-.field-relata .field-value div {
+.field-relate .field-value .related-img,
+.field-relata .field-value .related-img {
   max-height: 90px;
   max-width: 90px;
 }

@@ -32,7 +32,7 @@ const scriptFilesToLoad = [
   'field-insert-iiif.js',
   'headerSearchInputPlaceholder.js',
   'itemTable-row-Move-maintest.js',
-  'link-reformatter-thumb.js',
+  'link-reformatter-thumb+artist.js',
   'panel-expand.js',
   'pdf-objects-multipage-1_1.js',
   'physogs.js',
