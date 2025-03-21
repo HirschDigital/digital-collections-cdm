@@ -39,8 +39,6 @@ function reformatField(nickname,syntax) {
             });
           }
           break;
-        default:
-          console.log('link-reformatter-thumb.js: No fields found to reformat.');
       }
     })
   }
