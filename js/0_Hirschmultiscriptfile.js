@@ -28,8 +28,6 @@ const scriptFilesToLoad = [
   'browseSearchPage.js',
   'button-pdf-inline-1_0.js',
   'debug-events-all-1_5.js',
-  'ead-embed-1_2.js',
-  'field-insert-iiif.js',
   'headerSearchInputPlaceholder.js',
   'itemTable-row-Move-maintest.js',
   'link-reformatter-thumb+artist.js',
