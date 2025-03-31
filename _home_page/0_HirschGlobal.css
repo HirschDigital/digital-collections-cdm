@@ -1063,3 +1063,265 @@ a {
     line-height: 27px;
   }
 }
+/********************************/
+/***pinboard*******/
+/*******************************/
+ 
+@media (min-width: 841px) {
+  .pinboard-card-list--4col .pinboard-card {
+      width: 25%;
+      box-sizing: border-box;
+      padding: 0 16px 32px;
+  }
+
+  .pinboard-card-list--type__masonry.pinboard-card-list--4col {
+      column-count: 4;
+  }
+
+  .pinboard-card-list--type__masonry {
+      column-gap: 0;
+  }
+
+  .pinboard-card-list--type__masonry .pinboard-card {
+      break-inside: avoid-column;
+      padding-bottom: 64px;
+      box-sizing: border-box;
+      float: none;
+      width: 100%;
+  }
+}
+
+.pinboard-container__inner {
+  padding: 16px 0;
+}
+
+.pinboard-card {
+  position: relative;
+}
+
+.pinboard-card-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  list-style: none;
+  padding: 0;
+}
+
+.pinboard-card-list--type__title-over-image .pinboard-card {
+  max-width: 100%;
+}
+
+.pinboard-card__inner {
+  break-inside: avoid;
+  display: block;
+  padding-bottom: 16px;
+  position: relative;
+  text-align: left;
+  background: transparent;
+  color: #313131;
+}
+
+.pinboard-card__inner:hover {
+  color: #dc4b38;
+}
+
+.pinboard-card-list--type__title-over-image .pinboard-card:hover .pinboard-card__title {
+  background-color: #dc4b38;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.pinboard-card-media--image {
+  box-sizing: border-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.pinboard-card-list .pinboard-card-media__inner {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.pinboard-card-list .pinboard-card-media__inner picture {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.pinboard-card-list--type__title-over-image.pinboard-card-list--4col .pinboard-card-media img {
+  position: static;
+  max-width: none;
+  width: auto;
+}
+
+.pinboard-card-media--image img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  transition: opacity .8s;
+}
+
+.pinboard-card-content {
+  overflow: hidden;
+  padding-bottom: 8px;
+}
+
+.pinboard-card-list--type__title-over-image .pinboard-card__title {
+  display: flex;
+  left: 0;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .5);
+  box-sizing: border-box;
+  color: #fff;
+  padding: 0 8px;
+  transition: background-color .125s ease-in-out;
+  letter-spacing: .11em;
+}
+
+.pinboard-card__description {
+  color: #767676;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.pinboard-card-list .pinboard-card .pinboard-card__inner p {
+  word-break: break-word;
+}
+
+.pinboard-card-list.pinboard-card-list--type__masonry {
+  display: block;
+}
+
+.pinboard-card-list .pinboard-card-media__inner picture::after {
+  background: rgba(0, 0, 0, .4);
+  bottom: 0;
+  content: "";
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  transition: opacity .8s;
+  width: 100%;
+}
+
+.pinboard-card-list .pinboard-card__inner:hover picture::after {
+  opacity: 1;
+}
+
+@media (min-width: 1200px) {
+  .pinboard-container__inner {
+      width: 1136px;
+  }
+
+  .pinboard-card-list--type__title-over-image.pinboard-card-list--4col .pinboard-card-media,
+  .pinboard-card-list--type__title-over-image.pinboard-card-list--4col .pinboard-card-media img,
+  .pinboard-card-list--type__title-over-image.pinboard-card-list--4col .pinboard-card__title {
+      height: 260px;
+  }
+
+}
+
+@media (min-width: 1200px) and (min-height: 720px) {
+  .pinboard-card-list--type__title-over-image.pinboard-card-list--4col .pinboard-card__title {
+      font-size: 28px;
+      line-height: 36px;
+  }
+
+  .pinboard-card .pinboard-card-content p {
+      font-size: 17px;
+      line-height: 27px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .pinboard-container__inner {
+      width: 960px;
+  }
+
+  .pinboard-card-list--type__title-over-image.pinboard-card-list--4col .pinboard-card-media,
+  .pinboard-card-list--type__title-over-image.pinboard-card-list--4col .pinboard-card-media img,
+  .pinboard-card-list--type__title-over-image.pinboard-card-list--4col .pinboard-card__title {
+      height: 216px;
+  }
+}
+
+@media (min-width: 841px) and (max-width: 1024px) {
+  .pinboard-container__inner {
+      width: 801px;
+  }
+
+  .pinboard-card-list--type__title-over-image.pinboard-card-list--4col .pinboard-card__title {
+      font-size: 26px;
+      line-height: 34px;
+  }
+
+  .pinboard-card-list--type__title-over-image.pinboard-card-list--4col .pinboard-card-media,
+  .pinboard-card-list--type__title-over-image.pinboard-card-list--4col .pinboard-card-media img,
+  .pinboard-card-list--type__title-over-image.pinboard-card-list--4col .pinboard-card__title {
+      height: 170.25px;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 841px) {
+  .pinboard-container__inner {
+      width: 720px;
+  }
+
+  .pinboard-card-list .pinboard-card {
+      box-sizing: border-box;
+      padding: 0 16px 32px;
+      width: 50%;
+  }
+
+  .pinboard-card .pinboard-card__title {
+      font-size: 1.375rem;
+      line-height: 1.75rem;
+      height: 298px;
+  }
+
+}
+
+@media (min-width: 480px) and (max-width: 760px) {
+  .pinboard-card-list .pinboard-card {
+      box-sizing: border-box;
+      padding: 0 16px 32px;
+  }
+
+  .pinboard-card-list--4col .pinboard-card-media__inner {
+      max-height: 390px;
+  }
+
+  .pinboard-card-list.pinboard-card-list--4col .pinboard-card:nth-child(odd) {
+      clear: left;
+  }
+
+  .pinboard-card-list .pinboard-card .pinboard-card-content,
+  .pinboard-card-list .pinboard-card .pinboard-card-header,
+  .pinboard-card-list .pinboard-card .pinboard-card-media {
+      width: auto;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .pinboard-card-list--type__title-over-image.pinboard-card-list--4col .pinboard-card-media {
+      height: 216px;
+  }
+}
