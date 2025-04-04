@@ -29,8 +29,16 @@
 
         const correctAnswer = promptAnswerMap[randomPromptImage];
         // Step 2: Background Selection
-        const backgrounds = ["/customizations/collection/myfirst/pages/physogs/face_0001.jpg", "/customizations/collection/myfirst/pages/physogs/face_0002.jpg", "/customizations/collection/myfirst/pages/physogs/face_0003.jpg", "/customizations/collection/myfirst/pages/physogs/face_0004.jpg"];
+        const backgrounds = [
+            "/customizations/collection/myfirst/pages/physogs/face_0001.jpg", 
+            "/customizations/collection/myfirst/pages/physogs/face_0002.jpg", 
+            "/customizations/collection/myfirst/pages/physogs/face_0003.jpg", 
+            "/customizations/collection/myfirst/pages/physogs/face_0004.jpg"
+        ];
         const backgroundsContainer = document.getElementById("backgrounds");
+
+            // Clear existing background images to prevent duplication
+    backgroundsContainer.innerHTML = "";
 
         backgrounds.forEach((bg) => {
             const img = document.createElement("img");
@@ -54,6 +62,11 @@
         const mouthGroup = document.getElementById("mouth-group");
 
         let selectedImage = null;
+
+                // Clear existing image options to prevent duplication
+                eyesGroup.innerHTML = "";
+                noseGroup.innerHTML = "";
+                mouthGroup.innerHTML = "";
 
         function createImageOptions(group, images) {
             images.forEach((imgSrc) => {
@@ -133,5 +146,7 @@
     }
 
     document.addEventListener('cdm-custom-page:ready', physogs);
-    document.addEventListener('cdm-custom-page:update', physogs);
+
 })();
+
+//elimiated document.addEventListener("cdm-custom-page:update", physogs); causing loading issues   
