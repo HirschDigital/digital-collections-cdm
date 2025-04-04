@@ -29,6 +29,7 @@ const scriptFilesToLoad = [
   'button-pdf-inline-1_0.js',
   'debug-events-all-1_5.js',
   'headerSearchInputPlaceholder.js',
+  'insta-follow-button-1_2.js',
   'itemTable-row-Move-maintest.js',
   'link-reformatter-thumb+artist.js',
   'objectwarning.js',
