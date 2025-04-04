@@ -727,7 +727,7 @@ article {
   position: relative;
   text-align: left;
   background: transparent;
-  color: #313131;
+  color: #818181;
 }
 
 .card__inner::after {
@@ -973,7 +973,7 @@ a {
   }
 
   .card {
-    width: 25%;
+    width: 30%;
   }
 
   .card-list--type__masonry {
