@@ -17,7 +17,7 @@
       el.classList.add('warning-message');
 
       // Set the innerHTML of the element
-      el.innerHTML = `<p style="background: #ffdc7a; margin: 0px; padding: 3px 6px 6px; text-align: center; font-size: 16px">
+      el.innerHTML = `<p style="background:rgba(216, 38, 15, 0.83); margin: 0px; padding: 3px 6px 6px; text-align: center; font-size: 16px">
     Warning: Object contains graphic images of violence</p>`;
 
       // Add element to DOM
@@ -36,7 +36,7 @@
       el.classList.add('warning-message');
 
       // Set the innerHTML of the element
-      el.innerHTML = `<p style="background: #ffdc7a; margin: 0px; padding: 3px 6px 6px; text-align: center; font-size: 16px">
+      el.innerHTML = `<p style="background:rgba(216, 38, 15, 0.83); margin: 0px; padding: 3px 6px 6px; text-align: center; font-size: 16px">
       Warning: Object may contain nudity</p>`;
 
       // Add element to DOM

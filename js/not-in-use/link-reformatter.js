@@ -18,70 +18,29 @@
   *************************************************/
 
 
-  function reformatField(nickname,syntax) {
-  //"nickname" is the nickname of the field to reformat
-  //"syntax" is the descriptive formatting option being employed
+  function reformatField(nickname, syntax, target) {
+    //"nickname" is the nickname of the field to reformat
+    //"syntax" is the descriptive formatting option being employed
     let fieldsToChange = document.querySelectorAll('tr.ItemMetadata-metadatarow.field-' + nickname + ' > td.field-value > span');
     //find specified field in the dom
     if (fieldsToChange) {
-      fieldsToChange.forEach(function(field){
-      //field can occur twice, once in each Description accordion
+      fieldsToChange.forEach(function (field) {
+        //field can occur twice, once in each Description accordion
         var originalText = field.textContent;
         //grab existing text from the field if it exists
-        let parts = '', displayText = '', linkTarget = '', origTextArray = [];
+        let displayText = '', linkTarget = '', origTextArray = [];
         //declare variables outside switch statement so they can be used for each case
         switch (syntax) {
-          case 'frb':
-            origTextArray = originalText.split('<br>');
-            //separate multiple links into an array
-            if (origTextArray) {
-              field.innerHTML = '';
-              //wipe out existing text in the field
-              origTextArray.forEach(function(segment) {
-              //loop through each link
-                let eachLink = document.createElement('a');
-                parts = segment.split(': ');
-                //colon delimits display text from url
-                if (parts[0] && parts[1]) {
-                  displayText = parts[0] + '<br/>';
-                  eachLink.innerHTML = displayText;
-                  linkTarget = parts[1];
-                  eachLink.href = linkTarget;
-                  field.appendChild(eachLink);
-                }
-              });
-            }
-            break;
-          case 'pipe':
-            origTextArray = originalText.split(';');
-            //separate multiple links into an array
-            if (origTextArray) {
-              field.innerHTML = '';
-              //wipe out existing text in field
-              origTextArray.forEach(function(segment){
-              //loop through each link
-                let eachLink = document.createElement('a');
-                parts = segment.split('|');
-                //pipe character delimits display text from url
-                if (parts[0] && parts[1]) {
-                  displayText = parts[0].trim() + '<br/>';
-                  linkTarget = parts[1].trim();
-                  eachLink.href = linkTarget;
-                  eachLink.innerHTML = displayText;
-                  field.appendChild(eachLink);
-                }
-              });
-            }
-            break;
           case 'markdown':
             origTextArray = originalText.split(';');
             //separate multiple links into an array
             if (origTextArray) {
               field.innerHTML = '';
               //wipe out existing text in field
-              origTextArray.forEach(function(segment){
-              //loop through each link
+              origTextArray.forEach(function (segment) {
+                //loop through each link
                 let eachLink = document.createElement('a');
+                eachLink.target = target;
                 displayText = segment.substring(segment.lastIndexOf('[') + 1, segment.lastIndexOf(']')) + '<br/>';
                 //use text between square brackets as display text
                 linkTarget = segment.substring(segment.lastIndexOf('(') + 1, segment.lastIndexOf(')'));
@@ -99,39 +58,47 @@
     }
   }
 
+  let globalScope = true;
+  let collectionScope = [
+    ''
+  ];
 
-    let globalScope = true;
-    let collectionScope = [
-        ''
-    ];
+// let globalScope = false;
+// let collectionScope = [
+//    'p15700coll3'
+// ];
 
 
-    document.addEventListener('cdm-item-page:ready', function(e){
-        let item = e.detail.itemId;
-        let collection = e.detail.collectionId;
-        if (globalScope || collectionScope.includes(collection)) {
-          reformatField('frba','frb');
-          reformatField('vertia','pipe');
-          reformatField('markda','markdown');
-        }
-    });
+  document.addEventListener('cdm-item-page:ready', function (e) {
+    let item = e.detail.itemId;
+    let collection = e.detail.collectionId;
+    if (globalScope || collectionScope.includes(collection)) {
+      if (collection === 'p15700coll3') {
+        //this collection logic is usually needed because field nicknames are specific to collections
+        //add multiple stanzas for each collection as the field nicknames vary
+        reformatField('markda', 'markdown', '_self');
+      }
+    }
+  });
 
-    document.addEventListener('cdm-item-page:update', function(e){
-        let item = e.detail.itemId;
-        let collection = e.detail.collectionId;
-        if (globalScope || collectionScope.includes(collection)) {
-          reformatField('frba','frb');
-          reformatField('vertia','pipe');
-          reformatField('markda','markdown');
-        }
-    });
+  document.addEventListener('cdm-item-page:update', function (e) {
+    let item = e.detail.itemId;
+    let collection = e.detail.collectionId;
+    if (globalScope || collectionScope.includes(collection)) {
+      if (collection === 'p15700coll3') {
+        //this collection logic is usually needed because field nicknames are specific to collections
+        //add multiple stanzas for each collection as the field nicknames vary
+        reformatField('markda', 'markdown', '_self');
+      }
+    }
+  });
 
-    document.addEventListener('cdm-item-page:leave', function(e){
-        let collection = e.detail.collectionId;
-        if (globalScope || collectionScope.includes(collection)) {
-          //no clean up needed because metadata fields are always re-rendered
-        }
-    });
+  document.addEventListener('cdm-item-page:leave', function (e) {
+    let collection = e.detail.collectionId;
+    if (globalScope || collectionScope.includes(collection)) {
+      //no clean up needed because metadata fields are always re-rendered
+    }
+  });
 
 })();
 
