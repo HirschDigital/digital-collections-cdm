@@ -976,10 +976,6 @@ a {
     margin: 0 auto;
   }
 
-  .card {
-    width: 30%;
-  }
-
   .card-list--type__masonry {
     column-count: 4;
   }
@@ -1024,6 +1020,9 @@ a {
     font-size: 16px;
     line-height: 24px;
   }
+  .card {
+    width: 50%;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
@@ -1041,6 +1040,10 @@ a {
   .card-content p {
     font-size: 16px;
     line-height: 24px;
+  }
+
+  .card {
+    width: 50%;
   }
 }
 
@@ -1065,6 +1068,9 @@ a {
   .card-content p {
     font-size: 17px;
     line-height: 27px;
+  }
+  .card {
+    width: 50%;
   }
 }
 /********************************/
