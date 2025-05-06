@@ -19,6 +19,7 @@ padding-top: 5px;
 
 .ItemImage-itemImage img {
   max-width: 500px;
+  max-height: 600px;
 }
 .field-relate .field-value span a,
 .field-relata .field-value span a {
@@ -81,7 +82,9 @@ max-height: unset;
   padding-left: 10px;
 }
 
-
+.ItemPreview-container {
+  max-width:
+}
 
 /**************Landing Page*******************/
 .collView-mainColumn {
