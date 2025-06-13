@@ -8,7 +8,7 @@
         let displayText = '', linkTarget = '', origTextArray = [];
         switch (syntax) {
           case 'markdown':
-            origTextArray = originalText.split(';');
+            origTextArray = originalText.split(';;');
             if (origTextArray) {
               field.innerHTML = '';
               origTextArray.forEach(function(segment){
@@ -39,6 +39,7 @@
         let collection = e.detail.collectionId;
         if (globalScope || collectionScope.includes(collection)) {
           reformatField('more','markdown','_self');
+          reformatField('public','markdown');
         }
     });
 
@@ -47,6 +48,7 @@
         let collection = e.detail.collectionId;
         if (globalScope || collectionScope.includes(collection)) {
           reformatField('more','markdown','_self');
+          reformatField('public','markdown');
         }
     });
 
