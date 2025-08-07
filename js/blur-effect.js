@@ -3,8 +3,6 @@
 
     function contentblur(){
 
-
-        
 // ✅ List of OCLC numbers that should trigger blurring
 const targetOclcNumbers = [
   "1427518089", "1234567890" // Add more OCLC numbers here
@@ -38,7 +36,6 @@ observer.observe(document.body, { childList: true, subtree: true });
 // 🔁 Run once on initial load
 blurThumbnailsIfOclcMatches();
 };
-
 
 
     document.addEventListener('cdm-item-page:ready', contentblur);
