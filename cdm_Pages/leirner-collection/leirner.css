@@ -104,6 +104,16 @@
 /*.ItemPreview-container {
   max-width:
 }*/
+.exhibit-box {
+  margin-bottom: .75rem;
+}
+.exhibit-box p {
+  padding: 0;
+  margin: 0 !important;
+}
+.exhibit-title {
+  font-style:italic;
+}
 
 /**************Landing Page*******************/
 .collView-mainColumn {

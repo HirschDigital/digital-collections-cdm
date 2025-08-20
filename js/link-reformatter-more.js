@@ -5,7 +5,7 @@
     if (fieldsToChange) {
       fieldsToChange.forEach(function(field){
         var originalText = field.textContent;
-        let displayText = '', linkTarget = '', origTextArray = [];
+        let displayTitle = '', displayText = '', linkTarget = '', origTextArray = [];
         switch (syntax) {
           case 'markdown':
             origTextArray = originalText.split(';');
@@ -14,10 +14,11 @@
               origTextArray.forEach(function(segment){
                 let eachLink = document.createElement('a');
                 eachLink.target = target;
+                displayTitle = segment.substring(segment.lastIndexOf('<') + 1, segment.lastIndexOf('>')) + '<br/>';
                 displayText = segment.substring(segment.lastIndexOf('[') + 1, segment.lastIndexOf(']')) + '<br/>';
                 linkTarget = segment.substring(segment.lastIndexOf('(') + 1, segment.lastIndexOf(')'));
                 eachLink.href = linkTarget;
-                eachLink.innerHTML = displayText;
+                eachLink.innerHTML = displayTitle, displayText;
                 field.appendChild(eachLink);
               });
             }

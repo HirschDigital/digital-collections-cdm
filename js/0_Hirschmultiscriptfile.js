@@ -33,7 +33,7 @@ const scriptFilesToLoad = [
   'footer-badges.js',
   'headerSearchInputPlaceholder.js',
   'itemTable-row-Move-maintest.js',
-  'link-reformatter-more.js',
+  'link-reformatter-more2.js',
   'link-reformatter-thumb+artist.js',
   'objectwarning.js',
   'panel-expand.js',
