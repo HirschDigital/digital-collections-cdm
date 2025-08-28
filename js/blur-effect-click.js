@@ -3,7 +3,7 @@
 
     function clickToUnblur(){
 
-const targetOclcNumbers = ["1427518089", "1234567890"]; // Add more as needed
+const targetOclcNumbers = ["1427518089", "1346572645" , "1346573214"]; // Add more as needed
 
 function getOclcNumber() {
   const row = document.querySelector("tr.field-dmoclcno");

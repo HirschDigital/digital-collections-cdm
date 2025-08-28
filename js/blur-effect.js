@@ -5,7 +5,7 @@
 
 // ✅ List of OCLC numbers that should trigger blurring
 const targetOclcNumbers = [
-  "1427518089", "1234567890" // Add more OCLC numbers here
+  "1427518089", "1346572645" , "1346573214" // Add more OCLC numbers here
 ];
 
 // 🧠 Function to extract OCLC and blur thumbnails

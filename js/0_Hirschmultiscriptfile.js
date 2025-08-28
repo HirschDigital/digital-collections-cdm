@@ -35,11 +35,8 @@ const scriptFilesToLoad = [
   'itemTable-row-Move-maintest.js',
   'link-reformatter-more2.js',
   'link-reformatter-thumb+artist.js',
-  'objectwarning.js',
   'panel-expand.js',
   'pdf-objects-multipage-1_1.js',
-  'physogs.js',
-  'scrollbar.js',
 	'uv-cp.js',
 ];
 
