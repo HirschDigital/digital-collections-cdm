@@ -207,7 +207,7 @@ h2 a:visited,
 }
 
 .Footer-footerLanguageHolder button {
-  color: #545454 !important;
+  color: #242424 !important;
 }
 
 .Footer-footerLanguageHolder {
@@ -264,6 +264,10 @@ body {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+.About-maincontentAbout p {
+  line-height: 1.42857143 !important;
 }
 
 /*.shared-contentContainer {
@@ -528,7 +532,7 @@ p {
 
 .expanded-panel {
 
-  background-color: #dc4b38 !important;
+  background-color: #545454 !important;
   border-radius: 5px;
 
   .panel-title {
@@ -651,30 +655,6 @@ p {
   height: 200px;
 }
 
-/**************/
-/* ABOUT PAGE */
-/**************/
-#button-bar div {
-  font-size: 1rem !important;
-}
-
-.about-nav li a,
-.about-nav li a:hover,
-.about-nav li a:focus {
-  color: white !important;
-  background-color: #dc4b38;
-  font-weight: bold;
-  display: inline-block;
-  padding: 10px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1.2em;
-}
-
-.about-nav li {
-  display: inline-block;
-  margin: 5px;
-}
 
 /**************************/
 /******* TATE TILES *******/
