@@ -80,6 +80,7 @@
   }
 
   .Header-nameHolder .header-text {
+
     font-size: .75rem;
   }
 }
@@ -147,7 +148,9 @@
 
   .Header-headerMenuLinks h3 {
     margin: 5px;
-    color: #545454;
+    color: #242424;
+    font-weight: 500;
+    font-size: 1.25rem;
   }
 }
 
@@ -171,14 +174,14 @@
 .SimpleSearch-searchInputControl {
   width: 100%;
   height: 30px;
-  border: 1px #545454 solid;
+  border: 1px #242424 solid;
 }
 
 /*******************************/
 /*Section: FOOTER Modifications*/
 /*******************************/
 .Footer-footerWrapper a {
-  color: #545454 !important;
+  color: #242424 !important;
 }
 
 .FooterNavigationLinks-footerLinksHolder {
@@ -532,7 +535,7 @@ p {
 
 .expanded-panel {
 
-  background-color: #545454 !important;
+  background-color: #242424 !important;
   border-radius: 5px;
 
   .panel-title {

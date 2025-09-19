@@ -35,9 +35,9 @@
     
     // 2. Sort the Recently Added facet by date descending, instead of the default sort by number of records
     // NOTE: currently does not sort facet values added by the 'Show More' button, as we always have <10
-    function sortRecentlyAddedFacet() {
+    function sortDateFacet() {
         // find all instances of the facet (on mobile a second instance is created in the Refine modal)
-        var facetLinksContainer = document.querySelectorAll('div[label="close Recently Added Facet details"] .ShowMoreLess-container div');
+        var facetLinksContainer = document.querySelectorAll('div[label="close Date Facet details"] .ShowMoreLess-container div');
         if (facetLinksContainer) {
             facetLinksContainer.forEach(el => {
                 var facetLinks = Array.from(el.childNodes);
@@ -50,72 +50,7 @@
         }   
     }
     
-    // 3. Rename the Coverage facet title & sort label to Decade in cross-collection search/browse
-    function renameCoverageFacet() {
-         // find all instances of the facet (on mobile a second instance is created in the Refine modal)
-        var coverageFacet = document.querySelectorAll('h2[title="Close Coverage Facet"] span.Panel-panelTitleExpanded');
-        if (coverageFacet) {
-            coverageFacet.forEach(el => {
-                el.innerText = 'Decade';
-            });
-        }
-    }
-
-    function renameCoverageSortLabel() {
-        // find the sort labels in both the desktop sort dropdown and the mobile sort modal
-        var coverageLabel = document.querySelectorAll('#desktopSortBySelect option, .MobileSortModal-container .radio');
-        if (coverageLabel) {
-            coverageLabel.forEach(el => {
-                el.innerHTML = el.innerHTML.replace("Coverage","Decade");
-            });
-        }
-    }
-
-    // add a click listener on the Refine button so the new facet instances in the modal also get modified
-    function mobileRefineListener() {
-        var refineButton = document.querySelector('.MobileSearchHeader-buttonGroup button[data-id="filterBtn"]');
-        if (refineButton) {
-
-            refineButton.addEventListener('click', function() {
-                // the new facet instances are not immediately available so get our functions in the queue
-                setTimeout(sortRecentlyAddedFacet,0);
-                setTimeout(renameCoverageFacet,0);
-            });
-        }
-    }
-
-    // add a click listener on the Sort button so the new label instances in the modal also get modified
-    function mobileSortListener() {
-        var sortButton = document.querySelector('.MobileSearchHeader-buttonGroup button:nth-child(2)');
-        if (sortButton) {
-            sortButton.addEventListener('click', function() {
-                // the new sort instances are not immediately available so get our function in the queue
-                setTimeout(renameCoverageSortLabel,0);
-            });
-        }
-    }
-
-    // handle cases where the sort order/pagination is changed but no cdm events fire
-    function searchFilterListener() {
-        let targetNode = document.querySelector('.cdm-collection-search-page .Search-filterContent, .cdm-search-page .Search-filterContent');
-        if (targetNode) {
-            const observer = new MutationObserver(records => {
-                for (const record of records) {
-                    // check if any nodes have been added to the targetNode
-                    let totalAddedNodes = 0;
-                    if (record.type === "childList") {
-                      totalAddedNodes = totalAddedNodes + record.addedNodes.length;
-                      if (totalAddedNodes > 0) {
-                        comboModifications();
-                        setTimeout(searchFilterListener,0);
-                        observer.disconnect();
-                      }
-                    }
-                }
-            });
-            observer.observe(targetNode, { childList: true });
-        }
-    }    
+  
     
     // combine modification functions and add to appropriate cdm events
     function comboModifications() {
