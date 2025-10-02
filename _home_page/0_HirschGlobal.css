@@ -85,7 +85,7 @@
   }
 }
 
-@media screen and (max-width: 1100px) and (min-width: 768px) {
+@media screen and (max-width: 1100px) and (min-width: 767px) {
   .Header-logoImage {
     width: 295px;
   }
@@ -97,7 +97,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .Header-logoImage {
     margin-top: 10px !important;
   }
@@ -111,7 +111,7 @@
     max-height: 42px;
     border: none;
     text-align: center;
-    box-shadow: 0 -1px 2px rgba(0, 0, 0, .1);
+    /*box-shadow: 0 -1px 2px rgba(0, 0, 0, .1);*/
   }
 
   .Header-hamburgerHolder .btn-group button {
@@ -725,10 +725,6 @@ article {
   display: table;
 }
 
-.card__inner:hover {
-  color: #dc4b38;
-}
-
 a {
   text-decoration: none;
   background-color: transparent;
@@ -819,7 +815,7 @@ a {
 }
 
 .card:hover .card__title {
-  background-color: #dc4b38;
+  background-color: #545454;
 }
 
 .card:hover .card__title span {
@@ -827,7 +823,7 @@ a {
 }
 
 .card__description {
-  color: #767676;
+  color: #212529;
   margin-bottom: 8px;
   margin-top: 8px;
   margin: 8px 0 0;
@@ -877,7 +873,7 @@ a {
   }
 }
 
-@media (min-width: 480px) and (max-width: 760px) {
+@media (min-width: 480px) and (max-width: 767px) {
   .card {
     box-sizing: border-box;
     padding: 0 16px 32px;
@@ -911,7 +907,7 @@ a {
   }
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 767px) {
   .card-list {
     margin: 0 -8px;
   }
@@ -921,7 +917,7 @@ a {
   }
 }
 
-@media (min-width: 760px) and (max-width: 841px) {
+@media (min-width: 767px) and (max-width: 841px) {
   .container__inner {
     width: 720px;
   }

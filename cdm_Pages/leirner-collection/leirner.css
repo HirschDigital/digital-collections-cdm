@@ -157,17 +157,13 @@ article {
   position: relative;
   text-align: left;
   background: transparent;
-  color: #818181;
+  color: #212529;
 }
 
 .leirner-card__inner::after {
   clear: both;
   content: "";
   display: table;
-}
-
-.leirner-card__inner:hover {
-  color: #dc4b38;
 }
 
 a {
@@ -260,7 +256,7 @@ a {
 }
 
 .leirner-card:hover .leirner-card__title {
-  background-color: #dc4b38;
+  background-color: #545454;
 }
 
 .leirner-card:hover .leirner-card__title span {
@@ -268,7 +264,7 @@ a {
 }
 
 .leirner-card__description {
-  color: #767676;
+  color: #212529;
   margin-bottom: 8px;
   margin-top: 8px;
   margin: 8px 0 0;
@@ -314,7 +310,7 @@ a {
   }
 }
 
-@media (min-width: 480px) and (max-width: 760px) {
+@media (min-width: 480px) and (max-width: 767px) {
   .leirner-card {
     box-sizing: border-box;
     padding: 0 20px 32px;
@@ -348,13 +344,13 @@ a {
   }
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 767px) {
   .leirner-card {
     padding: 0 20px 32px;
   }
 }
 
-@media (min-width: 760px) and (max-width: 841px) {
+@media (min-width: 767px) and (max-width: 841px) {
   .leirner-card__title {
     font-size: 1.375rem;
     line-height: 1.75rem;
