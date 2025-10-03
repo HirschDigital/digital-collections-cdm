@@ -154,6 +154,10 @@
   }
 }
 
+.headerIcon {
+  color:#242424;
+}
+
 /******Search Bar*********/
 
 @media screen and (min-width: 767px) {
