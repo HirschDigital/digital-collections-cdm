@@ -93,7 +93,6 @@
     if (globalScope || collectionScope.includes(collection)) {
       reformatInfoField('more', 'markdown', '_self');
       reformatField('public', 'markdown');
-      reformatField('exhibi', 'markdown');
     }
   });
 
@@ -103,7 +102,6 @@
     if (globalScope || collectionScope.includes(collection)) {
       reformatInfoField('more', 'markdown', '_self');
       reformatField('public', 'markdown');
-      reformatField('exhibi', 'markdown');
     }
   });
 
