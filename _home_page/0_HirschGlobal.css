@@ -160,6 +160,12 @@ a.headerIcon {
 
 /******Search Bar*********/
 
+@media screen and (max-width: 767px) {
+  .SimpleSearch-searchBox {
+    top: 70px;
+  }
+}
+
 @media screen and (min-width: 767px) {
   .SimpleSearch-searchBox {
     top: 25px;
