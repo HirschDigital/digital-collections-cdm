@@ -154,7 +154,7 @@
   }
 }
 
-.headerIcon {
+a.headerIcon {
   color:#242424;
 }
 
@@ -207,11 +207,11 @@
   }
 }
 
-a:visited,
+/**a:visited,
 h2 a:visited,
 .cdm-footer a:visited {
   color: #dc4b38;
-}
+}**/
 
 .Footer-footerLanguageHolder button {
   color: #242424 !important;
@@ -223,9 +223,14 @@ h2 a:visited,
 
 #trademark {
   display: none;
+  padding: 0px 5px 5px 5px;
+  
 }
 
-/****.cdm-footer a:hover, .FooterNavigationLinks-footerLinksHolder***/
+.FooterNavigationLinks-footerLinksHolder li {
+  display: grid !important;
+
+}
 
 /*****************************/
 /* Section:  GENERAL CONTENT */
