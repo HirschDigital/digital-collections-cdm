@@ -34,9 +34,9 @@ title: Photobooks in the Libraries and Archives
 		<div>&nbsp;</div>
 		<div class="text-center">
 			<a data-id="browseButton" class="CollectionLanding-landingBrowseButton cdm-btn btn btn-lg btn-primary"
-			   data-metrics-event-name="event" data-metrics-merge-pagedefaults="true"
-			   data-metrics-event-category="collection landing" data-metrics-event-action="click"
-			   data-metrics-event-label="browse" href="/digital/collection/photobooks/search">Browse Photobooks</a>
+				data-metrics-event-name="event" data-metrics-merge-pagedefaults="true"
+				data-metrics-event-category="collection landing" data-metrics-event-action="click"
+				data-metrics-event-label="browse" href="/digital/collection/photobooks/search">Browse Photobooks</a>
 		</div>
 		<div>&nbsp;</div>
 
@@ -47,11 +47,11 @@ title: Photobooks in the Libraries and Archives
 			<div class="CardWrapper-div">
 				<div class="Card-cardcontainer col-sm-6 cdm-collection-card">
 					<a href="/digital/collection/photobooks/search/searchterm/%22photobook%20maquettes%22/field/digita/mode/exact/conn/and"
-					   class="Card-fullcard shared-box">
+						class="Card-fullcard shared-box">
 						<div>
 							<div class="Card-cardImageHolder"> <img class="Card-cardImage"
-									 src="/customizations/collection/photobooks/pages/images/maquettes-thumb2.jpg"
-									 alt="Rivers of Power">
+									src="/customizations/collection/photobooks/pages/images/maquettes-thumb2.jpg"
+									alt="Rivers of Power">
 							</div>
 							<div class="Card-cardTextHolder">
 								<div data-alias="photobooks">
@@ -60,19 +60,20 @@ title: Photobooks in the Libraries and Archives
 								</div>
 								<div>
 									<p class="Card-cardText truncation">
-										Pre-publication materials such as maquettes, dummies, and proofs, as well as unpublished projects and unique books.</p>
+										Pre-publication materials such as maquettes, dummies, and proofs, as well as
+										unpublished projects and unique books.</p>
 								</div>
 							</div>
 						</div>
 					</a>
 				</div>
 				<div class="Card-cardcontainer col-sm-6 cdm-collection-card"> <a
-					   href="/digital/collection/photobooks/search/searchterm/%22early%20photobooks%22/field/digita/mode/exact/conn/and"
-					   class="Card-fullcard shared-box">
+						href="/digital/collection/photobooks/search/searchterm/%22early%20photobooks%22/field/digita/mode/exact/conn/and"
+						class="Card-fullcard shared-box">
 						<div>
 							<div class="Card-cardImageHolder"> <img class="Card-cardImage"
-									 src="/customizations/collection/photobooks/pages/images/19thcent-thumb.jpg"
-									 alt="NZ Ferns"></div>
+									src="/customizations/collection/photobooks/pages/images/19thcent-thumb.jpg"
+									alt="NZ Ferns"></div>
 							<div class="Card-cardTextHolder">
 								<div data-alias="photobooks">
 									<h2 class="titleDiv">
@@ -85,13 +86,11 @@ title: Photobooks in the Libraries and Archives
 							</div>
 						</div>
 					</a> </div>
-				<div class="Card-cardcontainer col-sm-6 cdm-collection-card"> <a
-					   href="/digital/collection/photobooks/search/searchterm/%22photo%20league%20documents%22/field/digita/mode/exact/conn/and"
-					   class="Card-fullcard shared-box">
+				<div class="Card-cardcontainer col-sm-6 cdm-collection-card"> <a href="/cdm4/results.php?&CISORESTMP=results.php&CISOVIEWTMP=item_viewer.php&CISOMODE=bib&CISOGRID=thumbnail,A,1;title,A,1;seriea,A,0;creato,200,0;none,A,0;20;title,none,none,none,none&CISOBIB=title,A,0,N;seriea,A,0,N;creato,200,0,N;none,A,0,N;none,A,0,N;20;title,none,none,none,none&CISOTHUMB=20%20(4x5);title,none,none,none,none&CISOTITLE=20;title,none,none,none,none&CISOHIERA=20;creato,date,seriea,title,none&CISOSUPPRESS=1&CISOTYPE=browse&CISOROOT=%2Fphotobooks"	class="Card-fullcard shared-box">
 						<div>
 							<div class="Card-cardImageHolder"> <img class="Card-cardImage"
-									 src="/customizations/collection/photobooks/pages/images/photoleague.png"
-									 alt="Carpoolers"></div>
+									src="/customizations/collection/photobooks/pages/images/photoleague.png"
+									alt="Photo League"></div>
 							<div class="Card-cardTextHolder">
 								<div data-alias="photobooks">
 									<h2 class="titleDiv">
@@ -106,6 +105,39 @@ title: Photobooks in the Libraries and Archives
 						</div>
 					</a>
 				</div>
+
+				<form method="GET" action="/cdm4/results.php">
+
+					<input type="hidden" name="CISORESTMP" value="results.php">
+					<input type="hidden" name="CISOVIEWTMP" value="item_viewer.php">
+					<input type="hidden" name="CISOMODE" value="grid">
+					<input type="hidden" name="CISOGRID"
+						value="thumbnail,A,1;title,A,1;seriea,A,0;creato,200,0;none,A,0;20;relevancy,none,none,none,none">
+					<input type="hidden" name="CISOBIB"
+						value="title,A,1,N;seriea,A,0,N;creato,200,0,N;none,A,0,N;none,A,0,N;20;relevancy,none,none,none,none">
+					<input type="hidden" name="CISOTHUMB" value="20 (4x5);relevancy,none,none,none,none">
+					<input type="hidden" name="CISOTITLE" value="20;title,none,none,none,none">
+					<input type="hidden" name="CISOHIERA" value="20;seriea,title,none,none,none">
+					<input type="hidden" name="CISOSUPPRESS" value="0">
+					<input type="hidden" name="CISOOP1" value="all">
+					<input type="hidden" name="CISOFIELD1" value="digita">
+					<input type="hidden" name="CISOROOT" value="/photobooks">
+
+					<select name="CISOBOX1" size="6" onChange="submit();">
+
+						<option value="Early Photobooks">Early Photobooks</option>
+						<option value="Photo League Documents">Photo League Documents</option>
+						<option value="Photobook Maquettes">Photobook Maquettes</option>
+
+					</select>
+
+				</form>
+
+				<a
+					href="/cdm4/results.php?&CISORESTMP=results.php&CISOVIEWTMP=item_viewer.php&CISOMODE=hiera&CISOGRID=thumbnail,A,1;title,A,1;seriea,A,0;creato,200,0;none,A,0;20;title,none,none,none,none&CISOBIB=title,A,1,N;seriea,A,0,N;creato,200,0,N;none,A,0,N;none,A,0,N;20;title,none,none,none,none&CISOTHUMB=20%20(4x5);title,none,none,none,none&CISOTITLE=20;title,none,none,none,none&CISOHIERA=20;seriea,title,none,none,none&CISOSUPPRESS=0&CISOTYPE=browse&CISOROOT=%2Fphotobooks">query
+					name</a>
+
+
 			</div>
 		</div>
 		<!-- Optional additional resources
