@@ -226,10 +226,10 @@ h2 a:visited,
   padding: 0px 5px 5px 5px;
   
 }
-
+@media screen and (max-width: 767px) {
 .FooterNavigationLinks-footerLinksHolder li {
   display: grid !important;
-
+}
 }
 
 /*****************************/
