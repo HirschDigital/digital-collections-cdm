@@ -1,0 +1,280 @@
+
+/**Header**/
+.Header-headerContainer {
+    width: 100%;
+}
+
+@media print {
+  .Header-headerContainer {
+    display: none;
+  }
+}
+
+.Header-faCustom {
+    padding: 0 5px 0 0;
+}
+
+.activeRoute {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.Header-hamburgerExternalLinkIcon {
+  margin-left: 3px;
+}
+
+.Header-hideText {
+  text-indent: 100%;
+  width:0;
+  height: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  display:inline-block;
+}
+
+.Header-headerMenuLinks a:hover, .Header-headerMenuLinks a:focus {
+    color: #ffffff !important;
+    background-color: #434343 !important;
+}
+
+.Header-headerMenuLinks a:hover h3, .Header-headerMenuLinks a:focus h3 {
+    color: #ffffff !important;
+}
+
+.Header-headerMenuLinks h3 {
+    margin-top: 5px;
+}
+
+.Header-headerMenuLinks {
+    overflow: auto;
+    max-height: 90vh;
+}
+
+.Header-header {
+  width: 100%;
+  position: relative;
+  height: 150px;
+}
+
+.Header-logoNameContainer {
+  overflow: hidden;
+}
+
+.Header-controls {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  width: 60%;
+}
+
+.Header-nameHolder {
+  padding-top: 60px;
+  padding-left: 200px;
+  padding-right: 40px;
+
+  a {
+    text-decoration: none;
+    /*color: black;*/
+
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+}
+
+.Header-controls button, .Header-controls .btn {
+  background-color: transparent;
+}
+
+.Header-titleText {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.Header-logoImage {
+  max-height: 150px;
+  padding-left: 10px;
+  margin-right: 1rem;
+  float: left;
+}
+
+.Header-logoImageBanner {
+  padding-left: 0;
+}
+
+.Header-hamburgerHolder {
+  float: right;
+  margin-left: 10px;
+}
+
+.Header-headerButtonPadding, .Header-stackedHeaderButtonPadding {
+  padding: 0.25rem 0.5rem !important;
+}
+
+.Header-verticalCenter {
+  top: 50px;
+}
+
+.Header-bannerPadding {
+  padding-top: 0 !important;
+}
+
+.Header-overlayTitleText {
+  margin-right: 410px;
+  margin-top: -5px;
+}
+
+.Header-valerieBar {
+  background-color: #545454;
+  height: 5px;
+  width: 100%;
+  z-index: 800;
+}
+
+.Header-valerieBarContainer {
+  margin: 0 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.Header-browserTabletTitleHide {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+
+  .Header-headerMenuLinks {
+    max-height: inherit;
+  }
+
+  .Header-headerMenuLinks h3 {
+    margin-top: 20px;
+  }
+
+  .Header-header {
+    height: 120px;
+  }
+
+  .Header-hamburgerHolder {
+    margin-right: 2px;
+    margin-left: 0;
+    position: relative;
+    z-index: 4;
+  }
+
+  .Header-logoImage {
+    max-height: 65px;
+    padding-top: 5px;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .Header-controls {
+    left: 0;
+    width: 100%;
+  }
+
+  /* position header text and logo above nearby containers so they receive click events.  */
+  .Header-nameHolder, .Header-logoHolder {
+    position: relative;
+    z-index: 1;
+  }
+
+  .Header-browserTabletTitleHide {
+    display: block;
+  }
+
+  .Header-browserTabletTitleHide {
+    display: block;
+  }
+
+  .Header-mobileTitleDisplay {
+    padding: 13px 0 0 15px !important;
+    width: 84% !important;
+    text-align: left !important;
+  }
+
+  .Header-mobileTitleHide {
+    display: none;
+  }
+
+  .Header-verticalCenter {
+    top: 15px;
+  }
+}
+
+/**SEARCH**/
+@value text-color from 'styles/colors.css';
+
+.SimpleSearch-headerButtonPadding, .SimpleSearch-stackedHeaderButtonPadding {
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem !important;
+}
+
+.SimpleSearch-searchHolder {
+    margin-left: 10px;
+}
+
+.SimpleSearch-advancedSearch {
+    display: none;
+}
+
+.SimpleSearch-headerAdvancedSearchButtonLink:hover {
+    text-decoration: underline !important;
+}
+
+.SimpleSearch-searchInput {
+    margin-top: 4px;
+    width: 300px;
+}
+
+.SimpleSearch-searchInputControl {
+    width: 100%;
+    font-size: 1rem;
+    color: text-color;
+}
+
+.SimpleSearch-searchInputLabel {
+    float: right;
+    background-color: transparent !important;
+    padding: 0 !important;
+}
+
+.SimpleSearch-searchInputLabel a {
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+.SimpleSearch-searchBox{
+    float: right;
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 767px)  {
+
+    .SimpleSearch-searchInput {
+        flex: 1;
+        width: auto;
+    }
+
+    .SimpleSearch-searchInputControl {
+        font-size: 17px !important;
+    }
+
+    .SimpleSearch-searchInputLabel {
+        display: none;
+    }
+
+    .SimpleSearch-advancedSearch {
+        display: inline-block;
+    }
+
+    .SimpleSearch-searchBox{
+        position: absolute;
+        top: 60px;
+        width: calc(100% - 30px);
+        padding: 0 15px;
+    }
+}

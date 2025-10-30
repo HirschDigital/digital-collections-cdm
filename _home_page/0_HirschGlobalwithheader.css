@@ -5,11 +5,7 @@
 /* -- HEADER Modifications --*/
 /*****************************/
 
-/*
-.CoreLayout-headerContainer {
-	position: relative !important;
-}
-*/
+
 .Header-header {
   height: 140px;
   width: calc(100%);
@@ -54,11 +50,9 @@
 }
 
 /******Misc**********/
-/*.Header-verticalCenter {
-	top: 90px;}*/
 .Header-headerContainer {
   border-bottom: 1px solid #999;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 }
 
 .Header-valerieBar {
@@ -80,11 +74,11 @@
   }
 
   .Header-nameHolder .header-text {
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 }
 
-@media screen and (max-width: 1100px) and (min-width: 768px) {
+@media screen and (max-width: 1300px) and (min-width: 967px) {
   .Header-logoImage {
     width: 295px;
   }
@@ -101,29 +95,33 @@
     margin-top: 10px !important;
   }
 }
-@media screen and (min-width: 768px) {
-  /* Horizontal Menu */
+
+/* Horizontal Menu */
+ 
+.Header-controls {
+position: absolute;
+  right: 0px;
+  top: 10px;
+  width: 100%;
+}
+@media screen and (min-width: 967px) {
   .Header-controls {
     width: 100%;
     position: static;
-    border-radius: 0;
-    min-height: 42px;
-    max-height: 42px;
-    border: none;
-    text-align: center;
+  }
+  .Header-hamburgerHolder {
+    margin: -80px auto;
+    float: none;
+    width: 100%;
     /*box-shadow: 0 -1px 2px rgba(0, 0, 0, .1);*/
   }
-
   .Header-hamburgerHolder .btn-group button {
     display: none;
   }
 
-  .Header-hamburgerHolder,
   .dropdown.btn-group {
-    float: none;
-    display: block;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
+    padding-right: 0px;
+    float: right;
   }
 
   .Header-headerMenuLinks {
@@ -132,18 +130,15 @@
     flex-wrap: nowrap;
     border: none;
     box-shadow: none;
-    float: none;
-    justify-content: left;
-    background-color: #FFFFFF !important;
+    background-color: #ffffff !important;
     background: none;
-    width: auto;
-    border-top: 0;
-    border-bottom: 0;
-    overflow: visible;
   }
 
   .Header-headerMenuLinks a {
-    background-color: #FFFFFF !important;
+    background-color: #ffffff !important;
+  }
+  .dropdown-menu > li > a {
+    padding: 3px 15px;
   }
 
   .Header-headerMenuLinks h3 {
@@ -154,31 +149,40 @@
   }
 }
 
+@media screen and (max-width: 1042px) {
+  .Header-hamburgerHolder {
+    margin-right: 12px;
+    margin-left: 0;
+    position: relative;
+    z-index: 4;
+  }
+}
+
+  .Header-controls.Header-verticalCenter {
+    top: 0px !important;
+  }
 a.headerIcon {
-  color:#242424;
+  color: #242424;
 }
 
 /******Search Bar*********/
 
 @media screen and (max-width: 767px) {
   .SimpleSearch-searchBox {
-    top: 70px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .SimpleSearch-searchBox {
-    top: 25px;
-    right: 10px;
   }
 }
 
 .SimpleSearch-searchBox {
   position: absolute;
+  top: 80px !important;
+  width: 100%;
+  padding: 10px 15px 0px 75px;
 }
 
 .SimpleSearch-searchInput {
-  width: 385px;
+  width: calc(69% - 186px);
+  margin-right: -10px;
+  height: 30px;
 }
 
 .SimpleSearch-searchInputControl {
@@ -186,6 +190,18 @@ a.headerIcon {
   height: 30px;
   border: 1px #242424 solid;
   border-radius: 5px;
+}
+
+a.SimpleSearch-headerAdvancedSearchButtonLink {
+  padding: 8.5px 12px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  border: none;
+  background: #efefef;
+  border-radius: 4px;
+  font-weight: 500 !important;
+  color: #444;
 }
 
 
