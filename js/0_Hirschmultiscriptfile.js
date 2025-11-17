@@ -26,8 +26,6 @@ const fileDirectory = '/customizations/global/pages/js/';
 // array containing file names of each JS file
 const scriptFilesToLoad = [
   'browseSearchPage.js',
-  'blur-effect.js',
-  'blur-effect-click.js',
   'button-pdf-inline-1_0.js',
   'debug-events-all-1_5.js',
   'footer-badges.js',
