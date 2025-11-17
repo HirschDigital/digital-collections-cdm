@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    function insertBadges(instagramHandle, mailtoAddress) {
+    function insertBadges(instagramHandle, mailingList, mailtoAddress) {
         // Avoid inserting multiple times
         if (document.querySelector('.badge-container')) return;
 
@@ -49,6 +49,9 @@
                 <img src="/customizations/global/pages/images/insta.png" alt="Instagram logo">
                 <span>Follow us on Instagram</span>
             </a>
+            <a href="${mailingList}" target="_blank" rel="noopener noreferrer" class="badge-link">
+            <span>Join our mailing list</span>
+            </a>
             <a href="mailto:${mailtoAddress}" target="_blank" rel="noopener noreferrer" class="badge-link">
                 <img src="/customizations/global/pages/images/mailto.png" alt="Contact logo">
                 <span>Contact us</span>
@@ -62,6 +65,7 @@
 
     const instagramHandle = 'mfah_librariesarchives';
     const mailtoAddress = 'slong@mfah.org';
+    const mailingList = 'https://hirschlibrary.kit.com/f3f6bd7e01';
 
     const events = [
         'cdm-home-page:ready', 'cdm-about-page:ready', 'cdm-login-page:ready',
@@ -71,7 +75,7 @@
     ];
 
     events.forEach(event => {
-        document.addEventListener(event, () => insertBadges(instagramHandle, mailtoAddress));
+        document.addEventListener(event, () => insertBadges(instagramHandle, mailingList, mailtoAddress));
     });
 
 })();
