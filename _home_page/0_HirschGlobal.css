@@ -38,21 +38,6 @@
   padding-left: 10px !important;
 }
 
-/***Header Name****/
-.Header-nameHolder {
-  position: absolute;
-  top: 80px;
-  left: 300px;
-  padding: 0px;
-}
-
-.Header-nameHolder .header-text {
-  font-size: 1.2rem;
-  font-style: italic;
-  font-weight: 400;
-  padding-right: 5px;
-}
-
 /******Misc**********/
 /*.Header-verticalCenter {
 	top: 90px;}*/
@@ -72,15 +57,6 @@
 @media screen and (max-width: 767px) {
   .Header-mobileTitleHide {
     display: block;
-  }
-
-  .Header-nameHolder {
-    top: 60px;
-    left: 15px;
-  }
-
-  .Header-nameHolder .header-text {
-    font-size: .75rem;
   }
 }
 
@@ -301,7 +277,7 @@ p {
   padding-bottom: 10px;
 }
 .ContentHeader-mainCopyHolder p {
-    font-size: 16px;
+    font-size: 1rem;
 }
 /* Sub section: PHOTOGRID */
 
@@ -389,7 +365,7 @@ p {
 
 .titleDiv {
   display: block;
-  font-size: 20px;
+  font-size: 1.25rem;
   padding: 0 0 15px;
   margin-bottom: 5px !important;
   line-height: 32px !important;
@@ -401,7 +377,7 @@ p {
 }
 
 .Card-cardText {
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   line-height: 24px;
   margin: 0px auto !important;
@@ -431,19 +407,12 @@ p {
 /* COLLECTION LANDING PAGE */
 /***************************/
 
-/*text to the right of the image*/
-.CollectionLanding-mainLandingImage {
-  float: left;
-  margin: .5rem 2rem 1rem 0;
+
+.CollectionLanding-aboutCollection p {
+  font-size: 1rem;
 }
 
-/*suggested topics list*/
-.CollectionLanding-landingLinks li {
-  font: 1.15rem;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
+/*sub-collection pages*/
 .collView-mainColumn .collView-collSearchContainer {
   background-color: #EFEFEF;
   margin: 10px -15px;
