@@ -62,15 +62,21 @@
   }
 }
 
-@media screen and (max-width: 1100px) and (min-width: 768px) {
+@media screen and (max-width: 1100px) and (min-width: 881px) {
   .Header-logoImage {
-    width: 295px;
+    width: 420px;
   }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 880px) and (min-width: 768px) {
   .Header-logoImage {
-    width: 295px;
+    width: 228px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Header-logoImage {
+    width: 420px;
   }
 }
 
