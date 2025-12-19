@@ -34,7 +34,6 @@ const scriptFilesToLoad = [
   'link-reformatter-more2.js',
   'link-reformatter-thumb+artist.js',
   'panel-expand.js',
-  'physogs.js',
   'pdf-objects-multipage-1_1.js',
   'scrollbar.js',
 	'uv-cp.js',
