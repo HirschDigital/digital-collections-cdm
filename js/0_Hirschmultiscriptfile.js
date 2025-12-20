@@ -28,6 +28,7 @@ const scriptFilesToLoad = [
   'browseSearchPage.js',
   'button-pdf-inline-1_0.js',
   'debug-events-all-1_5.js',
+  'disable-click.js',
   'footer-badges.js',
   'headerSearchInputPlaceholder.js',
   'itemTable-row-Move-maintest.js',
