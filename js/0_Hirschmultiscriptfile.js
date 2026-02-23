@@ -38,6 +38,7 @@ const scriptFilesToLoad = [
   'pdf-objects-multipage-1_1.js',
   'scrollbar.js',
 	'uv-cp.js',
+  'video-stream-embed-1.2.js',
 ];
 
 (function() {
