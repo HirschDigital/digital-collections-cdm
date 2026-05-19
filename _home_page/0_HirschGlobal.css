@@ -409,6 +409,31 @@ p {
 }
 
 /***************************/
+/* Section: New Items */
+/***************************/
+#imageList img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+#imageList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#imageList .list-group-item {
+  width: 220px;
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+/***************************/
 /* Section: COLLECTION LANDING PAGE */
 /***************************/
 

@@ -3,3 +3,6 @@ Doesn't work that well in mobile.
 Link subject terms.
 
 Truncate facets in object description?
+
+
+When switching to next result via arrow, one table row gets sent to the side column

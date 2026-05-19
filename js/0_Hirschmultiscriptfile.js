@@ -38,6 +38,7 @@ const scriptFilesToLoad = [
   'pdf-objects-multipage-1_1.js',
   'scrollbar.js',
 	'uv-cp.js',
+  'Untitled.js',
 ];
 
 (function() {
