@@ -1,4 +1,11 @@
+/*  =====================
+   =====================
 
+Activates the expand/collapse functionality for panels on the page. For custom HTML.
+19-12-2025
+
+=====================
+===================== */
 (function () {
     'use strict';
 

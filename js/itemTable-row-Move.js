@@ -1,3 +1,12 @@
+/*  =====================
+   =====================
+
+Moves field from item description to right column on item page when screen size is small (<= 769px) and moves it back to description when screen size is larger. Tested on field-relate and field-relata, but can be adapted to other fields as needed.
+19-12-2025
+
+=====================
+===================== */
+
 (function () {
     'use strict';
 

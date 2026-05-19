@@ -1,3 +1,12 @@
+/*  =====================
+   =====================
+
+Add Instagram, mailing list, and contact badges to the footer of all pages.
+19-12-2025
+
+=====================
+===================== */
+
 (function () {
     'use strict';
 

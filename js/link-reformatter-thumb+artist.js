@@ -1,3 +1,11 @@
+/*  =====================
+   =====================
+
+Reformats links of the Related Objects and Related Scholarship fields to include artist, title, link, thumbnail.
+19-12-2025
+
+=====================
+===================== */
 (function () {
   'use strict';
 

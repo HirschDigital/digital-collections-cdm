@@ -1,3 +1,12 @@
+/*  =====================
+   =====================
+
+Reformats links in the "More Information" field of item pages to be more visually appealing and easier to use. Also reformats the Publication History field in the Leirner collection.
+19-12-2025
+
+=====================
+===================== */
+
 (function () {
   'use strict';
 
